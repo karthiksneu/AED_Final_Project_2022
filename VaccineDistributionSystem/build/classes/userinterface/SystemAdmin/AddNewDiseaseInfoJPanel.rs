@@ -1,0 +1,3 @@
+UserInterface.SystemAdmin.AddNewDiseaseInfoJPanel
+UserInterface.SystemAdmin.AddNewDiseaseInfoJPanel$2
+UserInterface.SystemAdmin.AddNewDiseaseInfoJPanel$1
