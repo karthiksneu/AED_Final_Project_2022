@@ -1,0 +1,6 @@
+UserInterface.SystemAdmin.ManageDiseaseCatalogJPanel$1
+UserInterface.SystemAdmin.ManageDiseaseCatalogJPanel
+UserInterface.SystemAdmin.ManageDiseaseCatalogJPanel$4
+UserInterface.SystemAdmin.ManageDiseaseCatalogJPanel$5
+UserInterface.SystemAdmin.ManageDiseaseCatalogJPanel$2
+UserInterface.SystemAdmin.ManageDiseaseCatalogJPanel$3
