@@ -1,5 +1,0 @@
-UserInterface.SystemAdmin.ManageDistributorUserAccountJPanel$1
-UserInterface.SystemAdmin.ManageDistributorUserAccountJPanel$2
-UserInterface.SystemAdmin.ManageDistributorUserAccountJPanel$3
-UserInterface.SystemAdmin.ManageDistributorUserAccountJPanel
-UserInterface.SystemAdmin.ManageDistributorUserAccountJPanel$4

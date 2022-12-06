@@ -1,5 +1,0 @@
-UserInterface.SystemAdmin.ManageCDCUserAccountJPanel$1
-UserInterface.SystemAdmin.ManageCDCUserAccountJPanel$2
-UserInterface.SystemAdmin.ManageCDCUserAccountJPanel
-UserInterface.SystemAdmin.ManageCDCUserAccountJPanel$3
-UserInterface.SystemAdmin.ManageCDCUserAccountJPanel$4

@@ -1,3 +1,0 @@
-UserInterface.SystemAdmin.AddNewVaccineInfoJPanel$2
-UserInterface.SystemAdmin.AddNewVaccineInfoJPanel$1
-UserInterface.SystemAdmin.AddNewVaccineInfoJPanel

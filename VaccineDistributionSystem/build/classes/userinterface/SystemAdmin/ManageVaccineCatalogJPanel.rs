@@ -1,6 +1,0 @@
-UserInterface.SystemAdmin.ManageVaccineCatalogJPanel$4
-UserInterface.SystemAdmin.ManageVaccineCatalogJPanel$3
-UserInterface.SystemAdmin.ManageVaccineCatalogJPanel$5
-UserInterface.SystemAdmin.ManageVaccineCatalogJPanel
-UserInterface.SystemAdmin.ManageVaccineCatalogJPanel$2
-UserInterface.SystemAdmin.ManageVaccineCatalogJPanel$1
