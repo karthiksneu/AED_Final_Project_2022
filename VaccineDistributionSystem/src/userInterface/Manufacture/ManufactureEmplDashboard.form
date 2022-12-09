@@ -31,7 +31,7 @@
         <Container class="javax.swing.JPanel" name="workContainer">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="99" red="66" type="rgb"/>
+              <Color blue="8e" green="a1" red="25" type="rgb"/>
             </Property>
           </Properties>
           <Constraints>
@@ -44,6 +44,9 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel1">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="8e" green="a1" red="25" type="rgb"/>
+                </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/UserInterface/ICONS/11122021icons/01image_processing20200619-31262-6cj3a4.gif"/>
                 </Property>

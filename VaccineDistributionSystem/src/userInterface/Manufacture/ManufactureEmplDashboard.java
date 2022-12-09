@@ -53,9 +53,10 @@ public class ManufactureEmplDashboard extends javax.swing.JPanel {
 
         jSplitPane1.setDividerLocation(175);
 
-        workContainer.setBackground(new java.awt.Color(102, 153, 255));
+        workContainer.setBackground(new java.awt.Color(37, 161, 142));
         workContainer.setLayout(new java.awt.CardLayout());
 
+        jLabel1.setBackground(new java.awt.Color(37, 161, 142));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/01image_processing20200619-31262-6cj3a4.gif"))); // NOI18N
         workContainer.add(jLabel1, "card3");
 
