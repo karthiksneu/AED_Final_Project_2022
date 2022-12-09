@@ -128,7 +128,7 @@ public class OrderVaccine extends javax.swing.JPanel {
         jLabel10 = new javax.swing.JLabel();
         cbordertype = new javax.swing.JComboBox();
 
-        setBackground(new java.awt.Color(102, 153, 255));
+        setBackground(new java.awt.Color(0, 204, 204));
         setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N

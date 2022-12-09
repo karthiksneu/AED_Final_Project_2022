@@ -77,7 +77,7 @@ public class ManageOrders extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         btnref2 = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(102, 153, 255));
+        setBackground(new java.awt.Color(0, 204, 204));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
