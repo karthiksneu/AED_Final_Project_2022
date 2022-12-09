@@ -29,6 +29,8 @@ public class VaccinatedPatients extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblvaccl = new javax.swing.JTable();
 
+        setBackground(new java.awt.Color(0, 204, 204));
+
         tblvaccl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
