@@ -10,15 +10,17 @@ import TheBusiness.WorkOrderQueue.WorkOrderQueue;
 
 /**
  *
- * @author soham
+ * @author Dsouza
  */
 //Initializing Useraccount class with specific variables and Workqueue request
 public class UserAccount {
     
     private String uname;
     private String password;
-    private Person person;
+   
     private Role role;
+    private Person person;
+    
     private WorkOrderQueue workQueue;
 
     public UserAccount() {
@@ -26,7 +28,7 @@ public class UserAccount {
     }
     
     
-    //getters ans setters for the above variables
+    //getters ans setters
     
     public String getUsername() {
         return uname;
@@ -47,18 +49,22 @@ public class UserAccount {
     public Role getRole() {
         return role;
     }
-
-    public void setPerson(Person employee) {
-        this.person = employee;
-    }
-
+    
+    
     public void setRole(Role role) {
         this.role = role;
     }
 
-    public Person getPerson() {
+    
+    
+     public Person getPerson() {
         return person;
     }
+    public void setPerson(Person employee) {
+        this.person = employee;
+    }
+
+   
 
     public WorkOrderQueue getWorkQueue() {
         return workQueue;

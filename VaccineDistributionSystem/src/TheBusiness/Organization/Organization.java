@@ -1,20 +1,36 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
  */
 package TheBusiness.Organization;
 
+import TheBusiness.Personnel.PersonDirectory;
+import TheBusiness.OrderManagement.OrderHistory;
+import TheBusiness.Roles.Role;
+import TheBusiness.UserAccountManagement.UserAccountDirectory;
+import TheBusiness.WorkOrderQueue.WorkOrderQueue;
+import java.util.ArrayList;
+
 /**
  *
- * @author Dsouza
+ * @author DELL
  */
-public class Organization {
-    
+
+//Initializing our abstract class Organization
+public abstract class Organization {
+
     private String name;
+    private WorkOrderQueue workQueue;
+    private PersonDirectory personDirectory;
+    private UserAccountDirectory userAccountDirectory;
+    private int organizationID;
+    private OrderHistory orderCatalog;
     
+    private static int counter;
     
-     private int organizationID;
-       public enum OrganizationType{
+    //Here are the below organizations that we are going to use in this project
+    
+    public enum OrganizationType{
         EnterpriseAdminOrg("Enterprise Admin Organization") ,
         CDCOrg ("CDC Organization"),
            ManufactureOrg("Manufacture Organization"),
@@ -36,22 +52,62 @@ public class Organization {
 
     public Organization(String name) {
         this.name = name;
-       
+        workQueue = new WorkOrderQueue();
+        personDirectory = new PersonDirectory();
+        userAccountDirectory = new UserAccountDirectory();
+        orderCatalog = new OrderHistory();
+        organizationID = counter;
+        ++counter;
     }
 
-    public String getName() {
-        return name;
+    public OrderHistory getOrderCatalog() {
+        return orderCatalog;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setOrderCatalog(OrderHistory orderCatalog) {
+        this.orderCatalog = orderCatalog;
+    }
+    
+    
+
+    public abstract ArrayList<Role> getSupportedRole();
+    
+    public UserAccountDirectory getUserAccountDirectory() {
+        return userAccountDirectory;
     }
 
     public int getOrganizationID() {
         return organizationID;
     }
 
-    public void setOrganizationID(int organizationID) {
-        this.organizationID = organizationID;
+    public PersonDirectory getPersonDirectory() {
+        return personDirectory;
     }
+    
+    public String getName() {
+        return name;
+    }
+
+    public WorkOrderQueue getWorkQueue() {
+        return workQueue;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setWorkQueue(WorkOrderQueue workQueue) {
+        this.workQueue = workQueue;
+    }
+
+    
+    
+    
+    
+    @Override
+    public String toString() {
+        return name;
+    }
+    
+    
 }

@@ -11,51 +11,31 @@ import java.util.ArrayList;
 /**
  *
  * @author soham
- * 
  */
 
 //Creating class WarehouseDirectory
 public class WarehouseDirectory {
     
     private ArrayList<Warehouse> warehouseList;
-    
-    //Creating Constructors for WarehouseDirectory
-
-    public WarehouseDirectory(ArrayList<Warehouse> warehouseList) {
-        this.warehouseList = warehouseList;
-    }
 
     public WarehouseDirectory() {
         warehouseList = new ArrayList<>();
     }
 
-    public Warehouse addNewWareHouse(){
-        
-        Warehouse warehouse = new Warehouse();
-        warehouseList.add(warehouse);
-        return warehouse;
-    }
-    
-    
-    public void removeWarehouse(Warehouse warehouse){
-        
-        warehouseList.remove(warehouse);
-    }
-    
-    
     public ArrayList<Warehouse> getWarehouseList() {
         return warehouseList;
     }
-
-    public void setWarehouseList(ArrayList<Warehouse> warehouseList) {
-        this.warehouseList = warehouseList;
-    }
-
-    @Override
-    public String toString() {
-        return super.toString(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+    
+    public Warehouse addNewWareHouse(){
+        
+        Warehouse wh = new Warehouse();
+        warehouseList.add(wh);
+        return wh;
     }
     
     
-    
+    public void removeWarehouse(Warehouse wh){
+        
+        warehouseList.remove(wh);
+    }
 }
