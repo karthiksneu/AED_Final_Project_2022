@@ -2,13 +2,13 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package models.business.roles;
+package TheBusiness.Personnel;
 
 import java.util.Date;
 
 /**
  *
- * @author akash
+ * @author soham
  */
 
 //Initializing Abstract Class Person
