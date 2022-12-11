@@ -7,6 +7,11 @@
 package userInterface.Manufacture;
 
 
+import TheBusiness.Ecosystems;
+import TheBusiness.NationalEnterprise.Manufacturer;
+import TheBusiness.Organization.ManufactureOrganization;
+import TheBusiness.Organization.Organization;
+import TheBusiness.VaccineManagement.VaccineDetails;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -16,7 +21,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Dsouza
  */
-public class ManageVaccine extends javax.swing.JPanel {
+public class VaccineManagement extends javax.swing.JPanel {
 
     /**
      * Creates new form ManageVaccinesJPanel
@@ -24,14 +29,18 @@ public class ManageVaccine extends javax.swing.JPanel {
     private JPanel workContainer;
    
     
-    public ManageVaccine(JPanel workContainer) {
+     // private JPanel workContainer;
+    private Manufacturer manufacturer;
+    private Ecosystems business;
+    
+    public VaccineManagement(JPanel workContainer, Manufacturer manufacturer, Ecosystems business) {
         initComponents();
         this.workContainer = workContainer;
-       
-       
+        this.manufacturer = manufacturer;
+        this.business = business;
+        //populateTable();
         
     }
-    
 
     
     
@@ -206,7 +215,37 @@ public class ManageVaccine extends javax.swing.JPanel {
         searchVaccine(searchCode);
  
     }//GEN-LAST:event_btnsrchActionPerformed
-
+ private void searchVaccine(String vaccineCode){
+         DefaultTableModel defaulttabelmodel = (DefaultTableModel) tblvacc.getModel();
+        defaulttabelmodel.setRowCount(0);
+        
+        ManufactureOrganization manufacureOrg = null;
+        for(Organization org : manufacturer.getOrganizationDirectory().getOrganizationList())
+        {   if(org instanceof ManufactureOrganization)
+        {   manufacureOrg = (ManufactureOrganization)org;
+            for(VaccineDetails vaccine : manufacureOrg.getVaccineProductCatalog().getVaccineProductList())
+            {
+                if(vaccineCode.equalsIgnoreCase(vaccine.getVaccineDefinition().getVaccineCode()))
+                {
+                Object[] row = new Object[7];
+            
+                row[0] = vaccine;
+                row[1] = vaccine.getVaccineDefinition().getVaccineName();
+                row[2] = vaccine.getVaccineId();
+                row[3] = vaccine.getBatchId();
+                row[4] = vaccine.getVaccinePrice();
+                row[5] = vaccine.getAvailablity();
+                row[6] = vaccine.getManufactureDate();
+                defaulttabelmodel.addRow(row);
+                }
+            }
+        }
+        
+        
+        
+        
+    }
+    }
     private void btnrefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnrefActionPerformed
         // TODO add your handling code here:
        
@@ -215,10 +254,25 @@ public class ManageVaccine extends javax.swing.JPanel {
     private void btnremvaccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnremvaccActionPerformed
         // TODO add your handling code here:
          int row = tblvacc.getSelectedRow();
+          // int row = tblvacc.getSelectedRow();
         if(row<0) {
             JOptionPane.showMessageDialog(null, "Please select a Vaccine from table");
             return;
         }
+        VaccineDetails vaccine = (VaccineDetails)tblvacc.getValueAt(row, 0);
+        ManufactureOrganization manufactureOrg = null;
+        for(Organization org: manufacturer.getOrganizationDirectory().getOrganizationList())
+        {   if(org instanceof ManufactureOrganization)
+        { manufactureOrg = (ManufactureOrganization)org;
+            for(VaccineDetails vaccineProduct : manufactureOrg.getVaccineProductCatalog().getVaccineProductList())
+            {
+                if(vaccine.equals(vaccineProduct))
+                    manufactureOrg.getVaccineProductCatalog().removeVaccineProduct(vaccineProduct);
+            }
+        }
+        }
+
+       // populateTable();
        
 
       
