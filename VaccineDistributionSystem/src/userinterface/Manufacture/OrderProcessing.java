@@ -2,19 +2,46 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package userInterface.Manufacture;
+package userinterface.Manufacture;
+
+
+import TheBusiness.Ecosystems;
+import TheBusiness.NationalEnterprise.Manufacturer;
+import TheBusiness.OrderManagement.OrderItem;
+import TheBusiness.Organization.DistributorOrganization;
+import TheBusiness.Organization.ManufactureOrganization;
+import TheBusiness.Organization.Organization;
+import TheBusiness.VaccineManagement.VaccineDetails;
+import TheBusiness.WorkOrderQueue.OrderVaccineWorkRequest;
+import java.awt.CardLayout;
+import java.util.Date;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author Dsouza
  */
-public class ProcessOrder extends javax.swing.JPanel {
+public class OrderProcessing extends javax.swing.JPanel {
 
     /**
      * Creates new form ProcessOrder
      */
-    public ProcessOrder() {
+       private JPanel workContainer;
+    private OrderVaccineWorkRequest vaccineWorkRequest;
+    private Manufacturer manufacturer;
+    private Ecosystems business;
+
+    public OrderProcessing(JPanel workContainer, OrderVaccineWorkRequest vaccineWorkRequest, Manufacturer manufacturer, Ecosystems business) {
         initComponents();
+        this.workContainer = workContainer;
+        this.vaccineWorkRequest = vaccineWorkRequest;
+        this.manufacturer = manufacturer;
+        this.business = business;
+        txtornum.setText(String.valueOf(vaccineWorkRequest.getVaccineOrder().getOrderNumber()));
+       
+
     }
 
     /**
@@ -183,7 +210,25 @@ public class ProcessOrder extends javax.swing.JPanel {
 
     private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
         // TODO add your handling code here:
-      
+       if(vaccineWorkRequest.getStatus().equalsIgnoreCase("Shipped") || vaccineWorkRequest.getStatus().equalsIgnoreCase("Stored"))
+         {
+             JOptionPane.showMessageDialog(null, "Order already shipped!");
+             return;
+         }
+        
+        vaccineWorkRequest.setStatus("Shipped");
+        vaccineWorkRequest.setShipdate(new Date());
+
+        DistributorOrganization distributorOrg = null;
+            for (Organization org : business.getDistributor().getOrganizationDirectory().getOrganizationList()) {
+                if (org instanceof DistributorOrganization){
+                    distributorOrg = (DistributorOrganization) org;
+                    distributorOrg.getWorkQueue().addWorkRequest(vaccineWorkRequest);
+                }
+            }
+            
+            JOptionPane.showMessageDialog(null, "Order Sent to Distributor");
+
     }//GEN-LAST:event_btnbackActionPerformed
 
 

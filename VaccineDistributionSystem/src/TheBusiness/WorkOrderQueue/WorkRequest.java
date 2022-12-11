@@ -1,6 +1,11 @@
 /*
+<<<<<<< HEAD
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
+=======
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+>>>>>>> ede3be31038cf031b10fa834bd37c779117db39a
  */
 package TheBusiness.WorkOrderQueue;
 
@@ -9,11 +14,16 @@ import java.util.Date;
 
 /**
  *
+<<<<<<< HEAD
  * @author karthik
  * 
  */
 
 //Initializing abstract class WorkRequest
+=======
+ * @author Dsouza
+ */
+>>>>>>> ede3be31038cf031b10fa834bd37c779117db39a
 public abstract class WorkRequest {
 
     private String message;
@@ -27,6 +37,7 @@ public abstract class WorkRequest {
         requestDate = new Date();
     }
 
+<<<<<<< HEAD
     public WorkRequest(String message, UserAccount sender, UserAccount receiver, String status, Date requestDate, Date resolveDate) {
         this.message = message;
         this.sender = sender;
@@ -36,6 +47,8 @@ public abstract class WorkRequest {
         this.resolveDate = resolveDate;
     }
 
+=======
+>>>>>>> ede3be31038cf031b10fa834bd37c779117db39a
     public String getMessage() {
         return message;
     }
@@ -68,6 +81,7 @@ public abstract class WorkRequest {
         this.status = status;
     }
 
+<<<<<<< HEAD
     public Date getResolveDate() {
         return resolveDate;
     }
@@ -76,6 +90,8 @@ public abstract class WorkRequest {
         this.resolveDate = resolveDate;
     }
     
+=======
+>>>>>>> ede3be31038cf031b10fa834bd37c779117db39a
     public Date getRequestDate() {
         return requestDate;
     }
@@ -84,9 +100,19 @@ public abstract class WorkRequest {
         this.requestDate = requestDate;
     }
 
+<<<<<<< HEAD
     @Override
     public String toString() {
         return "WorkRequest{" + '}';
     }
 
+=======
+    public Date getResolveDate() {
+        return resolveDate;
+    }
+
+    public void setResolveDate(Date resolveDate) {
+        this.resolveDate = resolveDate;
+    }
+>>>>>>> ede3be31038cf031b10fa834bd37c779117db39a
 }

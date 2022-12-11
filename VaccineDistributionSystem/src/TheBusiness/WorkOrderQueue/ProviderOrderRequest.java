@@ -2,6 +2,7 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
+
  */
 package TheBusiness.WorkOrderQueue;
 
@@ -15,25 +16,20 @@ import java.util.Date;
 
 /**
  *
- * @author DELL
- */
-//WorkRequest for Provision of vaccine Orders
-//Initializing class ProviderOrderRequest extends WorkRequest
-public class ProviderOrderRequest extends WorkRequest {
 
+ * @author Dsouza
+ */
+
+public class ProviderOrderRequest extends WorkRequest{
+    
     private Order orderVaccine;
     private Date deliDate;
-    private Enterprise enterprise;
-    private UserAccount lhdApprovedBy;
-    private UserAccount cdcApprovedBy;
-    private StateNetwork reqState;
-    private ClinicOrganization clinicOrganization;
-    private boolean clinicOrder;
     private boolean halfmonthContract;
     private boolean fullMonthContract;
     private boolean asReq;
     private boolean approvedByLHD;
     private boolean approvedByCDC;
+<<<<<<< HEAD
 
     public ProviderOrderRequest(Order orderVaccine, Date deliDate, Enterprise enterprise, UserAccount lhdApprovedBy, UserAccount cdcApprovedBy, StateNetwork reqState, ClinicOrganization clinicOrganization, boolean clinicOrder, boolean halfmonthContract, boolean fullMonthContract, boolean asReq, boolean approvedByLHD, boolean approvedByCDC) {
         this.orderVaccine = orderVaccine;
@@ -52,6 +48,14 @@ public class ProviderOrderRequest extends WorkRequest {
     }
     
     
+=======
+    private Enterprise enterprise;
+    private UserAccount lhdApprovedBy;
+    private UserAccount cdcApprovedBy;
+    private StateNetwork reqState;
+    private boolean clinicOrder;
+    private ClinicOrganization clinicOrganization;
+>>>>>>> ede3be31038cf031b10fa834bd37c779117db39a
     
     public ProviderOrderRequest() {
         orderVaccine = new Order();
@@ -74,7 +78,13 @@ public class ProviderOrderRequest extends WorkRequest {
     public void setClinicOrganization(ClinicOrganization clinicOrganization) {
         this.clinicOrganization = clinicOrganization;
     }
+<<<<<<< HEAD
 
+=======
+    
+    
+    
+>>>>>>> ede3be31038cf031b10fa834bd37c779117db39a
     public StateNetwork getreqState() {
         return reqState;
     }
@@ -82,6 +92,11 @@ public class ProviderOrderRequest extends WorkRequest {
     public void setreqState(StateNetwork reqState) {
         this.reqState = reqState;
     }
+<<<<<<< HEAD
+=======
+    
+    
+>>>>>>> ede3be31038cf031b10fa834bd37c779117db39a
 
     public UserAccount getPhdApprovedBy() {
         return lhdApprovedBy;
@@ -98,6 +113,32 @@ public class ProviderOrderRequest extends WorkRequest {
     public void setCdcApprovedBy(UserAccount cdcApprovedBy) {
         this.cdcApprovedBy = cdcApprovedBy;
     }
+<<<<<<< HEAD
+=======
+    
+    public void calculateDeliveryDate(ProviderOrderRequest request){
+        
+        if(request.asReq)
+        {
+            return;
+        }
+        
+        Date requestDate = request.getRequestDate();
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(requestDate);      
+       
+        if(request.halfmonthContract)
+            cal.add(Calendar.DATE, 15);
+        if(request.fullMonthContract)
+            cal.add(Calendar.DATE, 30);
+        
+        requestDate = cal.getTime();
+        
+        request.setdeliDate(requestDate);
+        
+        
+    }
+>>>>>>> ede3be31038cf031b10fa834bd37c779117db39a
 
     public Enterprise getEnterprise() {
         return enterprise;
@@ -162,6 +203,7 @@ public class ProviderOrderRequest extends WorkRequest {
     public void setApprovedByCDC(boolean approvedByCDC) {
         this.approvedByCDC = approvedByCDC;
     }
+<<<<<<< HEAD
     
      public void calculateDeliveryDate(ProviderOrderRequest request) {
 
@@ -185,10 +227,16 @@ public class ProviderOrderRequest extends WorkRequest {
         request.setdeliDate(requestDate);
 
     }
+=======
+>>>>>>> ede3be31038cf031b10fa834bd37c779117db39a
 
     @Override
     public String toString() {
         return String.valueOf(orderVaccine.getOrderNumber());
     }
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> ede3be31038cf031b10fa834bd37c779117db39a
 }

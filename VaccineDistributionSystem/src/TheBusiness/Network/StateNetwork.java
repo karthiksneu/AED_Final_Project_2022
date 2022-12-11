@@ -1,22 +1,4 @@
 /*
-
- * @author Dsouza
- */
-public class StateNetwork {
-    
-    private ArrayList<CityNetwork> cityList;
- 
-    private String stateName;
-    private int statePopulation;
-    private int vaccinesLeftForState;
-    
-    public StateNetwork() {
-        
-        this.cityList = new ArrayList<>();
-      
-        statePopulation = 0;
-        vaccinesLeftForState = statePopulation;
-
  * @author karthik
  *
  */
