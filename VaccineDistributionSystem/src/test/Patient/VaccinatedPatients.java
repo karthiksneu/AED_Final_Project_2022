@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package userInterface.Patient;
+package test.Patient;
 
 import TheBusiness.Enterprise.HospitalEnterprise;
 import TheBusiness.Organization.HospitalOrganization;

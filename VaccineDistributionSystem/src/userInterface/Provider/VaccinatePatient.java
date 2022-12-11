@@ -2,19 +2,49 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package userInterface.Provider;
+package userinterface.Provider;
+
+import TheBusiness.Ecosystems;
+import TheBusiness.Enterprise.HospitalEnterprise;
+import TheBusiness.Network.StateNetwork;
+import TheBusiness.Organization.HospitalOrganization;
+import TheBusiness.Organization.Organization;
+import TheBusiness.Organization.PatientOrganization;
+import TheBusiness.Personnel.Patient;
+import TheBusiness.Personnel.Person;
+import TheBusiness.UserAccountManagement.UserAccount;
+import java.awt.CardLayout;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
  * @author Dsouza
  */
-public class AdministerVaccine extends javax.swing.JPanel {
+public class VaccinatePatient extends javax.swing.JPanel {
 
     /**
      * Creates new form AdministerVaccine
      */
-    public AdministerVaccine() {
+       private JPanel workContainer;
+
+    private HospitalEnterprise hospital;
+    private UserAccount userAccount;
+    private HospitalOrganization hospitalOrg;
+    private Ecosystems business;
+    private StateNetwork state;
+    
+    public VaccinatePatient(JPanel workContainer, HospitalEnterprise hospital,HospitalOrganization hospitalOrg,UserAccount userAccount , Ecosystems business, StateNetwork state) {
         initComponents();
+        this.workContainer = workContainer;
+        this.userAccount = userAccount;
+        this.hospital = hospital;
+        this.business = business;
+        this.hospitalOrg = hospitalOrg;
+        this.state = state;
+     
+
+        
     }
 
     /**
@@ -216,7 +246,27 @@ public class AdministerVaccine extends javax.swing.JPanel {
     private void btnaddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddActionPerformed
         // TODO add your handling code here:
 
-       
+        try{
+        Patient patient = (Patient)cbpatient.getSelectedItem();
+        if(patient == null)
+        {
+            return;
+        }
+
+        
+        VaccinatePatientDetails panel = new VaccinatePatientDetails(workContainer, hospital, hospitalOrg, userAccount, business, patient, state);
+        workContainer.add("AdministerVaccineToPatientJPanel", panel);
+        CardLayout layout = (CardLayout)workContainer.getLayout();
+        layout.next(workContainer);
+
+        
+        }
+     
+        catch(NumberFormatException e)
+        {
+            JOptionPane.showMessageDialog(null, "Please enter numeric value for Amount");
+            return;
+        }
 
     }//GEN-LAST:event_btnaddActionPerformed
 

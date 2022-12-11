@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package userInterface.Patient;
+package test.Patient;
 
 
 import java.awt.CardLayout;
