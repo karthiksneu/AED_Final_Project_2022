@@ -21,7 +21,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Dsouza
  */
-public class ManageOrders extends javax.swing.JPanel {
+public class OrderManagement extends javax.swing.JPanel {
 
     /**
      * Creates new form ManageOrdersJPanel
@@ -32,7 +32,7 @@ public class ManageOrders extends javax.swing.JPanel {
    
     private Ecosystems business;
     
-    public ManageOrders(JPanel workContainer, Ecosystems business) {
+    public OrderManagement(JPanel workContainer, Ecosystems business) {
         initComponents();
         this.workContainer = workContainer;
        

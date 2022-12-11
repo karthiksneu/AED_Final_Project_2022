@@ -4,6 +4,8 @@
  */
 package userInterface.Manufacture;
 
+import javax.swing.JPanel;
+
 /**
  *
  * @author Dsouza
