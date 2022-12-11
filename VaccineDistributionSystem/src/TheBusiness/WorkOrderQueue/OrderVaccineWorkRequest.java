@@ -1,9 +1,6 @@
 /*
-
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
-
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package TheBusiness.WorkOrderQueue;
 
@@ -12,32 +9,15 @@ import java.util.Date;
 
 /**
  *
- * @author karthik
- * 
+ * @author Dsouza
  */
-
-//Initializing class OrderVaccineWorkRequest extends WorkRequest 
 public class OrderVaccineWorkRequest extends WorkRequest {
-
-    private Order vaccineOrder;
+    
+  private Order vaccineOrder;
     private Date shipdate;
 
-    public OrderVaccineWorkRequest(Order vaccineOrder, Date shipdate) {
-        this.vaccineOrder = vaccineOrder;
-        this.shipdate = shipdate;
-    }
-    
-        public OrderVaccineWorkRequest() {
+    public OrderVaccineWorkRequest() {
         vaccineOrder = new Order();
-    }
-
-
-    public Order getVaccineOrder() {
-        return vaccineOrder;
-    }
-
-    public void setVaccineOrder(Order vaccineOrder) {
-        this.vaccineOrder = vaccineOrder;
     }
 
     public Date getShipdate() {
@@ -48,9 +28,22 @@ public class OrderVaccineWorkRequest extends WorkRequest {
         this.shipdate = shipdate;
     }
 
+    public Order getVaccineOrder() {
+        return vaccineOrder;
+    }
+
+    public void setVaccineOrder(Order vaccineOrder) {
+        this.vaccineOrder = vaccineOrder;
+    }
+
+    
+    
+    
+    
     @Override
     public String toString() {
         return String.valueOf(vaccineOrder.getOrderNumber());
     }
-
+     
+    
 }
