@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package test.Manufacture;
+package userinterface.Manufacture;
 
 import TheBusiness.Ecosystems;
 import TheBusiness.NationalEnterprise.Manufacturer;
