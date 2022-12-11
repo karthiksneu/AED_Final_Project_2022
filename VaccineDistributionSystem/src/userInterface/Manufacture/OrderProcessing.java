@@ -8,12 +8,12 @@ package userInterface.Manufacture;
  *
  * @author Dsouza
  */
-public class ProcessOrder extends javax.swing.JPanel {
+public class OrderProcessing extends javax.swing.JPanel {
 
     /**
      * Creates new form ProcessOrder
      */
-    public ProcessOrder() {
+    public OrderProcessing() {
         initComponents();
     }
 

@@ -8,10 +8,12 @@ package userInterface.Manufacture;
 
 import TheBusiness.Ecosystems;
 import TheBusiness.NationalEnterprise.Manufacturer;
-
-
+import TheBusiness.OrderManagement.Order;
+import TheBusiness.Organization.ManufactureOrganization;
 import TheBusiness.Organization.Organization;
-
+import TheBusiness.UserAccountManagement.UserAccount;
+import TheBusiness.WorkOrderQueue.OrderVaccineWorkRequest;
+import TheBusiness.WorkOrderQueue.WorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -27,16 +29,16 @@ public class OrderManagement extends javax.swing.JPanel {
      * Creates new form ManageOrdersJPanel
      */
     
-    private JPanel workContainer;
- 
-   
+       private JPanel workContainer;
+    private Manufacturer manufacturer;
+    private UserAccount userAccount;
     private Ecosystems business;
     
-    public OrderManagement(JPanel workContainer, Ecosystems business) {
+    public OrderManagement(JPanel workContainer, Manufacturer manufacturer, UserAccount userAccount, Ecosystems business) {
         initComponents();
         this.workContainer = workContainer;
-       
-        
+        this.manufacturer = manufacturer;
+        this.userAccount = userAccount;
         this.business = business;
         populateOrderTable();
         populateProcessedOrderTable();
@@ -230,21 +232,33 @@ public class OrderManagement extends javax.swing.JPanel {
 
     private void btnassignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnassignActionPerformed
         // TODO add your handling code here:
-        int selectedRow = tblorder.getSelectedRow();
+       int selectedRow = tblorder.getSelectedRow();
         
         if (selectedRow < 0){
             JOptionPane.showMessageDialog(null, "Please select an Order from table");
             return;
         }
         
-     
+        WorkRequest request = (WorkRequest)tblorder.getValueAt(selectedRow, 0);
+        
+        if(request.getStatus().equalsIgnoreCase("Shipped") || request.getStatus().equalsIgnoreCase("Stored"))
+         {
+             JOptionPane.showMessageDialog(null, "Order already shipped!");
+             return;
+         }
+        request.setReceiver(userAccount);
+        request.setStatus("Assigned");
+        populateOrderTable();
+        
+        
+       
         
         
     }//GEN-LAST:event_btnassignActionPerformed
 
     private void btnprocessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnprocessActionPerformed
         // TODO add your handling code here:
-        int selectedRow = tblorder.getSelectedRow();
+          int selectedRow = tblorder.getSelectedRow();
         
         if (selectedRow < 0){
             JOptionPane.showMessageDialog(null, "Please select an Order from table");
@@ -252,7 +266,24 @@ public class OrderManagement extends javax.swing.JPanel {
         }
         
         
-       
+         OrderVaccineWorkRequest request = (OrderVaccineWorkRequest)tblorder.getValueAt(selectedRow, 0);
+         
+         if(request.getStatus().equalsIgnoreCase("Shipped") || request.getStatus().equalsIgnoreCase("Stored"))
+         {
+             JOptionPane.showMessageDialog(null, "Order already shipped!");
+             return;
+         }
+         
+         if(request.getReceiver() == null)
+         {
+             JOptionPane.showMessageDialog(null, "Please assign the work request first");
+            return;
+             
+         }
+        
+        
+        
+    
         
         
     }//GEN-LAST:event_btnprocessActionPerformed

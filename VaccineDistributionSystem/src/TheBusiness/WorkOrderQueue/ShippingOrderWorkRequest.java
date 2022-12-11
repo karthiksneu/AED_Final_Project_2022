@@ -11,22 +11,20 @@ import java.util.Date;
  *
  * @author Dsouza
  */
-public class OrderVaccineWorkRequest extends WorkRequest {
+
+
+
+public class ShippingOrderWorkRequest extends WorkRequest {
     
-  private Order vaccineOrder;
-    private Date shipdate;
+    private Order vaccineOrder;
+    private Order shipOrder;
+   
+    private Date shippingDate;
 
-    public OrderVaccineWorkRequest() {
-        vaccineOrder = new Order();
+    public ShippingOrderWorkRequest() {
+        shipOrder = new Order();
     }
-
-    public Date getShipdate() {
-        return shipdate;
-    }
-
-    public void setShipdate(Date shipdate) {
-        this.shipdate = shipdate;
-    }
+ 
 
     public Order getVaccineOrder() {
         return vaccineOrder;
@@ -36,14 +34,27 @@ public class OrderVaccineWorkRequest extends WorkRequest {
         this.vaccineOrder = vaccineOrder;
     }
 
-    
-    
-    
-    
+    public Order getShipOrder() {
+        return shipOrder;
+    }
+
+    public void setShipOrder(Order shipOrder) {
+        this.shipOrder = shipOrder;
+    }
+
+    public Date getShippingDate() {
+        return shippingDate;
+    }
+
+    public void setShippingDate(Date shippingDate) {
+        this.shippingDate = shippingDate;
+    }
+
     @Override
     public String toString() {
         return String.valueOf(vaccineOrder.getOrderNumber());
     }
-     
+   
     
 }
+
