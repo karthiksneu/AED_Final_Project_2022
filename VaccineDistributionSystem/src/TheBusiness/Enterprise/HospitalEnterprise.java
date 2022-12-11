@@ -3,11 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+
 package TheBusiness.Enterprise;
 
 import TheBusiness.OrderManagement.OrderHistory;
 import TheBusiness.Roles.Role;
 import java.util.ArrayList;
+
 
 /**
  *
@@ -35,5 +38,6 @@ public class HospitalEnterprise extends Enterprise {
     public ArrayList<Role> getSupportedRole() {
         return null;
     }
+
 
 }

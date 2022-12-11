@@ -1,15 +1,22 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+
+ * @author Dsouza
  */
-package TheBusiness.Network;
+public class StateNetwork {
+    
+    private ArrayList<CityNetwork> cityList;
+ 
+    private String stateName;
+    private int statePopulation;
+    private int vaccinesLeftForState;
+    
+    public StateNetwork() {
+        
+        this.cityList = new ArrayList<>();
+      
+        statePopulation = 0;
+        vaccinesLeftForState = statePopulation;
 
-import TheBusiness.Enterprise.LocalHealthDepartment;
-import java.util.ArrayList;
-
-/**
- *
  * @author karthik
  *
  */
@@ -40,6 +47,7 @@ public class StateNetwork {
         statePopulation = 0;
         vaccinesLeftForState = statePopulation;
 
+
     }
 
     public int getStatePopulation() {
@@ -50,6 +58,7 @@ public class StateNetwork {
         this.statePopulation = statePopulation;
     }
 
+
     public ArrayList<CityNetwork> getCityList() {
         return cityList;
     }
@@ -57,6 +66,7 @@ public class StateNetwork {
     public void setCityList(ArrayList<CityNetwork> cityList) {
         this.cityList = cityList;
     }
+
 
     public int getVaccinesLeftForState() {
         return vaccinesLeftForState;
@@ -66,6 +76,7 @@ public class StateNetwork {
         this.vaccinesLeftForState = vaccinesLeftForState;
     }
 
+
     public LocalHealthDepartment getLocalHealthDepartment() {
         return localHealthDept;
     }
@@ -74,6 +85,7 @@ public class StateNetwork {
         this.localHealthDept = localHealthDept;
     }
 
+
     public String getStateName() {
         return stateName;
     }
@@ -81,6 +93,7 @@ public class StateNetwork {
     public void setStateName(String stateName) {
         this.stateName = stateName;
     }
+
 
     public CityNetwork addNewCity(String name) {
 
@@ -103,10 +116,12 @@ public class StateNetwork {
             for (CityNetwork city : cityList) {
                 sum = sum + city.getTotalVaccinesAdministeredInCity();
             }
+
         }
         return sum;
 
     }
+
 
     //Dispalys number of failed vaccines distributed in State
     public int getTotalVaccinesDistributedInState() {
@@ -115,10 +130,12 @@ public class StateNetwork {
             for (CityNetwork c : cityList) {
                 sum = sum + c.getTotalVaccinesDistributedInCity();
             }
+
         }
         return sum;
 
     }
+
 
     //Dispalys number of failed vaccines administered in State
     public int getTotalFailedVaccinesInState() {
@@ -132,9 +149,12 @@ public class StateNetwork {
 
     }
 
+
     @Override
     public String toString() {
         return stateName;
     }
 
+
 }
+
