@@ -12,22 +12,21 @@ import java.util.ArrayList;
 /**
  *
  * @author karthik
- *
- *
- **/
+ * 
+ */
+//Initializing class CenterOfDiseaseControl extends Enterprise
+public class CenterOfDiseaseControl extends Enterprise {
 
-
-//Initializing class Distributor extends Enterprise
-public class Distributor extends Enterprise {
-
-    //Constructor for Distributor
-    public Distributor(String name) {
-        super(name, Enterprise.EnterpriseType.Distributor);
+    //Constructor
+    public CenterOfDiseaseControl(String name) {
+        super(name, EnterpriseType.CDC);
+        
     }
 
     @Override
     public ArrayList<Role> getSupportedRole() {
         return null;
+
     }
 
 }
