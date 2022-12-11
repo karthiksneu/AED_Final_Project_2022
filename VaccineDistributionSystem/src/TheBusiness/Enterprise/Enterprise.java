@@ -1,19 +1,29 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package TheBusiness.Enterprise;
+
+
 
 import TheBusiness.Organization.Organization;
 import TheBusiness.Organization.OrganizationDirectory;
 
 /**
  *
- * @author Dsouza
+
+ * @author karthik
+ * 
+ * 
  */
+
+//Initializing abstract class  Enterprise extends Organization
 public abstract class  Enterprise extends Organization{
     
-    private String enterpriseName;
+    private String entprName;
+
     private EnterpriseType enterpriseType;
     private OrganizationDirectory organizationDirectory;
   
@@ -35,13 +45,15 @@ public abstract class  Enterprise extends Organization{
     }
 
 
+    //Creating getter and setter.
 
     public String getEnterpriseName() {
-        return enterpriseName;
+        return entprName;
     }
 
-    public void setEnterpriseName(String enterpriseName) {
-        this.enterpriseName = enterpriseName;
+    public void setEnterpriseName(String entprName) {
+        this.entprName = entprName;
+
     }
     
     
@@ -49,25 +61,30 @@ public abstract class  Enterprise extends Organization{
     public enum EnterpriseType
     {
         Hospital ("Hospital"),
-        CDC("CDC"),
+
         Manufacturer("Manufacturer"),
         Distributor("Distributor"),
+        CDC("CDC"),
         LocalHealthDepartment("Local Health Department");
-        private String value;
         
-        private EnterpriseType(String value){
-            this.value = value;
+        private String val;
+        
+        private EnterpriseType(String val){
+            this.val = val;
         }
         
         public String getValue(){
-            return value;
+            return val;
+
         }
 
         @Override
         public String toString() {
-            return value;
+
+            return val;
         }
               
     }
-    
+ 
 }
+

@@ -4,32 +4,40 @@
  * and open the template in the editor.
  */
 
+
 package TheBusiness.Enterprise;
 
 import TheBusiness.OrderManagement.OrderHistory;
 import TheBusiness.Roles.Role;
 import java.util.ArrayList;
-//
+
+
 /**
  *
- * @author Dsouza
+ * @author karthik
+ *
+ *
  */
-
 //Initializing  class  HospitalEnterprise extends Organization
 public class HospitalEnterprise extends Enterprise {
-    
-    private OrderHistory orderHistory;
-    
+
+    private OrderHistory orderHist;
+
     public HospitalEnterprise(String name) {
-        
+
         super(name, EnterpriseType.Hospital);
-        this.orderHistory = new OrderHistory();
+        this.orderHist = new OrderHistory();
+
     }
 
     public OrderHistory getOrderHistory() {
-        return orderHistory;
+        return orderHist;
     }
-    
-   
-    
+
+    @Override
+    public ArrayList<Role> getSupportedRole() {
+        return null;
+    }
+
+
 }
