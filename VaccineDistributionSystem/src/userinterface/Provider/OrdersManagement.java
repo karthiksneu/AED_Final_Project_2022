@@ -4,17 +4,17 @@
  * and open the template in the editor.
  */
 
-package UserInterface.Provider;
+package userinterface.Provider;
 
-import Business.EcoSystem;
-import Business.Enterprise.HospitalEnterprise;
-import Business.Network.StateNetwork;
-import Business.Organization.HospitalOrganization;
-import Business.Organization.Organization;
-import Business.UserAccount.UserAccount;
-import Business.WorkQueue.ProviderVaccineOrderWorkRequest;
-import Business.WorkQueue.ShippingOrderWorkRequest;
-import Business.WorkQueue.WorkRequest;
+import TheBusiness.Ecosystems;
+import TheBusiness.Enterprise.HospitalEnterprise;
+import TheBusiness.Network.StateNetwork;
+import TheBusiness.Organization.HospitalOrganization;
+import TheBusiness.Organization.Organization;
+import TheBusiness.UserAccountManagement.UserAccount;
+import TheBusiness.WorkOrderQueue.ProviderOrderRequest;
+import TheBusiness.WorkOrderQueue.ShippingOrderWorkRequest;
+import TheBusiness.WorkOrderQueue.WorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -24,20 +24,20 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author soham
  */
-public class ManageOrdersJPanel extends javax.swing.JPanel {
+public class OrdersManagement extends javax.swing.JPanel {
 
     /**
-     * Creates new form ManageOrdersJPanel
+     * Creates new form OrdersManagement
      */
     private JPanel workContainer;
 
     private HospitalEnterprise hospital;
     private UserAccount userAccount;
     private HospitalOrganization hospitalOrg;
-    private EcoSystem business;
+    private Ecosystems business;
     private StateNetwork state;
     
-    public ManageOrdersJPanel(JPanel workContainer, HospitalEnterprise hospital,HospitalOrganization hospitalOrg,UserAccount userAccount , EcoSystem business, StateNetwork state) {
+    public OrdersManagement(JPanel workContainer, HospitalEnterprise hospital,HospitalOrganization hospitalOrg,UserAccount userAccount , Ecosystems business, StateNetwork state) {
         initComponents();
         this.workContainer = workContainer;
         this.userAccount = userAccount;
@@ -66,9 +66,9 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
         
         for(WorkRequest wr: hospitalOrg.getWorkQueue().getWorkRequestList())
         {   
-            if( wr instanceof ProviderVaccineOrderWorkRequest)
+            if( wr instanceof ProviderOrderRequest)
             {
-              ProviderVaccineOrderWorkRequest request = (ProviderVaccineOrderWorkRequest)wr  ;
+              ProviderOrderRequest request = (ProviderOrderRequest)wr  ;
                Object[] row = new Object[5];
                row[0] = request;
                row[1] = getContractDetails(request);
@@ -84,7 +84,7 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
     }
     }
     
-    private String getContractDetails(ProviderVaccineOrderWorkRequest request){
+    private String getContractDetails(ProviderOrderRequest request){
         
         if(request.ishalfmonthContract())
             return "Half Monthly";
@@ -322,9 +322,9 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
             return;
         }
         
-        ProviderVaccineOrderWorkRequest request = (ProviderVaccineOrderWorkRequest)tblrorder.getValueAt(selectedRow, 0);
+        ProviderOrderRequest request = (ProviderOrderRequest)tblrorder.getValueAt(selectedRow, 0);
         
-        ViewDetailsOfPlacedOrderJPanel panel = new ViewDetailsOfPlacedOrderJPanel(workContainer, request);
+        ViewPlacedOrders panel = new ViewPlacedOrders(workContainer, request);
         workContainer.add("ViewDetailsOfPlacedOrderJPanel", panel);
         CardLayout layout = (CardLayout)workContainer.getLayout();
         layout.next(workContainer);
@@ -345,7 +345,7 @@ public class ManageOrdersJPanel extends javax.swing.JPanel {
         ShippingOrderWorkRequest request = (ShippingOrderWorkRequest)tblship.getValueAt(selectedRow, 0);
         
         
-        ViewDetailsOfShippedOrderJPanel panel = new ViewDetailsOfShippedOrderJPanel(workContainer, business , hospital, hospitalOrg, request);
+        ViewShippedOrders panel = new ViewShippedOrders(workContainer, business , hospital, hospitalOrg, request);
         workContainer.add("ViewDetailsOfShippedOrderJPanel", panel);
         CardLayout layout = (CardLayout)workContainer.getLayout();
         layout.next(workContainer);

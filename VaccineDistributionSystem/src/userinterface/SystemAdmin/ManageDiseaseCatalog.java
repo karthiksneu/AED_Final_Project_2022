@@ -37,7 +37,7 @@ public class ManageDiseaseCatalog extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tbldislist.getModel();
         model.setRowCount(0);
         
-        for(Disease disease : business.getDiseaseDirectory().getdiseaseDirectory())
+        for(Disease disease : business.getDiseaseDirectory().getdiseaseDir())
         {
             Object[] row = new Object[3];
             row[0] = disease;

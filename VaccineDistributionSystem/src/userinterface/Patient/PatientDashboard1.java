@@ -6,7 +6,11 @@
 
 package userinterface.Patient;
 
-
+import TheBusiness.Ecosystems;
+import TheBusiness.Enterprise.Enterprise;
+import TheBusiness.Enterprise.HospitalEnterprise;
+import TheBusiness.Organization.Organization;
+import TheBusiness.UserAccountManagement.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
@@ -20,10 +24,24 @@ public class PatientDashboard1 extends javax.swing.JPanel {
      * Creates new form PatientWorkAreaJPanel
      */
   
+        private JPanel userProcessContainer;
+    private UserAccount userAccount;
+    private Enterprise enterprise;
+    private Organization organization;
+    private Ecosystems business;
     
     public PatientDashboard1() {
         initComponents();
         
+    }
+    
+        public PatientDashboard1(JPanel userProcessContainer,UserAccount userAccount, Enterprise enterprise, Organization organization, Ecosystems business) {
+        initComponents();
+        this.userProcessContainer = userProcessContainer;
+        this.userAccount = userAccount;
+        this.enterprise = enterprise;
+        this.organization = organization;
+        this.business = business;
     }
 
     /**
@@ -40,7 +58,7 @@ public class PatientDashboard1 extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         mainMenu = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        btnviewadminvacc = new javax.swing.JButton();
+        btnViewAdministeredVaccines = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
 
         setLayout(new java.awt.BorderLayout());
@@ -59,13 +77,13 @@ public class PatientDashboard1 extends javax.swing.JPanel {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Main Menu:");
 
-        btnviewadminvacc.setBackground(new java.awt.Color(0, 0, 102));
-        btnviewadminvacc.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnviewadminvacc.setForeground(new java.awt.Color(255, 255, 255));
-        btnviewadminvacc.setText("View Administered Vaccines");
-        btnviewadminvacc.addActionListener(new java.awt.event.ActionListener() {
+        btnViewAdministeredVaccines.setBackground(new java.awt.Color(0, 0, 102));
+        btnViewAdministeredVaccines.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnViewAdministeredVaccines.setForeground(new java.awt.Color(255, 255, 255));
+        btnViewAdministeredVaccines.setText("View Administered Vaccines");
+        btnViewAdministeredVaccines.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnviewadminvaccActionPerformed(evt);
+                btnViewAdministeredVaccinesActionPerformed(evt);
             }
         });
 
@@ -80,7 +98,7 @@ public class PatientDashboard1 extends javax.swing.JPanel {
             .addGroup(mainMenuLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(mainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnviewadminvacc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnViewAdministeredVaccines, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(mainMenuLayout.createSequentialGroup()
                         .addGroup(mainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
@@ -98,7 +116,7 @@ public class PatientDashboard1 extends javax.swing.JPanel {
                 .addGap(54, 54, 54)
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
-                .addComponent(btnviewadminvacc)
+                .addComponent(btnViewAdministeredVaccines)
                 .addContainerGap(416, Short.MAX_VALUE))
         );
 
@@ -107,14 +125,17 @@ public class PatientDashboard1 extends javax.swing.JPanel {
         add(jSplitPane1, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnviewadminvaccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnviewadminvaccActionPerformed
+    private void btnViewAdministeredVaccinesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewAdministeredVaccinesActionPerformed
         // TODO add your handling code here:
-      
-    }//GEN-LAST:event_btnviewadminvaccActionPerformed
+        VaccinatedPatients panel = new VaccinatedPatients(workContainer, (HospitalEnterprise)enterprise, userAccount);
+        workContainer.add("AdministeredVaccineListJPanel", panel);
+        CardLayout layout = (CardLayout)workContainer.getLayout();
+        layout.next(workContainer);
+    }//GEN-LAST:event_btnViewAdministeredVaccinesActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnviewadminvacc;
+    private javax.swing.JButton btnViewAdministeredVaccines;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;

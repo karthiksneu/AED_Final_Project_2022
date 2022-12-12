@@ -3,21 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package UserInterface.Provider;
+package userinterface.Provider;
 
-import Business.EcoSystem;
-import Business.Enterprise.HospitalEnterprise;
-import Business.NationalEnterprise.Manufacturer;
-import Business.Network.StateNetwork;
-import Business.Order.Order;
-import Business.Order.OrderItem;
-import Business.Organization.HospitalOrganization;
-import Business.Organization.ManufactureOrganization;
-import Business.Organization.Organization;
-import Business.Organization.LHDImmuneOrganization;
-import Business.UserAccount.UserAccount;
-import Business.Vaccine.VaccineDetails;
-import Business.WorkQueue.ProviderVaccineOrderWorkRequest;
+import TheBusiness.Ecosystems;
+import TheBusiness.Enterprise.HospitalEnterprise;
+import TheBusiness.NationalEnterprise.Manufacturer;
+import TheBusiness.Network.StateNetwork;
+import TheBusiness.OrderManagement.Order;
+import TheBusiness.OrderManagement.OrderItem;
+import TheBusiness.Organization.HospitalOrganization;
+import TheBusiness.Organization.ManufactureOrganization;
+import TheBusiness.Organization.Organization;
+import TheBusiness.Organization.LocalHealthDptImmuneOrganization;
+import TheBusiness.UserAccountManagement.UserAccount;
+import TheBusiness.VaccineManagement.VaccineDetails;
+import TheBusiness.WorkOrderQueue.ProviderOrderRequest;
 import java.awt.CardLayout;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -28,7 +28,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author soham
  */
-public class PlaceVaccineOrderJPanel extends javax.swing.JPanel {
+public class OrderVaccine extends javax.swing.JPanel {
 
     /**
      * Creates new form CreateVaccineOrderJPanel
@@ -38,13 +38,13 @@ public class PlaceVaccineOrderJPanel extends javax.swing.JPanel {
     private HospitalEnterprise hospital;
     private UserAccount userAccount;
     private HospitalOrganization hospitalOrg;
-    private EcoSystem business;
+    private Ecosystems business;
     private Order tempOrder;
     private ArrayList<OrderItem> cartOrder;
     private boolean isCheckout;
     private StateNetwork state;
 
-    public PlaceVaccineOrderJPanel(JPanel workContainer, HospitalEnterprise hospital,HospitalOrganization hospitalOrg,UserAccount userAccount , EcoSystem business, StateNetwork state) {
+    public OrderVaccine(JPanel workContainer, HospitalEnterprise hospital,HospitalOrganization hospitalOrg,UserAccount userAccount , Ecosystems business, StateNetwork state) {
         initComponents();
         this.workContainer = workContainer;
         this.userAccount = userAccount;
@@ -623,7 +623,7 @@ public class PlaceVaccineOrderJPanel extends javax.swing.JPanel {
                 Order o = hospital.getOrderCatalog().addNewOrder();
                 o=tempOrder;
                
-                ProviderVaccineOrderWorkRequest workRequest = new ProviderVaccineOrderWorkRequest();
+                ProviderOrderRequest workRequest = new ProviderOrderRequest();
                 workRequest.setasReq(adhoc);
                 workRequest.setHalfmonthContract(bimonth);
                 workRequest.setfullMonthContract(monthly);
@@ -644,7 +644,7 @@ public class PlaceVaccineOrderJPanel extends javax.swing.JPanel {
                 
                 for(Organization org: state.getLocalHealthDepartment().getOrganizationDirectory().getOrganizationList())
                 {
-                    if(org instanceof LHDImmuneOrganization)
+                    if(org instanceof LocalHealthDptImmuneOrganization)
                     {
                         org.getWorkQueue().addWorkRequest(workRequest);
                     }
@@ -671,7 +671,7 @@ public class PlaceVaccineOrderJPanel extends javax.swing.JPanel {
         displayManufacturerVaccines();
         refreshCartTable();
 
-          PlaceVaccineOrderJPanel panel = new PlaceVaccineOrderJPanel(workContainer, hospital, hospitalOrg, userAccount, business, state);
+          OrderVaccine panel = new OrderVaccine(workContainer, hospital, hospitalOrg, userAccount, business, state);
         workContainer.add("PlaceVaccineOrderJPanel", panel);
         CardLayout layout = (CardLayout)workContainer.getLayout();
         layout.next(workContainer);

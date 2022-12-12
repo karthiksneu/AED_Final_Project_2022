@@ -4,18 +4,17 @@
  * and open the template in the editor.
  */
 
-package UserInterface.Provider;
+package userinterface.Provider;
 
-import Business.EcoSystem;
-import Business.Enterprise.HospitalEnterprise;
-
-import Business.Network.StateNetwork;
-import Business.Organization.HospitalOrganization;
-import Business.Organization.Organization;
-import Business.Organization.PatientOrganization;
-import Business.Person.Patient;
-import Business.Person.Person;
-import Business.UserAccount.UserAccount;
+import TheBusiness.Ecosystems;
+import TheBusiness.Enterprise.HospitalEnterprise;
+import TheBusiness.Network.StateNetwork;
+import TheBusiness.Organization.HospitalOrganization;
+import TheBusiness.Organization.Organization;
+import TheBusiness.Organization.PatientOrganization;
+import TheBusiness.Personnel.Patient;
+import TheBusiness.Personnel.Person;
+import TheBusiness.UserAccountManagement.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -24,10 +23,10 @@ import javax.swing.JPanel;
  *
  * @author soham
  */
-public class AdministerVaccineJPanel extends javax.swing.JPanel {
+public class VaccinatePatient extends javax.swing.JPanel {
 
     /**
-     * Creates new form AdministerVaccineJPanel
+     * Creates new form VaccinatePatient
      */
     
     private JPanel workContainer;
@@ -35,10 +34,10 @@ public class AdministerVaccineJPanel extends javax.swing.JPanel {
     private HospitalEnterprise hospital;
     private UserAccount userAccount;
     private HospitalOrganization hospitalOrg;
-    private EcoSystem business;
+    private Ecosystems business;
     private StateNetwork state;
     
-    public AdministerVaccineJPanel(JPanel workContainer, HospitalEnterprise hospital,HospitalOrganization hospitalOrg,UserAccount userAccount , EcoSystem business, StateNetwork state) {
+    public VaccinatePatient(JPanel workContainer, HospitalEnterprise hospital,HospitalOrganization hospitalOrg,UserAccount userAccount , Ecosystems business, StateNetwork state) {
         initComponents();
         this.workContainer = workContainer;
         this.userAccount = userAccount;
@@ -280,7 +279,7 @@ public class AdministerVaccineJPanel extends javax.swing.JPanel {
         }
 
         
-        AdministerVaccineToPatientJPanel panel = new AdministerVaccineToPatientJPanel(workContainer, hospital, hospitalOrg, userAccount, business, patient, state);
+        VaccinatePatientDetails panel = new VaccinatePatientDetails(workContainer, hospital, hospitalOrg, userAccount, business, patient, state);
         workContainer.add("AdministerVaccineToPatientJPanel", panel);
         CardLayout layout = (CardLayout)workContainer.getLayout();
         layout.next(workContainer);

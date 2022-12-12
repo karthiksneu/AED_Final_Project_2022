@@ -169,7 +169,7 @@ public class AddDiseases extends javax.swing.JPanel {
         
         Date lastUpdatedDate = dcldate.getDate();
         
-        for(Disease d : business.getDiseaseDirectory().getdiseaseDirectory())
+        for(Disease d : business.getDiseaseDirectory().getdiseaseDir())
         {
             if(d.getDiseaseCode().equalsIgnoreCase(diseaseCode) && d.getDiseaseName().equalsIgnoreCase(diseaseName))
             {

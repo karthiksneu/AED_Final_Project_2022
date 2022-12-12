@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package UserInterface.Provider;
+package userinterface.Provider;
 
-import Business.EcoSystem;
-import Business.Enterprise.HospitalEnterprise;
-import Business.Order.OrderItem;
-import Business.Organization.HospitalOrganization;
-import Business.Organization.Organization;
-import Business.Vaccine.VaccineDetails;
-import Business.WorkQueue.ShippingOrderWorkRequest;
+import TheBusiness.Ecosystems;
+import TheBusiness.Enterprise.HospitalEnterprise;
+import TheBusiness.OrderManagement.OrderItem;
+import TheBusiness.Organization.HospitalOrganization;
+import TheBusiness.Organization.Organization;
+import TheBusiness.VaccineManagement.VaccineDetails;
+import TheBusiness.WorkOrderQueue.ShippingOrderWorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -21,18 +21,18 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author soham
  */
-public class ViewDetailsOfShippedOrderJPanel extends javax.swing.JPanel {
+public class ViewShippedOrders extends javax.swing.JPanel {
 
     /**
-     * Creates new form ViewDetailsOfShippedOrderJPanel
+     * Creates new form ViewShippedOrders
      */
     private JPanel workContainer;
-    private EcoSystem business;
+    private Ecosystems business;
     private HospitalEnterprise hospitalEnterprise;
     private HospitalOrganization hospitalOrganization;
     private ShippingOrderWorkRequest request;
 
-    public ViewDetailsOfShippedOrderJPanel(JPanel workContainer, EcoSystem business, HospitalEnterprise hospitalEnterprise, HospitalOrganization hospitalOrganization, ShippingOrderWorkRequest request) {
+    public ViewShippedOrders(JPanel workContainer, Ecosystems business, HospitalEnterprise hospitalEnterprise, HospitalOrganization hospitalOrganization, ShippingOrderWorkRequest request) {
         initComponents();
         this.workContainer = workContainer;
         this.business = business;

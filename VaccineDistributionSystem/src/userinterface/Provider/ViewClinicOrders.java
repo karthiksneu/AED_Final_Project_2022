@@ -4,11 +4,15 @@
  * and open the template in the editor.
  */
 
-package UserInterface.Provider;
+package userinterface.Provider;
 
-import Business.Order.OrderItem;
-import Business.WorkQueue.ProviderVaccineOrderWorkRequest;
+import TheBusiness.Network.StateNetwork;
+import TheBusiness.OrderManagement.OrderItem;
+import TheBusiness.Organization.Organization;
+import TheBusiness.Organization.LocalHealthDptImmuneOrganization;
+import TheBusiness.WorkOrderQueue.ProviderOrderRequest;
 import java.awt.CardLayout;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
@@ -16,21 +20,23 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author soham
  */
-public class ViewDetailsOfPlacedOrderJPanel extends javax.swing.JPanel {
+public class ViewClinicOrders extends javax.swing.JPanel {
 
     /**
      * Creates new form ViewDetailsOfPlacedOrderJPanel
      */
     private JPanel workContainer;
-    private ProviderVaccineOrderWorkRequest request;
+    private ProviderOrderRequest request;
+    private StateNetwork state;
     
-    public ViewDetailsOfPlacedOrderJPanel(JPanel workContainer, ProviderVaccineOrderWorkRequest request) {
+    public ViewClinicOrders(JPanel workContainer, ProviderOrderRequest request, StateNetwork state) {
         initComponents();
         this.workContainer = workContainer;
         this.request = request;
+        this.state = state;
         displayContractDetails();
         calculateTotalCostOfOrder();
-        txtordernum.setText(String.valueOf(request.getVaccineOrder().getOrderNumber()));
+        txtornum.setText(String.valueOf(request.getVaccineOrder().getOrderNumber()));
         populateOrderTable();
     }
     
@@ -52,13 +58,13 @@ public class ViewDetailsOfPlacedOrderJPanel extends javax.swing.JPanel {
         {
             total = total + (oi.getVaccineDetails().getVaccinePrice()*oi.getQuantity());
         }
-        txttotamt.setText(String.valueOf(total));
+        txttamt.setText(String.valueOf(total));
     }
     
     private void populateOrderTable(){
         
-         int rowCount = tblorder.getRowCount();
-        DefaultTableModel defaulttabelmodel = (DefaultTableModel)tblorder.getModel();
+         int rowCount = tblorderdetail.getRowCount();
+        DefaultTableModel defaulttabelmodel = (DefaultTableModel)tblorderdetail.getModel();
         
         for(int i=rowCount-1 ; i>=0; i--){
             defaulttabelmodel.removeRow(i);
@@ -73,13 +79,13 @@ public class ViewDetailsOfPlacedOrderJPanel extends javax.swing.JPanel {
                 row[2] = oi.getVaccineDetails().getManufacturerName();
                 row[3] = oi.getVaccineDetails().getVaccineId();
                 row[4] = oi.getVaccineDetails().getBatchId();
+                
                 row[5] = oi.getVaccineDetails().getVaccinePrice();
                 row[6] = oi.getQuantity();
                 row[7] = oi.getVaccineDetails().getManufactureDate();
-                row[8] = oi.getVaccineDetails().getVaccinePrice()*oi.getQuantity();    
+                row[8] = oi.getVaccineDetails().getVaccinePrice()*oi.getQuantity();              
                 defaulttabelmodel.addRow(row);
-          
-            
+        
         }
     }
 
@@ -97,26 +103,27 @@ public class ViewDetailsOfPlacedOrderJPanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        txttotamt = new javax.swing.JTextField();
-        txtordernum = new javax.swing.JTextField();
+        txttamt = new javax.swing.JTextField();
+        txtornum = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
-        tblorder = new javax.swing.JTable();
+        tblorderdetail = new javax.swing.JTable();
         jLabel6 = new javax.swing.JLabel();
-        btnback = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        btnbvack = new javax.swing.JButton();
+        btnsubmit = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(70, 130, 180));
+        setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("View Details of Placed Order");
+        jLabel1.setText("View Details of Placed Order by Clinic");
 
         txtdetails.setEnabled(false);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Order Particulars:");
+        jLabel3.setText("Order Details:");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -126,11 +133,11 @@ public class ViewDetailsOfPlacedOrderJPanel extends javax.swing.JPanel {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Order Number:");
 
-        txttotamt.setEnabled(false);
+        txttamt.setEnabled(false);
 
-        txtordernum.setEnabled(false);
+        txtornum.setEnabled(false);
 
-        tblorder.setModel(new javax.swing.table.DefaultTableModel(
+        tblorderdetail.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -146,21 +153,29 @@ public class ViewDetailsOfPlacedOrderJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        tblorder.getTableHeader().setReorderingAllowed(false);
-        jScrollPane2.setViewportView(tblorder);
+        tblorderdetail.getTableHeader().setReorderingAllowed(false);
+        jScrollPane2.setViewportView(tblorderdetail);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Contract :");
+        jLabel6.setText("Order");
 
-        btnback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
-        btnback.addActionListener(new java.awt.event.ActionListener() {
+        btnbvack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
+        btnbvack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnbackActionPerformed(evt);
+                btnbvackActionPerformed(evt);
             }
         });
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/003.png"))); // NOI18N
+        btnsubmit.setBackground(new java.awt.Color(0, 0, 0));
+        btnsubmit.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnsubmit.setForeground(new java.awt.Color(255, 255, 255));
+        btnsubmit.setText("Forward the Order to LHD");
+        btnsubmit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsubmitActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -173,26 +188,25 @@ public class ViewDetailsOfPlacedOrderJPanel extends javax.swing.JPanel {
                     .addComponent(jScrollPane2)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnback)
                             .addComponent(jLabel3)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtordernum, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtornum, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel5)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txttotamt, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txttamt, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel6)
                                 .addGap(18, 18, 18)
                                 .addComponent(txtdetails, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 73, Short.MAX_VALUE)))
+                        .addGap(0, 95, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnbvack)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnsubmit)))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(226, 226, 226)
-                .addComponent(jLabel4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -206,41 +220,63 @@ public class ViewDetailsOfPlacedOrderJPanel extends javax.swing.JPanel {
                         .addComponent(txtdetails, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel5)
-                        .addComponent(txttotamt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txttamt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel2)
-                        .addComponent(txtordernum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtornum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnback)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnbvack)
+                    .addComponent(btnsubmit))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
+    private void btnbvackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbvackActionPerformed
         // TODO add your handling code here:
         workContainer.remove(this);
         CardLayout layout = (CardLayout) workContainer.getLayout();
         layout.previous(workContainer);
-    }//GEN-LAST:event_btnbackActionPerformed
+    }//GEN-LAST:event_btnbvackActionPerformed
+
+    private void btnsubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsubmitActionPerformed
+        // TODO add your handling code here:
+        if(request.getStatus().equalsIgnoreCase("FWD to LHD") || request.getStatus().equalsIgnoreCase("Shipped") || request.getStatus().equalsIgnoreCase("Stored"))
+        {
+            JOptionPane.showMessageDialog(null, "Order already forwarded to LHD!");
+            return;
+        }
+        
+        
+        for(Organization org: state.getLocalHealthDepartment().getOrganizationDirectory().getOrganizationList())
+                {
+                    if(org instanceof LocalHealthDptImmuneOrganization)
+                    {
+                        org.getWorkQueue().addWorkRequest(request);
+                    }
+                }
+        request.setStatus("FWD to LHD");
+        
+        JOptionPane.showMessageDialog(null, "Order forwarded to LHD!");
+    }//GEN-LAST:event_btnsubmitActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnback;
+    private javax.swing.JButton btnbvack;
+    private javax.swing.JButton btnsubmit;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable tblorder;
+    private javax.swing.JTable tblorderdetail;
     private javax.swing.JTextField txtdetails;
-    private javax.swing.JTextField txtordernum;
-    private javax.swing.JTextField txttotamt;
+    private javax.swing.JTextField txtornum;
+    private javax.swing.JTextField txttamt;
     // End of variables declaration//GEN-END:variables
 }
