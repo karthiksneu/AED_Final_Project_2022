@@ -24,24 +24,24 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lbl1" max="32767" attributes="0"/>
+                  <Component id="lblTitle" max="32767" attributes="0"/>
                   <Component id="jScrollPane1" pref="1007" max="32767" attributes="0"/>
                   <Component id="jSeparator1" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="lbl3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblLocation" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="btn1" pref="171" max="32767" attributes="0"/>
-                                  <Component id="txt1" max="32767" attributes="0"/>
+                                  <Component id="btnAddWarehouse" pref="171" max="32767" attributes="0"/>
+                                  <Component id="txtLocation" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="btn2" min="-2" pref="177" max="-2" attributes="0"/>
-                                  <Component id="lbl2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnViewInventory" min="-2" pref="177" max="-2" attributes="0"/>
+                                  <Component id="lblAddNewWarehouse" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -58,13 +58,13 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="lbl1" min="-2" max="-2" attributes="0"/>
+              <Component id="lblTitle" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="115" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="btn2" min="-2" max="-2" attributes="0"/>
+              <Component id="btnViewInventory" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-              <Component id="lbl2" min="-2" max="-2" attributes="0"/>
+              <Component id="lblAddNewWarehouse" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
@@ -72,11 +72,11 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lbl3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txt1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblLocation" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtLocation" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="btn1" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnAddWarehouse" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Component id="jLabel1" min="-2" pref="404" max="-2" attributes="0"/>
               </Group>
@@ -86,7 +86,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="lbl1">
+    <Component class="javax.swing.JLabel" name="lblTitle">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="October Compressed Devanagari" size="24" style="1"/>
@@ -142,7 +142,7 @@
     </Container>
     <Component class="javax.swing.JSeparator" name="jSeparator1">
     </Component>
-    <Component class="javax.swing.JLabel" name="lbl2">
+    <Component class="javax.swing.JLabel" name="lblAddNewWarehouse">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="October Compressed Devanagari" size="14" style="1"/>
@@ -153,7 +153,7 @@
         <Property name="text" type="java.lang.String" value="Add New Warehouse:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbl3">
+    <Component class="javax.swing.JLabel" name="lblLocation">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="October Compressed Devanagari" size="14" style="0"/>
@@ -164,9 +164,9 @@
         <Property name="text" type="java.lang.String" value="Location:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt1">
+    <Component class="javax.swing.JTextField" name="txtLocation">
     </Component>
-    <Component class="javax.swing.JButton" name="btn1">
+    <Component class="javax.swing.JButton" name="btnAddWarehouse">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="0" type="rgb"/>
@@ -183,10 +183,10 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddWarehouseActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btn2">
+    <Component class="javax.swing.JButton" name="btnViewInventory">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="0" type="rgb"/>
@@ -203,7 +203,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnViewInventoryActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">

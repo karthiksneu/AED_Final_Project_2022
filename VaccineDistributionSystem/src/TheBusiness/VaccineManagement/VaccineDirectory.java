@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Dsouza
+ * @author soham
  */
 
 //Crating class VaccineDirectory
@@ -18,14 +18,11 @@ public class VaccineDirectory {
     
     private ArrayList<Vaccine> vaccineCatalog;
 
-    
-    
     public VaccineDirectory() {
         
         vaccineCatalog = new ArrayList<>();
     }
 
-    
     public ArrayList<Vaccine> getVaccineCatalog() {
         return vaccineCatalog;
     }
@@ -34,24 +31,18 @@ public class VaccineDirectory {
         this.vaccineCatalog = vaccineCatalog;
     }
     
-    //remove
+    public Vaccine addNewVaccineDefinition(){
+        
+        Vaccine newVaccine = new Vaccine();
+        vaccineCatalog.add(newVaccine);
+        return newVaccine;
+        
+    }
     
     public void removeVaccineDefinition(Vaccine vaccine){
         
         vaccineCatalog.remove(vaccine);
     }
-    
-    
-    //addvacc method
-    public Vaccine addNewVaccineDefinition(){
-        
-        Vaccine newestVaccine = new Vaccine();
-        vaccineCatalog.add(newestVaccine);
-        return newestVaccine;
-        
-    }
-    
-    
     
     
     

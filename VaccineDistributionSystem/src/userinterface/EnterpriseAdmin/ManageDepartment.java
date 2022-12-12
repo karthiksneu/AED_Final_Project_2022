@@ -43,12 +43,12 @@ public class ManageDepartment extends javax.swing.JPanel {
         this.enterprise = enterprise;
         populateTable();
         populateCombo();
-        txt1.setVisible(false);
-            lbl4.setVisible(false);
+        txtClinicName.setVisible(false);
+            lblClinicName.setVisible(false);
         if(enterprise instanceof HospitalEnterprise)
         {
-            txt1.setVisible(true);
-            lbl4.setVisible(true);
+            txtClinicName.setVisible(true);
+            lblClinicName.setVisible(true);
                 
         }
         
@@ -115,24 +115,24 @@ public class ManageDepartment extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbl1 = new javax.swing.JLabel();
+        lblTitle = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblorg = new javax.swing.JTable();
-        btn1 = new javax.swing.JButton();
-        lbl2 = new javax.swing.JLabel();
+        btnBack = new javax.swing.JButton();
+        lblOrganizationType = new javax.swing.JLabel();
         cborglist = new javax.swing.JComboBox();
-        btn2 = new javax.swing.JButton();
+        btnAddOrganization = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
-        lbl3 = new javax.swing.JLabel();
-        lbl4 = new javax.swing.JLabel();
-        txt1 = new javax.swing.JTextField();
+        lblAddOrganization = new javax.swing.JLabel();
+        lblClinicName = new javax.swing.JLabel();
+        txtClinicName = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(70, 130, 180));
 
-        lbl1.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
-        lbl1.setForeground(new java.awt.Color(255, 255, 255));
-        lbl1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbl1.setText("Manage Organization");
+        lblTitle.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitle.setText("Manage Organization");
 
         tblorg.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -160,36 +160,36 @@ public class ManageDepartment extends javax.swing.JPanel {
         tblorg.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tblorg);
 
-        btn1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
-        btn1.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn1ActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
 
-        lbl2.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
-        lbl2.setForeground(new java.awt.Color(255, 255, 255));
-        lbl2.setText("Organization Type ");
+        lblOrganizationType.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
+        lblOrganizationType.setForeground(new java.awt.Color(255, 255, 255));
+        lblOrganizationType.setText("Organization Type ");
 
         cborglist.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        btn2.setBackground(new java.awt.Color(0, 0, 0));
-        btn2.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
-        btn2.setForeground(new java.awt.Color(255, 255, 255));
-        btn2.setText("Add Organization");
-        btn2.addActionListener(new java.awt.event.ActionListener() {
+        btnAddOrganization.setBackground(new java.awt.Color(0, 0, 0));
+        btnAddOrganization.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        btnAddOrganization.setForeground(new java.awt.Color(255, 255, 255));
+        btnAddOrganization.setText("Add Organization");
+        btnAddOrganization.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn2ActionPerformed(evt);
+                btnAddOrganizationActionPerformed(evt);
             }
         });
 
-        lbl3.setFont(new java.awt.Font("October Compressed Devanagari", 1, 14)); // NOI18N
-        lbl3.setForeground(new java.awt.Color(255, 255, 255));
-        lbl3.setText("Add Organization:");
+        lblAddOrganization.setFont(new java.awt.Font("October Compressed Devanagari", 1, 14)); // NOI18N
+        lblAddOrganization.setForeground(new java.awt.Color(255, 255, 255));
+        lblAddOrganization.setText("Add Organization:");
 
-        lbl4.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
-        lbl4.setForeground(new java.awt.Color(255, 255, 255));
-        lbl4.setText(" Clinic Name:");
+        lblClinicName.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
+        lblClinicName.setForeground(new java.awt.Color(255, 255, 255));
+        lblClinicName.setText(" Clinic Name:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -201,28 +201,28 @@ public class ManageDepartment extends javax.swing.JPanel {
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(btn1)
+                                .addComponent(btnBack)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lbl1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(jSeparator1)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 545, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(lbl3))
+                                .addComponent(lblAddOrganization))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(76, 76, 76)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(btn2)
+                                    .addComponent(btnAddOrganization)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(lbl4)
-                                            .addComponent(lbl2))
+                                            .addComponent(lblClinicName)
+                                            .addComponent(lblOrganizationType))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(cborglist, 0, 144, Short.MAX_VALUE)
-                                            .addComponent(txt1))))))
+                                            .addComponent(txtClinicName))))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -231,36 +231,36 @@ public class ManageDepartment extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl1)
-                    .addComponent(btn1))
+                    .addComponent(lblTitle)
+                    .addComponent(btnBack))
                 .addGap(35, 35, 35)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lbl3)
+                .addComponent(lblAddOrganization)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl2)
+                    .addComponent(lblOrganizationType)
                     .addComponent(cborglist, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl4)
-                    .addComponent(txt1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblClinicName)
+                    .addComponent(txtClinicName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn2)
+                .addComponent(btnAddOrganization)
                 .addContainerGap(83, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         workContainer.remove(this);
         CardLayout layout = (CardLayout) workContainer.getLayout();
         layout.previous(workContainer);
-    }//GEN-LAST:event_btn1ActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
-    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
+    private void btnAddOrganizationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddOrganizationActionPerformed
         // TODO add your handling code here:
         
         
@@ -339,7 +339,7 @@ public class ManageDepartment extends javax.swing.JPanel {
             boolean patientOrg=false;
         if( enterprise instanceof HospitalEnterprise)
         {
-            String satClinicName = txt1.getText();
+            String satClinicName = txtClinicName.getText();
            
             for(Organization org : enterprise.getOrganizationDirectory().getOrganizationList())
             {
@@ -376,20 +376,20 @@ public class ManageDepartment extends javax.swing.JPanel {
         enterprise.getOrganizationDirectory().createOrganization(type);
         populateTable();
     
-    }//GEN-LAST:event_btn2ActionPerformed
+    }//GEN-LAST:event_btnAddOrganizationActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn1;
-    private javax.swing.JButton btn2;
+    private javax.swing.JButton btnAddOrganization;
+    private javax.swing.JButton btnBack;
     private javax.swing.JComboBox cborglist;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JLabel lbl1;
-    private javax.swing.JLabel lbl2;
-    private javax.swing.JLabel lbl3;
-    private javax.swing.JLabel lbl4;
+    private javax.swing.JLabel lblAddOrganization;
+    private javax.swing.JLabel lblClinicName;
+    private javax.swing.JLabel lblOrganizationType;
+    private javax.swing.JLabel lblTitle;
     private javax.swing.JTable tblorg;
-    private javax.swing.JTextField txt1;
+    private javax.swing.JTextField txtClinicName;
     // End of variables declaration//GEN-END:variables
 }

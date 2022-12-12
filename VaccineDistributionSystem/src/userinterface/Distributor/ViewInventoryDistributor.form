@@ -32,21 +32,21 @@
                               <Component id="jSeparator1" pref="1" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="btn1" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnBack" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="lbl1" max="32767" attributes="0"/>
+                              <Component id="lblTitle" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Component id="lbl2" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblWarehouseId" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="txt1" min="-2" pref="47" max="-2" attributes="0"/>
+                      <Component id="txtWarehouseId" min="-2" pref="47" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="lbl3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblLocation" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="txt2" min="-2" pref="135" max="-2" attributes="0"/>
+                      <Component id="txtLocation" min="-2" pref="135" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -59,20 +59,20 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="btn1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="77" max="32767" attributes="0"/>
+                      <Component id="btnBack" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="27" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lbl2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txt1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbl3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txt2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblWarehouseId" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtWarehouseId" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblLocation" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtLocation" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jScrollPane2" min="-2" pref="213" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="135" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Component id="lbl1" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblTitle" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="290" max="-2" attributes="0"/>
                       <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
@@ -83,7 +83,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="lbl1">
+    <Component class="javax.swing.JLabel" name="lblTitle">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="October Compressed Devanagari" size="24" style="1"/>
@@ -95,7 +95,7 @@
         <Property name="text" type="java.lang.String" value="View Inventory"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbl2">
+    <Component class="javax.swing.JLabel" name="lblWarehouseId">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="October Compressed Devanagari" size="14" style="0"/>
@@ -106,12 +106,12 @@
         <Property name="text" type="java.lang.String" value="Warehouse ID:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt1">
+    <Component class="javax.swing.JTextField" name="txtWarehouseId">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbl3">
+    <Component class="javax.swing.JLabel" name="lblLocation">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="October Compressed Devanagari" size="14" style="0"/>
@@ -122,7 +122,7 @@
         <Property name="text" type="java.lang.String" value="Location:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt2">
+    <Component class="javax.swing.JTextField" name="txtLocation">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
@@ -201,20 +201,20 @@
     </Container>
     <Component class="javax.swing.JSeparator" name="jSeparator1">
     </Component>
-    <Component class="javax.swing.JButton" name="btn1">
+    <Component class="javax.swing.JButton" name="btnBack">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"/>
+          <Image iconType="3" name="/userinterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"/>
         </Property>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
           <Color id="Hand Cursor"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBackActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

@@ -53,12 +53,12 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="lbl2" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblTitle" min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="lbl1" min="-2" max="-2" attributes="0"/>
-                              <Component id="btn1" max="32767" attributes="0"/>
-                              <Component id="btn2" alignment="0" max="32767" attributes="0"/>
-                              <Component id="btn3" max="32767" attributes="0"/>
+                              <Component id="lblMainMenu" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnManageDepartment" max="32767" attributes="0"/>
+                              <Component id="btnManagePersons" alignment="0" max="32767" attributes="0"/>
+                              <Component id="btnManageUsers" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -69,22 +69,22 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                      <Component id="lbl2" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblTitle" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                      <Component id="lbl1" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblMainMenu" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="btn1" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnManageDepartment" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="btn2" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnManagePersons" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="btn3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnManageUsers" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="378" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="lbl1">
+            <Component class="javax.swing.JLabel" name="lblMainMenu">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="October Compressed Devanagari" size="18" style="1"/>
@@ -95,7 +95,7 @@
                 <Property name="text" type="java.lang.String" value="Main Menu:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btn1">
+            <Component class="javax.swing.JButton" name="btnManageDepartment">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
@@ -109,10 +109,10 @@
                 <Property name="text" type="java.lang.String" value="Manage Department"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageDepartmentActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="btn2">
+            <Component class="javax.swing.JButton" name="btnManagePersons">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
@@ -126,10 +126,10 @@
                 <Property name="text" type="java.lang.String" value="Manage Persons"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManagePersonsActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="btn3">
+            <Component class="javax.swing.JButton" name="btnManageUsers">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
@@ -143,10 +143,10 @@
                 <Property name="text" type="java.lang.String" value="Manage Users"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn3ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageUsersActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="lbl2">
+            <Component class="javax.swing.JLabel" name="lblTitle">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="October Compressed Devanagari" size="18" style="1"/>

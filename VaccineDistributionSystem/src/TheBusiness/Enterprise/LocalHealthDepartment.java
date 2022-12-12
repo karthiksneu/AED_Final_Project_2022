@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package TheBusiness.Enterprise;
 
 import TheBusiness.Roles.Role;
@@ -10,24 +11,20 @@ import java.util.ArrayList;
 
 /**
  *
- * @author karthik
- * 
+ * @author vinithhiteshharsora
  */
-
-
 
 //Initializing  class  LocalHealthDepartment extends Enterprise
 public class LocalHealthDepartment extends Enterprise {
 
     public LocalHealthDepartment(String stateName) {
         super(stateName, EnterpriseType.LocalHealthDepartment);
-        
     }
 
+    
     @Override
     public ArrayList<Role> getSupportedRole() {
         return null;
-        
     }
-
+    
 }

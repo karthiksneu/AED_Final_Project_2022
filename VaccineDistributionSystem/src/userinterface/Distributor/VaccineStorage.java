@@ -34,7 +34,7 @@ public class VaccineStorage extends javax.swing.JPanel {
         this.enterprise = enterprise;
         this.distributorOrganization = distributorOrganization;
         this.request = request;
-        txt2.setText(String.valueOf(request.getVaccineOrder().getOrderNumber()));
+        txtOrderNumber.setText(String.valueOf(request.getVaccineOrder().getOrderNumber()));
         populateTable();
         calculateTotalAmount();
         populateWarehouseComboBox();
@@ -65,7 +65,7 @@ public class VaccineStorage extends javax.swing.JPanel {
             totalAmount = totalAmount + (orderItem.getVaccineDetails().getVaccinePrice() * orderItem.getQuantity());
         }
 
-        txt1.setText(String.valueOf(totalAmount));
+        txtTotalAmountOfOrder.setText(String.valueOf(totalAmount));
     }
      
      private void populateWarehouseComboBox(){
@@ -87,57 +87,57 @@ public class VaccineStorage extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbl1 = new javax.swing.JLabel();
-        lbl2 = new javax.swing.JLabel();
-        txt1 = new javax.swing.JTextField();
-        btn1 = new javax.swing.JButton();
-        btn2 = new javax.swing.JButton();
-        lbl3 = new javax.swing.JLabel();
+        lblTitle = new javax.swing.JLabel();
+        lblTotalAmountOfOrder = new javax.swing.JLabel();
+        txtTotalAmountOfOrder = new javax.swing.JTextField();
+        btnStoreVaccine = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
+        lblParticulars = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblorder = new javax.swing.JTable();
-        lbl4 = new javax.swing.JLabel();
-        txt2 = new javax.swing.JTextField();
-        lbl6 = new javax.swing.JLabel();
+        lblOrderNumber = new javax.swing.JLabel();
+        txtOrderNumber = new javax.swing.JTextField();
+        lblWarehouse = new javax.swing.JLabel();
         bcwarelist = new javax.swing.JComboBox();
         jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(70, 130, 180));
 
-        lbl1.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
-        lbl1.setForeground(new java.awt.Color(255, 255, 255));
-        lbl1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbl1.setText("Store Vaccines");
+        lblTitle.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitle.setText("Store Vaccines");
 
-        lbl2.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
-        lbl2.setForeground(new java.awt.Color(255, 255, 255));
-        lbl2.setText("Total Amount of Order: ");
+        lblTotalAmountOfOrder.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
+        lblTotalAmountOfOrder.setForeground(new java.awt.Color(255, 255, 255));
+        lblTotalAmountOfOrder.setText("Total Amount of Order: ");
 
-        txt1.setEnabled(false);
+        txtTotalAmountOfOrder.setEnabled(false);
 
-        btn1.setBackground(new java.awt.Color(0, 0, 0));
-        btn1.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
-        btn1.setForeground(new java.awt.Color(255, 255, 255));
-        btn1.setText("Store Vaccine");
-        btn1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn1.addActionListener(new java.awt.event.ActionListener() {
+        btnStoreVaccine.setBackground(new java.awt.Color(0, 0, 0));
+        btnStoreVaccine.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        btnStoreVaccine.setForeground(new java.awt.Color(255, 255, 255));
+        btnStoreVaccine.setText("Store Vaccine");
+        btnStoreVaccine.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnStoreVaccine.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn1ActionPerformed(evt);
+                btnStoreVaccineActionPerformed(evt);
             }
         });
 
-        btn2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btn2.setForeground(new java.awt.Color(255, 255, 255));
-        btn2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
-        btn2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn2.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnBack.setForeground(new java.awt.Color(255, 255, 255));
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
+        btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn2ActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
 
-        lbl3.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
-        lbl3.setForeground(new java.awt.Color(255, 255, 255));
-        lbl3.setText("Particulars:");
+        lblParticulars.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        lblParticulars.setForeground(new java.awt.Color(255, 255, 255));
+        lblParticulars.setText("Particulars:");
 
         tblorder.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -158,15 +158,15 @@ public class VaccineStorage extends javax.swing.JPanel {
         tblorder.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tblorder);
 
-        lbl4.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
-        lbl4.setForeground(new java.awt.Color(255, 255, 255));
-        lbl4.setText("Order Number:");
+        lblOrderNumber.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
+        lblOrderNumber.setForeground(new java.awt.Color(255, 255, 255));
+        lblOrderNumber.setText("Order Number:");
 
-        txt2.setEnabled(false);
+        txtOrderNumber.setEnabled(false);
 
-        lbl6.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
-        lbl6.setForeground(new java.awt.Color(255, 255, 255));
-        lbl6.setText("Warehouse:");
+        lblWarehouse.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
+        lblWarehouse.setForeground(new java.awt.Color(255, 255, 255));
+        lblWarehouse.setText("Warehouse:");
 
         bcwarelist.setForeground(new java.awt.Color(0, 0, 102));
         bcwarelist.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -180,30 +180,30 @@ public class VaccineStorage extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbl3)
+                            .addComponent(lblParticulars)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(lbl2)
+                                .addComponent(lblTotalAmountOfOrder)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtTotalAmountOfOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(lbl6)
+                                .addComponent(lblWarehouse)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(bcwarelist, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(332, 332, 332)
-                                .addComponent(btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(btnStoreVaccine, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(83, 83, 83)
                                 .addComponent(jLabel1))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(btn2)
-                                    .addComponent(lbl4))
+                                    .addComponent(btnBack)
+                                    .addComponent(lblOrderNumber))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(txtOrderNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 83, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -213,34 +213,34 @@ public class VaccineStorage extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lbl1)
+                        .addComponent(lblTitle)
                         .addGap(53, 53, 53))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btn2)
+                        .addComponent(btnBack)
                         .addGap(18, 18, 18)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl4)
-                    .addComponent(txt2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblOrderNumber)
+                    .addComponent(txtOrderNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lbl3)
+                .addComponent(lblParticulars)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl2)
-                    .addComponent(txt1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblTotalAmountOfOrder)
+                    .addComponent(txtTotalAmountOfOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl6)
+                    .addComponent(lblWarehouse)
                     .addComponent(bcwarelist, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn1))
+                    .addComponent(btnStoreVaccine))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+    private void btnStoreVaccineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStoreVaccineActionPerformed
         // TODO add your handling code here:
          if(request.getStatus().equalsIgnoreCase("Stored")) {
             JOptionPane.showMessageDialog(null, "Order already Stored!");
@@ -298,29 +298,29 @@ public class VaccineStorage extends javax.swing.JPanel {
         
 
 
-    }//GEN-LAST:event_btn1ActionPerformed
+    }//GEN-LAST:event_btnStoreVaccineActionPerformed
 
-    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         workContainer.remove(this);
         CardLayout layout = (CardLayout) workContainer.getLayout();
         layout.previous(workContainer);
-    }//GEN-LAST:event_btn2ActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox bcwarelist;
-    private javax.swing.JButton btn1;
-    private javax.swing.JButton btn2;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnStoreVaccine;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lbl1;
-    private javax.swing.JLabel lbl2;
-    private javax.swing.JLabel lbl3;
-    private javax.swing.JLabel lbl4;
-    private javax.swing.JLabel lbl6;
+    private javax.swing.JLabel lblOrderNumber;
+    private javax.swing.JLabel lblParticulars;
+    private javax.swing.JLabel lblTitle;
+    private javax.swing.JLabel lblTotalAmountOfOrder;
+    private javax.swing.JLabel lblWarehouse;
     private javax.swing.JTable tblorder;
-    private javax.swing.JTextField txt1;
-    private javax.swing.JTextField txt2;
+    private javax.swing.JTextField txtOrderNumber;
+    private javax.swing.JTextField txtTotalAmountOfOrder;
     // End of variables declaration//GEN-END:variables
 }

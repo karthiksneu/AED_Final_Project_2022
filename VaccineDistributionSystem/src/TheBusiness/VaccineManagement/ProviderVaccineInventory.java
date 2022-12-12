@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Dsouza
+ * @author soham
  */
 
 //Initializing ProviderVacineInventory
@@ -30,23 +30,16 @@ public class ProviderVaccineInventory {
         this.vaccineDetailsList = vdl;
     }
     
-    //add vac method
-    
-    
     public VaccineDetails addNewVaccineDetail(){
         
-        VaccineDetails vdlist = new VaccineDetails();
-        vaccineDetailsList.add(vdlist);
-        return vdlist;
+        VaccineDetails vd = new VaccineDetails();
+        vaccineDetailsList.add(vd);
+        return vd;
   
     }
     
-    
-    // remove vac method
-    
-    
-    public void removeVaccineDetail(VaccineDetails vds){
+    public void removeVaccineDetail(VaccineDetails vd){
         
-        vaccineDetailsList.remove(vds);
+        vaccineDetailsList.remove(vd);
     }
 }

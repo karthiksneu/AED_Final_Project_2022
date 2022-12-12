@@ -11,41 +11,38 @@ import java.util.ArrayList;
 
 /**
  *
- * @author karthik
+ * @author soham
  */
-
-
-
 //Initializing Clinic Class
 public class Clinic {
 
     private String clinicName;
-    private boolean isRegistered;
-    
-    
+    private boolean registered;
     private ArrayList<VaccineDetails> vaccineDetails;
-    private ArrayList<AdministeredVaccineDetails> administeredVacDetails;
+    private ArrayList<AdministeredVaccineDetails> administeredVaccineDetails;
 
     public Clinic() {
-        isRegistered = false;
+        registered = false;
         vaccineDetails = new ArrayList<>();
-        administeredVacDetails = new ArrayList<>();
+        administeredVaccineDetails = new ArrayList<>();
 
-    }
-
+    }    
+    
+    
     public ArrayList<VaccineDetails> getVaccineInventoryClinic() {
         return vaccineDetails;
     }
 
     public ArrayList<AdministeredVaccineDetails> getAdministeredVaccineList() {
-        return administeredVacDetails;
+        return administeredVaccineDetails;
     }
 
-    public void setAdministeredVaccineList(ArrayList<AdministeredVaccineDetails> administeredVacDetails) {
-        this.administeredVacDetails = administeredVacDetails;
+    public void setAdministeredVaccineList(ArrayList<AdministeredVaccineDetails> administeredVaccineDetails) {
+        this.administeredVaccineDetails = administeredVaccineDetails;
     }
-
+    
     //Creating getters and setters
+    
     public String getClinicName() {
         return clinicName;
     }
@@ -55,11 +52,11 @@ public class Clinic {
     }
 
     public boolean isRegistered() {
-        return isRegistered;
+        return registered;
     }
 
-    public void setRegistered(boolean isRegistered) {
-        this.isRegistered = isRegistered;
+    public void setRegistered(boolean registered) {
+        this.registered = registered;
     }
 
     public VaccineDetails addVaccine(VaccineDetails vaccine) {
@@ -83,15 +80,15 @@ public class Clinic {
 
     public AdministeredVaccineDetails addNewAdministeredVaccine() {
         AdministeredVaccineDetails vaccineDetails = new AdministeredVaccineDetails();
-        administeredVacDetails.add(vaccineDetails);
+        administeredVaccineDetails.add(vaccineDetails);
         return vaccineDetails;
 
     }
 
     public int getTotalAdministeredVaccines() {
         int sum = 0;
-        if (administeredVacDetails != null) {
-            for (AdministeredVaccineDetails vaccine : administeredVacDetails) {
+        if (administeredVaccineDetails != null) {
+            for (AdministeredVaccineDetails vaccine : administeredVaccineDetails) {
                 sum = sum + 1;
             }
 
@@ -101,14 +98,12 @@ public class Clinic {
 
     }
 
-    
-    
     public int getTotalVaccinesFailed() {
         int sum = 0;
-        if (administeredVacDetails != null) {
-            for (AdministeredVaccineDetails av : administeredVacDetails) {
+        if (administeredVaccineDetails != null) {
+            for (AdministeredVaccineDetails av : administeredVaccineDetails) {
                 if (av != null) {
-                    if (av.getshotstatus() != null) {
+                    if (av.getshotstatus()!= null) {
                         if (av.getshotstatus().equalsIgnoreCase("Fail")) {
                             sum = sum + 1;
                         }
@@ -121,7 +116,7 @@ public class Clinic {
         return sum;
 
     }
-
+    
     public int getTotalStoredVaccines() {
         int sum = 0;
         if (vaccineDetails != null) {

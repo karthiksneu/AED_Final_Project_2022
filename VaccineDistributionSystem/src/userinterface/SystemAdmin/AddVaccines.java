@@ -37,7 +37,7 @@ public class AddVaccines extends javax.swing.JPanel {
     private void populateDiseaseCombo(){
         cbdislist.removeAllItems();
         
-        for(Disease disease : business.getDiseaseDirectory().getdiseaseDir())
+        for(Disease disease : business.getDiseaseDirectory().getdiseaseDirectory())
         {
             cbdislist.addItem(disease);
         }
@@ -54,13 +54,13 @@ public class AddVaccines extends javax.swing.JPanel {
     private void initComponents() {
 
         dcludate = new com.toedter.calendar.JDateChooser();
-        jLabel5 = new javax.swing.JLabel();
-        txtvacccode = new javax.swing.JTextField();
-        txtvaccname = new javax.swing.JTextField();
-        btnaddvacc = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        lblLastUpdatedOn = new javax.swing.JLabel();
+        txtvaccineCode = new javax.swing.JTextField();
+        txtVaccineName = new javax.swing.JTextField();
+        btnAddVaccine = new javax.swing.JButton();
+        lblTitle = new javax.swing.JLabel();
+        lblVaccineCode = new javax.swing.JLabel();
+        lblVaccineName = new javax.swing.JLabel();
         btnback = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         cbdislist = new javax.swing.JComboBox();
@@ -71,34 +71,34 @@ public class AddVaccines extends javax.swing.JPanel {
 
         dcludate.setDateFormatString(" MMM, d yyyy");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Last Updated on:");
+        lblLastUpdatedOn.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblLastUpdatedOn.setForeground(new java.awt.Color(255, 255, 255));
+        lblLastUpdatedOn.setText("Last Updated on:");
 
-        btnaddvacc.setBackground(new java.awt.Color(0, 0, 0));
-        btnaddvacc.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnaddvacc.setForeground(new java.awt.Color(255, 255, 255));
-        btnaddvacc.setText("Add Vaccine");
-        btnaddvacc.addActionListener(new java.awt.event.ActionListener() {
+        btnAddVaccine.setBackground(new java.awt.Color(0, 0, 0));
+        btnAddVaccine.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnAddVaccine.setForeground(new java.awt.Color(255, 255, 255));
+        btnAddVaccine.setText("Add Vaccine");
+        btnAddVaccine.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnaddvaccActionPerformed(evt);
+                btnAddVaccineActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Add New Vaccine");
+        lblTitle.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitle.setText("Add New Vaccine");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Vaccine Code:");
+        lblVaccineCode.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblVaccineCode.setForeground(new java.awt.Color(255, 255, 255));
+        lblVaccineCode.setText("Vaccine Code:");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Vaccine Name:");
+        lblVaccineName.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblVaccineName.setForeground(new java.awt.Color(255, 255, 255));
+        lblVaccineName.setText("Vaccine Name:");
 
-        btnback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
+        btnback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
         btnback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnbackActionPerformed(evt);
@@ -121,27 +121,27 @@ public class AddVaccines extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 863, Short.MAX_VALUE)
+                    .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 863, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(jLabel3)
+                                    .addComponent(lblVaccineName)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                                    .addComponent(txtvaccname, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txtVaccineName, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel2)
+                                        .addComponent(lblVaccineCode)
                                         .addComponent(jLabel6))
                                     .addGap(27, 27, 27)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(txtvacccode, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE)
+                                        .addComponent(txtvaccineCode, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE)
                                         .addComponent(cbdislist, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel5)
+                                .addComponent(lblLastUpdatedOn)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(btnaddvacc, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE)
+                                    .addComponent(btnAddVaccine, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE)
                                     .addComponent(dcludate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addComponent(btnback))
                         .addGap(18, 18, 18)
@@ -153,7 +153,7 @@ public class AddVaccines extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(lblTitle)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -162,22 +162,22 @@ public class AddVaccines extends javax.swing.JPanel {
                             .addComponent(cbdislist, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(22, 22, 22)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(txtvacccode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblVaccineCode)
+                            .addComponent(txtvaccineCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(txtvaccname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblVaccineName)
+                            .addComponent(txtVaccineName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(56, 56, 56)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
+                            .addComponent(lblLastUpdatedOn)
                             .addComponent(dcludate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addComponent(btnaddvacc)
+                        .addComponent(btnAddVaccine)
                         .addGap(18, 18, 18)
                         .addComponent(btnback))
                     .addComponent(jLabel4))
-                .addContainerGap(124, Short.MAX_VALUE))
+                .addContainerGap(74, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -189,15 +189,15 @@ public class AddVaccines extends javax.swing.JPanel {
 
     }//GEN-LAST:event_btnbackActionPerformed
 
-    private void btnaddvaccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddvaccActionPerformed
+    private void btnAddVaccineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddVaccineActionPerformed
         // TODO add your handling code here:
-        String vaccineCode = txtvacccode.getText();
+        String vaccineCode = txtvaccineCode.getText();
         if(vaccineCode.trim().equalsIgnoreCase(""))
         {
             JOptionPane.showMessageDialog(null, "Please enter vaccine Code!");
             return;
         }
-        String vaccineName = txtvaccname.getText();
+        String vaccineName = txtVaccineName.getText();
         if(vaccineName.trim().equalsIgnoreCase(""))
         {
             JOptionPane.showMessageDialog(null, "Please enter vaccine Name!");
@@ -224,21 +224,21 @@ public class AddVaccines extends javax.swing.JPanel {
         vaccine.setDisease(disease);
         
         
-    }//GEN-LAST:event_btnaddvaccActionPerformed
+    }//GEN-LAST:event_btnAddVaccineActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnaddvacc;
+    private javax.swing.JButton btnAddVaccine;
     private javax.swing.JButton btnback;
     private javax.swing.JComboBox cbdislist;
     private com.toedter.calendar.JDateChooser dcludate;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JTextField txtvacccode;
-    private javax.swing.JTextField txtvaccname;
+    private javax.swing.JLabel lblLastUpdatedOn;
+    private javax.swing.JLabel lblTitle;
+    private javax.swing.JLabel lblVaccineCode;
+    private javax.swing.JLabel lblVaccineName;
+    private javax.swing.JTextField txtVaccineName;
+    private javax.swing.JTextField txtvaccineCode;
     // End of variables declaration//GEN-END:variables
 }

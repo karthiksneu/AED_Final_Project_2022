@@ -11,16 +11,13 @@ import java.nio.file.Paths;
 
 /**
  *
- * @author karthik
- * 
+ * @author rrheg
+ * @author Lingfeng
  */
-
-
 public class DB4OUtil {
 
-   // path to the data store
-    private static final String FILE_NAME = Paths.get("Databank.db4o").toAbsolutePath().toString();
-    
+   
+    private static final String FILENAME = Paths.get("Databank.db4o").toAbsolutePath().toString();// path to the data store
     private static DB4OUtil dB4OUtil;
     
     public synchronized static DB4OUtil getInstance(){
@@ -41,27 +38,20 @@ public class DB4OUtil {
 
             EmbeddedConfiguration config = Db4oEmbedded.newConfiguration();
             config.common().add(new TransparentPersistenceSupport());
-           
             //Controls the number of objects in memory
             config.common().activationDepth(Integer.MAX_VALUE);
-            
             //Controls the depth/level of updation of Object
             config.common().updateDepth(Integer.MAX_VALUE);
 
             //Register your top most Class here
             config.common().objectClass(Ecosystems.class).cascadeOnUpdate(true); // Change to the object you want to save
 
-            ObjectContainer db = Db4oEmbedded.openFile(config, FILE_NAME);
-            
+            ObjectContainer db = Db4oEmbedded.openFile(config, FILENAME);
             return db;
-            
-            
         } catch (Exception ex) {
             System.out.print(ex.getMessage());
         }
-        
         return null;
-        
     }
 
     public synchronized void storeSystem(Ecosystems system) {
@@ -73,13 +63,10 @@ public class DB4OUtil {
     
     public Ecosystems retrieveSystem(){
         ObjectContainer conn = createConnection();
-        
-        // Change to the object you want to save
-        ObjectSet<Ecosystems> systems = conn.query(Ecosystems.class); 
+        ObjectSet<Ecosystems> systems = conn.query(Ecosystems.class); // Change to the object you want to save
         Ecosystems system;
-        // If there's no System in the record, create a new one
         if (systems.size() == 0){
-            system = ConfigureSystem.configure();  
+            system = ConfigureSystem.configure();  // If there's no System in the record, create a new one
         }
         else{
             system = systems.get(systems.size()-1);

@@ -21,21 +21,15 @@ import javax.swing.JPanel;
 public class PatientDashboard1 extends javax.swing.JPanel {
 
     /**
-     * Creates new form PatientWorkAreaJPanel
+     * Creates new form PatientDashboard1
      */
-  
-        private JPanel userProcessContainer;
+    private JPanel userProcessContainer;
     private UserAccount userAccount;
     private Enterprise enterprise;
     private Organization organization;
     private Ecosystems business;
     
-    public PatientDashboard1() {
-        initComponents();
-        
-    }
-    
-        public PatientDashboard1(JPanel userProcessContainer,UserAccount userAccount, Enterprise enterprise, Organization organization, Ecosystems business) {
+    public PatientDashboard1(JPanel userProcessContainer,UserAccount userAccount, Enterprise enterprise, Organization organization, Ecosystems business) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.userAccount = userAccount;
@@ -57,13 +51,13 @@ public class PatientDashboard1 extends javax.swing.JPanel {
         workContainer = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         mainMenu = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        lblMainMenu = new javax.swing.JLabel();
         btnViewAdministeredVaccines = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
+        lblTitle = new javax.swing.JLabel();
 
         setLayout(new java.awt.BorderLayout());
 
-        workContainer.setBackground(new java.awt.Color(0, 204, 204));
+        workContainer.setBackground(new java.awt.Color(70, 130, 180));
         workContainer.setLayout(new java.awt.CardLayout());
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/patient.gif"))); // NOI18N
@@ -71,13 +65,13 @@ public class PatientDashboard1 extends javax.swing.JPanel {
 
         jSplitPane1.setRightComponent(workContainer);
 
-        mainMenu.setBackground(new java.awt.Color(0, 204, 204));
+        mainMenu.setBackground(new java.awt.Color(70, 130, 180));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Main Menu:");
+        lblMainMenu.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblMainMenu.setForeground(new java.awt.Color(255, 255, 255));
+        lblMainMenu.setText("Main Menu:");
 
-        btnViewAdministeredVaccines.setBackground(new java.awt.Color(0, 0, 102));
+        btnViewAdministeredVaccines.setBackground(new java.awt.Color(0, 0, 0));
         btnViewAdministeredVaccines.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnViewAdministeredVaccines.setForeground(new java.awt.Color(255, 255, 255));
         btnViewAdministeredVaccines.setText("View Administered Vaccines");
@@ -87,9 +81,9 @@ public class PatientDashboard1 extends javax.swing.JPanel {
             }
         });
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("PATIENT");
+        lblTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitle.setText("PATIENT");
 
         javax.swing.GroupLayout mainMenuLayout = new javax.swing.GroupLayout(mainMenu);
         mainMenu.setLayout(mainMenuLayout);
@@ -101,10 +95,10 @@ public class PatientDashboard1 extends javax.swing.JPanel {
                     .addComponent(btnViewAdministeredVaccines, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(mainMenuLayout.createSequentialGroup()
                         .addGroup(mainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
+                            .addComponent(lblMainMenu)
                             .addGroup(mainMenuLayout.createSequentialGroup()
                                 .addGap(74, 74, 74)
-                                .addComponent(jLabel6)))
+                                .addComponent(lblTitle)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -112,9 +106,9 @@ public class PatientDashboard1 extends javax.swing.JPanel {
             mainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainMenuLayout.createSequentialGroup()
                 .addGap(43, 43, 43)
-                .addComponent(jLabel6)
+                .addComponent(lblTitle)
                 .addGap(54, 54, 54)
-                .addComponent(jLabel3)
+                .addComponent(lblMainMenu)
                 .addGap(18, 18, 18)
                 .addComponent(btnViewAdministeredVaccines)
                 .addContainerGap(416, Short.MAX_VALUE))
@@ -137,9 +131,9 @@ public class PatientDashboard1 extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnViewAdministeredVaccines;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JSplitPane jSplitPane1;
+    private javax.swing.JLabel lblMainMenu;
+    private javax.swing.JLabel lblTitle;
     private javax.swing.JPanel mainMenu;
     private javax.swing.JPanel workContainer;
     // End of variables declaration//GEN-END:variables

@@ -1,10 +1,8 @@
 /*
-
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 
 package TheBusiness.NationalEnterprise;
 
@@ -14,14 +12,13 @@ import java.util.ArrayList;
 
 /**
  *
-
- * @author karthik
+ * @author DELL
  */
 
-//Creating a class Manufacturer 
+//Initializing class Manufacturer extends Enterprise
 public class Manufacturer extends Enterprise {
     
-    //Constructor for Manufacturer
+    
     public Manufacturer(String name) {
         super(name , EnterpriseType.Manufacturer);
     }
@@ -36,4 +33,3 @@ public class Manufacturer extends Enterprise {
     
     
 }
-

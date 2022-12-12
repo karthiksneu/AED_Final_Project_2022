@@ -27,9 +27,9 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="btn1" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnBack" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="lbl1" max="32767" attributes="0"/>
+                              <Component id="lblTitle" max="32767" attributes="0"/>
                           </Group>
                           <Component id="jSeparator1" alignment="0" max="32767" attributes="0"/>
                           <Component id="jScrollPane1" alignment="1" pref="545" max="32767" attributes="0"/>
@@ -39,21 +39,21 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="lbl3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblAddOrganization" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="btn2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnAddOrganization" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="lbl4" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lbl2" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblClinicName" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblOrganizationType" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Component id="cborglist" pref="144" max="32767" attributes="0"/>
-                                          <Component id="txt1" max="32767" attributes="0"/>
+                                          <Component id="txtClinicName" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -71,34 +71,34 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lbl1" min="-2" max="-2" attributes="0"/>
-                  <Component id="btn1" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblTitle" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnBack" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="85" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="lbl3" min="-2" max="-2" attributes="0"/>
+              <Component id="lblAddOrganization" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbl2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblOrganizationType" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="cborglist" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbl4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txt1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblClinicName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtClinicName" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="btn2" min="-2" max="-2" attributes="0"/>
+              <Component id="btnAddOrganization" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="83" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="lbl1">
+    <Component class="javax.swing.JLabel" name="lblTitle">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="October Compressed Devanagari" size="24" style="1"/>
@@ -146,17 +146,17 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="btn1">
+    <Component class="javax.swing.JButton" name="btnBack">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBackActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbl2">
+    <Component class="javax.swing.JLabel" name="lblOrganizationType">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="October Compressed Devanagari" size="14" style="0"/>
@@ -179,7 +179,7 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btn2">
+    <Component class="javax.swing.JButton" name="btnAddOrganization">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="0" type="rgb"/>
@@ -193,12 +193,12 @@
         <Property name="text" type="java.lang.String" value="Add Organization"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddOrganizationActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JSeparator" name="jSeparator1">
     </Component>
-    <Component class="javax.swing.JLabel" name="lbl3">
+    <Component class="javax.swing.JLabel" name="lblAddOrganization">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="October Compressed Devanagari" size="14" style="1"/>
@@ -209,7 +209,7 @@
         <Property name="text" type="java.lang.String" value="Add Organization:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbl4">
+    <Component class="javax.swing.JLabel" name="lblClinicName">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="October Compressed Devanagari" size="14" style="0"/>
@@ -220,7 +220,7 @@
         <Property name="text" type="java.lang.String" value=" Clinic Name:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt1">
+    <Component class="javax.swing.JTextField" name="txtClinicName">
     </Component>
   </SubComponents>
 </Form>
