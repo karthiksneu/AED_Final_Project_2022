@@ -1,29 +1,36 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
-package userinterface.Manufacture;
-import TheBusiness.Ecosystems;
 
+package userinterface.Manufacture;
+
+import TheBusiness.Ecosystems;
+import TheBusiness.Enterprise.Enterprise;
 import TheBusiness.NationalEnterprise.Manufacturer;
+import TheBusiness.UserAccountManagement.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
+
 /**
  *
  * @author Dsouza
  */
 public class ManufactureEmplDashboard extends javax.swing.JPanel {
 
-    
+    /**
+     * Creates new form ManufactureEmplDashboard
+     */
     private JPanel userProcessContainer;
-    
+    private UserAccount userAccount;
     private Manufacturer manufacturer;
     private Ecosystems business;
     
-    public ManufactureEmplDashboard(JPanel userProcessContainer,Manufacturer manufacturer,Ecosystems business  ) {
+    public ManufactureEmplDashboard(JPanel userProcessContainer,UserAccount userAccount,Manufacturer manufacturer,Ecosystems business  ) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
-        
+        this.userAccount = userAccount;
         this.manufacturer = manufacturer;
         this.business = business;
 
@@ -43,10 +50,10 @@ public class ManufactureEmplDashboard extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         mainMenu = new javax.swing.JPanel();
-        btnmanvaccprod = new javax.swing.JButton();
-        btnmanorder = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        btnManageVaccineProd = new javax.swing.JButton();
+        btnManageOrders = new javax.swing.JButton();
+        lblTitle = new javax.swing.JLabel();
+        lblMainMenu = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setLayout(new java.awt.BorderLayout());
@@ -56,7 +63,6 @@ public class ManufactureEmplDashboard extends javax.swing.JPanel {
         workContainer.setBackground(new java.awt.Color(37, 161, 142));
         workContainer.setLayout(new java.awt.CardLayout());
 
-        jLabel1.setBackground(new java.awt.Color(37, 161, 142));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/01image_processing20200619-31262-6cj3a4.gif"))); // NOI18N
         workContainer.add(jLabel1, "card3");
 
@@ -77,35 +83,35 @@ public class ManufactureEmplDashboard extends javax.swing.JPanel {
 
         jSplitPane1.setRightComponent(workContainer);
 
-        mainMenu.setBackground(new java.awt.Color(102, 153, 255));
+        mainMenu.setBackground(new java.awt.Color(37, 161, 142));
 
-        btnmanvaccprod.setBackground(new java.awt.Color(0, 0, 102));
-        btnmanvaccprod.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnmanvaccprod.setForeground(new java.awt.Color(255, 255, 255));
-        btnmanvaccprod.setText("Manage Vaccine Products");
-        btnmanvaccprod.addActionListener(new java.awt.event.ActionListener() {
+        btnManageVaccineProd.setBackground(new java.awt.Color(0, 0, 0));
+        btnManageVaccineProd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnManageVaccineProd.setForeground(new java.awt.Color(255, 255, 255));
+        btnManageVaccineProd.setText("Manage Vaccine Products");
+        btnManageVaccineProd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnmanvaccprodActionPerformed(evt);
+                btnManageVaccineProdActionPerformed(evt);
             }
         });
 
-        btnmanorder.setBackground(new java.awt.Color(0, 0, 102));
-        btnmanorder.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnmanorder.setForeground(new java.awt.Color(255, 255, 255));
-        btnmanorder.setText("Manage Orders");
-        btnmanorder.addActionListener(new java.awt.event.ActionListener() {
+        btnManageOrders.setBackground(new java.awt.Color(0, 0, 0));
+        btnManageOrders.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnManageOrders.setForeground(new java.awt.Color(255, 255, 255));
+        btnManageOrders.setText("Manage Orders");
+        btnManageOrders.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnmanorderActionPerformed(evt);
+                btnManageOrdersActionPerformed(evt);
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("MANUFACTURER");
+        lblTitle.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitle.setText("MANUFACTURER");
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Main Menu:");
+        lblMainMenu.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblMainMenu.setForeground(new java.awt.Color(255, 255, 255));
+        lblMainMenu.setText("Main Menu:");
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/manumiddle_150x150.png"))); // NOI18N
 
@@ -116,12 +122,12 @@ public class ManufactureEmplDashboard extends javax.swing.JPanel {
             .addGroup(mainMenuLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(mainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnmanvaccprod, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnmanorder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnManageVaccineProd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnManageOrders, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(mainMenuLayout.createSequentialGroup()
                         .addGroup(mainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel5))
+                            .addComponent(lblMainMenu)
+                            .addComponent(lblTitle))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(mainMenuLayout.createSequentialGroup()
@@ -133,13 +139,13 @@ public class ManufactureEmplDashboard extends javax.swing.JPanel {
             mainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainMenuLayout.createSequentialGroup()
                 .addGap(92, 92, 92)
-                .addComponent(jLabel5)
+                .addComponent(lblTitle)
                 .addGap(41, 41, 41)
-                .addComponent(jLabel6)
+                .addComponent(lblMainMenu)
                 .addGap(18, 18, 18)
-                .addComponent(btnmanvaccprod)
+                .addComponent(btnManageVaccineProd)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnmanorder)
+                .addComponent(btnManageOrders)
                 .addGap(84, 84, 84)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(669, Short.MAX_VALUE))
@@ -150,27 +156,33 @@ public class ManufactureEmplDashboard extends javax.swing.JPanel {
         add(jSplitPane1, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnmanvaccprodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmanvaccprodActionPerformed
+    private void btnManageVaccineProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageVaccineProdActionPerformed
         // TODO add your handling code here:
-     
+        VaccineManagement panel = new VaccineManagement(workContainer, manufacturer, business);
+        workContainer.add("ManageVaccinesJPanel", panel);
+        CardLayout layout = (CardLayout)workContainer.getLayout();
+        layout.next(workContainer);
         
-    }//GEN-LAST:event_btnmanvaccprodActionPerformed
+    }//GEN-LAST:event_btnManageVaccineProdActionPerformed
 
-    private void btnmanorderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmanorderActionPerformed
+    private void btnManageOrdersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageOrdersActionPerformed
         // TODO add your handling code here:
-       
-    }//GEN-LAST:event_btnmanorderActionPerformed
+         ManufacturerOrderManagement panel = new ManufacturerOrderManagement(workContainer, manufacturer, userAccount, business);
+        workContainer.add("ManageOrdersJPanel", panel);
+        CardLayout layout = (CardLayout)workContainer.getLayout();
+        layout.next(workContainer);
+    }//GEN-LAST:event_btnManageOrdersActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnmanorder;
-    private javax.swing.JButton btnmanvaccprod;
+    private javax.swing.JButton btnManageOrders;
+    private javax.swing.JButton btnManageVaccineProd;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSplitPane jSplitPane1;
+    private javax.swing.JLabel lblMainMenu;
+    private javax.swing.JLabel lblTitle;
     private javax.swing.JPanel mainMenu;
     private javax.swing.JPanel workContainer;
     // End of variables declaration//GEN-END:variables

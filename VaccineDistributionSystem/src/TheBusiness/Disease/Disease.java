@@ -3,26 +3,29 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package TheBusiness.Disease;
 
 import java.util.Date;
 
 /**
  *
- * @author karthik
+ * @author vinithhiteshharsora
  */
-//initializing Disease class with its attributes
+//initializing Disease class with some variables
 public class Disease {
-
-    private String diseaseName;
+    
     private String diseaseCode;
-    private Date lastUpdatedDate;
+    private String diseaseName;
+    private Date lastUpdatedTime;
 
-    //initializing constructor, getters and setters for Disease class
-    public Disease(String diseaseName, String diseaseCode, Date lastUpdatedDate) {
-        this.diseaseName = diseaseName;
+    //initializing getter and setter for Disease class
+    public String getDiseaseCode() {
+        return diseaseCode;
+    }
+
+    public void setDiseaseCode(String diseaseCode) {
         this.diseaseCode = diseaseCode;
-        this.lastUpdatedDate = lastUpdatedDate;
     }
 
     public String getDiseaseName() {
@@ -33,25 +36,19 @@ public class Disease {
         this.diseaseName = diseaseName;
     }
 
-    public String getDiseaseCode() {
-        return diseaseCode;
+    public Date getLastUpdatedTime() {
+        return lastUpdatedTime;
     }
 
-    public void setDiseaseCode(String diseaseCode) {
-        this.diseaseCode = diseaseCode;
-    }
-
-    public Date getLastUpdatedDate() {
-        return lastUpdatedDate;
-    }
-
-    public void setLastUpdatedDate(Date lastUpdatedDate) {
-        this.lastUpdatedDate = lastUpdatedDate;
+    public void setLastUpdatedTime(Date lastUpdatedTime) {
+        this.lastUpdatedTime = lastUpdatedTime;
     }
 
     @Override
     public String toString() {
         return diseaseCode;
     }
-
+    
+    
+    
 }

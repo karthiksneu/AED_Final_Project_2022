@@ -1,35 +1,34 @@
 /*
- * @author karthik
- *
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 
+package TheBusiness.Network;
+
+import TheBusiness.Enterprise.LocalHealthDepartment;
+import java.util.ArrayList;
+
+/**
+ *
+ * @author DELL
+ */
 
 //Initializing Class StateNetwork
 public class StateNetwork {
-
-    private LocalHealthDepartment localHealthDept;
+    
+    private ArrayList<CityNetwork> cityList;
+    private LocalHealthDepartment localHealthDepartment;
+    private String stateName;
     private int statePopulation;
     private int vaccinesLeftForState;
-    private String stateName;
-    private ArrayList<CityNetwork> cityList;
-
-    public StateNetwork(ArrayList<CityNetwork> cityList, LocalHealthDepartment localHealthDept, String stateName, int statePopulation, int vaccinesLeftForState) {
-        this.cityList = cityList;
-        this.localHealthDept = localHealthDept;
-        this.stateName = stateName;
-        this.statePopulation = statePopulation;
-        this.vaccinesLeftForState = vaccinesLeftForState;
-
-    }
-
+    
     public StateNetwork() {
-
+        
         this.cityList = new ArrayList<>();
-        localHealthDept = new LocalHealthDepartment(stateName);
+        localHealthDepartment = new LocalHealthDepartment(stateName);
         statePopulation = 0;
         vaccinesLeftForState = statePopulation;
-
-
     }
 
     public int getStatePopulation() {
@@ -40,7 +39,14 @@ public class StateNetwork {
         this.statePopulation = statePopulation;
     }
 
+    public int getVaccinesLeftForState() {
+        return vaccinesLeftForState;
+    }
 
+    public void setVaccinesLeftForState(int vaccinesLeftForState) {
+        this.vaccinesLeftForState = vaccinesLeftForState;
+    }
+    
     public ArrayList<CityNetwork> getCityList() {
         return cityList;
     }
@@ -49,25 +55,15 @@ public class StateNetwork {
         this.cityList = cityList;
     }
 
-
-    public int getVaccinesLeftForState() {
-        return vaccinesLeftForState;
-    }
-
-    public void setVaccinesLeftForState(int vaccinesLeftForState) {
-        this.vaccinesLeftForState = vaccinesLeftForState;
-    }
-
-
     public LocalHealthDepartment getLocalHealthDepartment() {
-        return localHealthDept;
+        return localHealthDepartment;
     }
 
-    public void setLocalHealthDepartment(LocalHealthDepartment localHealthDept) {
-        this.localHealthDept = localHealthDept;
+    public void setLocalHealthDepartment(LocalHealthDepartment localHealthDepartment) {
+        this.localHealthDepartment = localHealthDepartment;
     }
-
-
+    
+           
     public String getStateName() {
         return stateName;
     }
@@ -75,60 +71,64 @@ public class StateNetwork {
     public void setStateName(String stateName) {
         this.stateName = stateName;
     }
-
-
-    public CityNetwork addNewCity(String name) {
-
+    
+    public CityNetwork addNewCity(String name){
+        
         CityNetwork cn = new CityNetwork();
         cn.setName(name);
         cityList.add(cn);
         return cn;
-
+        
     }
-
-    public void removeCity(CityNetwork city) {
-
+    
+    public void removeCity(CityNetwork city){
+        
         cityList.remove(city);
     }
-
-    //Dispalys number of vaccines administered in State
-    public int getTotalVaccinesAdministeredInState() {
+    
+  //Dispalys number of vaccines administered in State
+    
+    public int getTotalVaccinesAdministeredInState(){
         int sum = 0;
-        if (cityList != null) {
-            for (CityNetwork city : cityList) {
-                sum = sum + city.getTotalVaccinesAdministeredInCity();
+        if(cityList != null)
+        {
+            for(CityNetwork city: cityList)
+            {
+                sum= sum+city.getTotalVaccinesAdministeredInCity();
             }
-
         }
         return sum;
 
     }
-
-
-    //Dispalys number of failed vaccines distributed in State
-    public int getTotalVaccinesDistributedInState() {
+    
+     //Dispalys number of failed vaccines administered in State
+    
+     public int getTotalFailedVaccinesInState(){
         int sum = 0;
-        if (cityList != null) {
-            for (CityNetwork c : cityList) {
-                sum = sum + c.getTotalVaccinesDistributedInCity();
+        if(cityList != null)
+        {
+            for(CityNetwork c: cityList)
+            {
+                sum= sum+c.getTotalFailedVaccinesInCity();
             }
-
         }
         return sum;
 
     }
-
-
-    //Dispalys number of failed vaccines administered in State
-    public int getTotalFailedVaccinesInState() {
+     
+     //Dispalys number of failed vaccines distributed in State
+     
+      public int getTotalVaccinesDistributedInState(){
         int sum = 0;
-        if (cityList != null) {
-            for (CityNetwork c : cityList) {
-                sum = sum + c.getTotalFailedVaccinesInCity();
+        if(cityList != null)
+        {
+            for(CityNetwork c: cityList)
+            {
+                sum= sum+c.getTotalVaccinesDistributedInCity();
             }
         }
         return sum;
-
+        
     }
 
 
@@ -137,6 +137,4 @@ public class StateNetwork {
         return stateName;
     }
 
-
 }
-

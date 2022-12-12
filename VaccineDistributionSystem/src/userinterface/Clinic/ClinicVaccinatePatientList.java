@@ -4,18 +4,18 @@
  * and open the template in the editor.
  */
 
-package UserInterface.Clinic;
+package userinterface.Clinic;
 
-import Business.EcoSystem;
-import Business.Enterprise.HospitalEnterprise;
-import Business.Network.StateNetwork;
-import Business.Organization.HospitalOrganization;
-import Business.Organization.Organization;
-import Business.Organization.ClinicOrganization;
-import Business.Person.Patient;
-import Business.UserAccount.UserAccount;
-import Business.Vaccine.AdministeredVaccineDetails;
-import Business.Vaccine.VaccineDetails;
+import TheBusiness.Ecosystems;
+import TheBusiness.Enterprise.HospitalEnterprise;
+import TheBusiness.Network.StateNetwork;
+import TheBusiness.Organization.HospitalOrganization;
+import TheBusiness.Organization.Organization;
+import TheBusiness.Organization.ClinicOrganization;
+import TheBusiness.Personnel.Patient;
+import TheBusiness.UserAccountManagement.UserAccount;
+import TheBusiness.VaccineManagement.AdministeredVaccineDetails;
+import TheBusiness.VaccineManagement.VaccineDetails;
 
 import java.awt.CardLayout;
 import java.util.ArrayList;
@@ -25,9 +25,9 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author DELL
+ * @author karthik
  */
-public class AdministerVaccineToPatientClinicJPanel extends javax.swing.JPanel {
+public class ClinicVaccinatePatientList extends javax.swing.JPanel {
 
    
     private JPanel workContainer;
@@ -35,12 +35,12 @@ public class AdministerVaccineToPatientClinicJPanel extends javax.swing.JPanel {
     private HospitalEnterprise hospital;
     private UserAccount userAccount;
     private ClinicOrganization clinicOrg;
-    private EcoSystem business;
+    private Ecosystems business;
     private Patient patient;
     private StateNetwork state;
     private int flagg;
     
-    public AdministerVaccineToPatientClinicJPanel(JPanel workContainer, HospitalEnterprise hospital, ClinicOrganization clinicOrg, UserAccount userAccount , EcoSystem business, Patient patient, StateNetwork state) {
+    public ClinicVaccinatePatientList(JPanel workContainer, HospitalEnterprise hospital, ClinicOrganization clinicOrg, UserAccount userAccount , Ecosystems business, Patient patient, StateNetwork state) {
         initComponents();
         this.workContainer = workContainer;
         this.userAccount = userAccount;
@@ -49,8 +49,8 @@ public class AdministerVaccineToPatientClinicJPanel extends javax.swing.JPanel {
         this.clinicOrg = clinicOrg;
         this.patient = patient;
         this.state = state;
-        txtdoc.setText(userAccount.getPerson().getFirstName()+" "+userAccount.getPerson().getLastName());
-        txtpname.setText(patient.getFirstName() + " " + patient.getLastName());
+        txtGivenBy.setText(userAccount.getPerson().getFirstName()+" "+userAccount.getPerson().getLastName());
+        txtPatient.setText(patient.getFirstName() + " " + patient.getLastName());
         cbvacclcodelist.removeAllItems();
         cbbrandlist.removeAllItems();
         cbnum.removeAllItems();
@@ -156,7 +156,7 @@ public class AdministerVaccineToPatientClinicJPanel extends javax.swing.JPanel {
                {
                    if(product.getManufacturerName().equalsIgnoreCase(brand) && product.getBatchId().equalsIgnoreCase(batchID) && product.getVaccineDefinition().getVaccineCode().equalsIgnoreCase(vaccineCode))
                    {
-                       txtmanudate.setText(String.valueOf(product.getManufactureDate()));
+                       txtManufactureDate.setText(String.valueOf(product.getManufactureDate()));
                        return;
                    }
                }
@@ -177,26 +177,26 @@ public class AdministerVaccineToPatientClinicJPanel extends javax.swing.JPanel {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        txtpname = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        lblTitle = new javax.swing.JLabel();
+        lblPatient = new javax.swing.JLabel();
+        txtPatient = new javax.swing.JTextField();
+        lblVaccineDetails = new javax.swing.JLabel();
+        lblVaccineCode = new javax.swing.JLabel();
         cbvacclcodelist = new javax.swing.JComboBox();
-        jLabel6 = new javax.swing.JLabel();
-        txtdosenum = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        txtmanudate = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
+        lblDoseNumber = new javax.swing.JLabel();
+        txtDoseNumber = new javax.swing.JTextField();
+        lblManufactureDate = new javax.swing.JLabel();
+        txtManufactureDate = new javax.swing.JTextField();
+        lblBatchNumber = new javax.swing.JLabel();
         cbnum = new javax.swing.JComboBox();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        txtdoc = new javax.swing.JTextField();
-        btnadmin = new javax.swing.JButton();
-        jLabel14 = new javax.swing.JLabel();
+        lblArm = new javax.swing.JLabel();
+        lblInjectionStatus = new javax.swing.JLabel();
+        lblGivenBy = new javax.swing.JLabel();
+        txtGivenBy = new javax.swing.JTextField();
+        btnAdministerVaccine = new javax.swing.JButton();
+        lblBrand = new javax.swing.JLabel();
         cbbrandlist = new javax.swing.JComboBox();
-        btnback = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel10 = new javax.swing.JLabel();
@@ -204,27 +204,27 @@ public class AdministerVaccineToPatientClinicJPanel extends javax.swing.JPanel {
         cbstatus = new javax.swing.JComboBox();
         jLabel4 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(70, 130, 180));
+        setBackground(new java.awt.Color(0, 204, 204));
         setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Administer Vaccine");
+        lblTitle.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitle.setText("Administer Vaccine");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Patient: ");
+        lblPatient.setFont(new java.awt.Font("October Compressed Devanagari", 0, 12)); // NOI18N
+        lblPatient.setForeground(new java.awt.Color(255, 255, 255));
+        lblPatient.setText("Patient: ");
 
-        txtpname.setEnabled(false);
+        txtPatient.setEnabled(false);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Vaccine Details:");
+        lblVaccineDetails.setFont(new java.awt.Font("October Compressed Devanagari", 3, 18)); // NOI18N
+        lblVaccineDetails.setForeground(new java.awt.Color(255, 255, 255));
+        lblVaccineDetails.setText("Vaccine Details:");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Vaccine Code:");
+        lblVaccineCode.setFont(new java.awt.Font("October Compressed Devanagari", 0, 12)); // NOI18N
+        lblVaccineCode.setForeground(new java.awt.Color(255, 255, 255));
+        lblVaccineCode.setText("Vaccine Code:");
 
         cbvacclcodelist.setBackground(new java.awt.Color(0, 0, 0));
         cbvacclcodelist.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -236,19 +236,19 @@ public class AdministerVaccineToPatientClinicJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Dose Number:");
+        lblDoseNumber.setFont(new java.awt.Font("October Compressed Devanagari", 0, 12)); // NOI18N
+        lblDoseNumber.setForeground(new java.awt.Color(255, 255, 255));
+        lblDoseNumber.setText("Dose Number:");
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Manufacture Date:");
+        lblManufactureDate.setFont(new java.awt.Font("October Compressed Devanagari", 0, 12)); // NOI18N
+        lblManufactureDate.setForeground(new java.awt.Color(255, 255, 255));
+        lblManufactureDate.setText("Manufacture Date:");
 
-        txtmanudate.setEnabled(false);
+        txtManufactureDate.setEnabled(false);
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Batch Number :");
+        lblBatchNumber.setFont(new java.awt.Font("October Compressed Devanagari", 0, 12)); // NOI18N
+        lblBatchNumber.setForeground(new java.awt.Color(255, 255, 255));
+        lblBatchNumber.setText("Batch Number :");
 
         cbnum.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         cbnum.setForeground(new java.awt.Color(0, 0, 102));
@@ -259,34 +259,34 @@ public class AdministerVaccineToPatientClinicJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Arm");
+        lblArm.setFont(new java.awt.Font("October Compressed Devanagari", 0, 12)); // NOI18N
+        lblArm.setForeground(new java.awt.Color(255, 255, 255));
+        lblArm.setText("Arm");
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setText("Injection Status:");
+        lblInjectionStatus.setFont(new java.awt.Font("October Compressed Devanagari", 0, 12)); // NOI18N
+        lblInjectionStatus.setForeground(new java.awt.Color(255, 255, 255));
+        lblInjectionStatus.setText("Injection Status:");
 
-        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("Given By:");
+        lblGivenBy.setFont(new java.awt.Font("October Compressed Devanagari", 0, 12)); // NOI18N
+        lblGivenBy.setForeground(new java.awt.Color(255, 255, 255));
+        lblGivenBy.setText("Given By:");
 
-        txtdoc.setEnabled(false);
+        txtGivenBy.setEnabled(false);
 
-        btnadmin.setBackground(new java.awt.Color(0, 0, 0));
-        btnadmin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnadmin.setForeground(new java.awt.Color(255, 255, 255));
-        btnadmin.setText("Administer Vaccine");
-        btnadmin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnadmin.addActionListener(new java.awt.event.ActionListener() {
+        btnAdministerVaccine.setBackground(new java.awt.Color(0, 0, 0));
+        btnAdministerVaccine.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        btnAdministerVaccine.setForeground(new java.awt.Color(255, 255, 255));
+        btnAdministerVaccine.setText("Administer Vaccine");
+        btnAdministerVaccine.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAdministerVaccine.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnadminActionPerformed(evt);
+                btnAdministerVaccineActionPerformed(evt);
             }
         });
 
-        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setText("Brand:");
+        lblBrand.setFont(new java.awt.Font("October Compressed Devanagari", 0, 12)); // NOI18N
+        lblBrand.setForeground(new java.awt.Color(255, 255, 255));
+        lblBrand.setText("Brand:");
 
         cbbrandlist.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         cbbrandlist.setForeground(new java.awt.Color(0, 0, 102));
@@ -297,18 +297,17 @@ public class AdministerVaccineToPatientClinicJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnback.setBackground(new java.awt.Color(0, 0, 102));
-        btnback.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnback.setForeground(new java.awt.Color(255, 255, 255));
-        btnback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
-        btnback.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnback.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnBack.setForeground(new java.awt.Color(255, 255, 255));
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
+        btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnbackActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/keepitup_70x70.png"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/keepitup_70x70.png"))); // NOI18N
 
         cbArm.setBackground(new java.awt.Color(0, 0, 0));
         cbArm.setForeground(new java.awt.Color(255, 255, 255));
@@ -329,7 +328,8 @@ public class AdministerVaccineToPatientClinicJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/vaccine.gif"))); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 204, 204));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/vaccine.gif"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -338,61 +338,61 @@ public class AdministerVaccineToPatientClinicJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnBack)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jSeparator2)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel14))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jSeparator1))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(14, 14, 14)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(cbvacclcodelist, 0, 173, Short.MAX_VALUE)
-                                    .addComponent(cbbrandlist, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(0, 0, Short.MAX_VALUE))))
+                        .addComponent(lblVaccineDetails)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSeparator1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(15, 15, 15)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(lblBrand)
+                                        .addComponent(lblVaccineCode))
+                                    .addGap(12, 12, 12)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(cbvacclcodelist, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(lblBatchNumber))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(cbbrandlist, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(lblDoseNumber)))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(cbnum, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtDoseNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(btnAdministerVaccine, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(lblManufactureDate)
+                                                .addComponent(lblArm)
+                                                .addComponent(lblGivenBy)
+                                                .addComponent(lblInjectionStatus))
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(cbArm, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(txtManufactureDate)
+                                                .addComponent(txtGivenBy)
+                                                .addComponent(cbstatus, 0, 175, Short.MAX_VALUE))))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(48, 48, 48)
-                                .addComponent(jLabel2)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtpname, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnback)
-                                .addGap(129, 129, 129)
-                                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(349, 349, 349)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel9)
-                                    .addComponent(jLabel6))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cbnum, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtdosenum, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(btnadmin, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jLabel7)
-                                            .addComponent(jLabel11)
-                                            .addComponent(jLabel13)
-                                            .addComponent(jLabel12))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(cbArm, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(txtmanudate)
-                                            .addComponent(txtdoc)
-                                            .addComponent(cbstatus, 0, 175, Short.MAX_VALUE))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 84, Short.MAX_VALUE)))
+                                .addComponent(lblPatient)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtPatient, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 116, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -401,57 +401,64 @@ public class AdministerVaccineToPatientClinicJPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(txtpname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(46, 46, 46)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblTitle)
+                                .addGap(53, 53, 53))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnBack)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblPatient)
+                            .addComponent(txtPatient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblVaccineDetails)
                             .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
+                            .addComponent(lblVaccineCode)
                             .addComponent(cbvacclcodelist, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9)
+                            .addComponent(lblBatchNumber)
                             .addComponent(cbnum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(cbbrandlist, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel14)
-                            .addComponent(jLabel6)
-                            .addComponent(txtdosenum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblBrand)
+                            .addComponent(lblDoseNumber)
+                            .addComponent(txtDoseNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(25, 25, 25)
-                        .addComponent(jLabel7))
-                    .addComponent(txtmanudate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lblManufactureDate))
+                    .addComponent(txtManufactureDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cbArm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel11))
-                        .addGap(19, 19, 19)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel13)
-                            .addComponent(txtdoc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel12)
-                            .addComponent(cbstatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(cbArm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblArm))
+                                .addGap(19, 19, 19)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblGivenBy)
+                                    .addComponent(txtGivenBy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lblInjectionStatus)
+                                    .addComponent(cbstatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addComponent(btnAdministerVaccine)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addComponent(btnadmin)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(1, 1, 1)))
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnback))
-                .addGap(23, 23, 23))
+                .addGap(105, 105, 105))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -467,7 +474,7 @@ public class AdministerVaccineToPatientClinicJPanel extends javax.swing.JPanel {
  
     }//GEN-LAST:event_cbvacclcodelistActionPerformed
 
-    private void btnadminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnadminActionPerformed
+    private void btnAdministerVaccineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdministerVaccineActionPerformed
         // TODO add your handling code here:
       
         try
@@ -558,7 +565,7 @@ public class AdministerVaccineToPatientClinicJPanel extends javax.swing.JPanel {
         
         
         if (flagg==2){
-        int dose = Integer.parseInt(txtdosenum.getText());
+        int dose = Integer.parseInt(txtDoseNumber.getText());
         administeredVaccine.setDoseNumber(dose);
         administeredVaccine.setshotstatus(status);
         administeredVaccine.setProvider(userAccount);
@@ -595,7 +602,7 @@ public class AdministerVaccineToPatientClinicJPanel extends javax.swing.JPanel {
             return;
         }
   
-    }//GEN-LAST:event_btnadminActionPerformed
+    }//GEN-LAST:event_btnAdministerVaccineActionPerformed
 
     private void cbbrandlistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbbrandlistActionPerformed
         // TODO add your handling code here:
@@ -616,12 +623,12 @@ public class AdministerVaccineToPatientClinicJPanel extends javax.swing.JPanel {
         populateTextFields();
     }//GEN-LAST:event_cbnumActionPerformed
 
-    private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         workContainer.remove(this);
         CardLayout layout = (CardLayout) workContainer.getLayout();
         layout.previous(workContainer);
-    }//GEN-LAST:event_btnbackActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
     private void cbArmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbArmActionPerformed
         // TODO add your handling code here:
@@ -633,8 +640,8 @@ public class AdministerVaccineToPatientClinicJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnadmin;
-    private javax.swing.JButton btnback;
+    private javax.swing.JButton btnAdministerVaccine;
+    private javax.swing.JButton btnBack;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JComboBox cbArm;
@@ -642,24 +649,24 @@ public class AdministerVaccineToPatientClinicJPanel extends javax.swing.JPanel {
     private javax.swing.JComboBox cbnum;
     private javax.swing.JComboBox cbstatus;
     private javax.swing.JComboBox cbvacclcodelist;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JTextField txtdoc;
-    private javax.swing.JTextField txtdosenum;
-    private javax.swing.JTextField txtmanudate;
-    private javax.swing.JTextField txtpname;
+    private javax.swing.JLabel lblArm;
+    private javax.swing.JLabel lblBatchNumber;
+    private javax.swing.JLabel lblBrand;
+    private javax.swing.JLabel lblDoseNumber;
+    private javax.swing.JLabel lblGivenBy;
+    private javax.swing.JLabel lblInjectionStatus;
+    private javax.swing.JLabel lblManufactureDate;
+    private javax.swing.JLabel lblPatient;
+    private javax.swing.JLabel lblTitle;
+    private javax.swing.JLabel lblVaccineCode;
+    private javax.swing.JLabel lblVaccineDetails;
+    private javax.swing.JTextField txtDoseNumber;
+    private javax.swing.JTextField txtGivenBy;
+    private javax.swing.JTextField txtManufactureDate;
+    private javax.swing.JTextField txtPatient;
     // End of variables declaration//GEN-END:variables
 }
