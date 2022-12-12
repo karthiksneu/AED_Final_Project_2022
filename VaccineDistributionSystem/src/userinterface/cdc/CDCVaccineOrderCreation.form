@@ -526,7 +526,7 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/UserInterface/ICONS/11122021icons/cart1_50x50.png"/>
+          <Image iconType="3" name="/userinterface/ICONS/11122021icons/cart1_50x50.png"/>
         </Property>
       </Properties>
     </Component>

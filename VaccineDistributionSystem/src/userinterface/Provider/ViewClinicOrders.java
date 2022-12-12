@@ -121,15 +121,15 @@ public class ViewClinicOrders extends javax.swing.JPanel {
 
         txtdetails.setEnabled(false);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Order Details:");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Total Cost of the Order:");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Order Number:");
 
@@ -156,11 +156,11 @@ public class ViewClinicOrders extends javax.swing.JPanel {
         tblorderdetail.getTableHeader().setReorderingAllowed(false);
         jScrollPane2.setViewportView(tblorderdetail);
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Order");
 
-        btnbvack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
+        btnbvack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
         btnbvack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnbvackActionPerformed(evt);
@@ -168,7 +168,7 @@ public class ViewClinicOrders extends javax.swing.JPanel {
         });
 
         btnsubmit.setBackground(new java.awt.Color(0, 0, 0));
-        btnsubmit.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnsubmit.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnsubmit.setForeground(new java.awt.Color(255, 255, 255));
         btnsubmit.setText("Forward the Order to LHD");
         btnsubmit.addActionListener(new java.awt.event.ActionListener() {

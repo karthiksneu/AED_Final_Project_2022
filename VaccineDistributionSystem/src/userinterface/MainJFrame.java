@@ -75,16 +75,16 @@ public class MainJFrame extends javax.swing.JFrame {
         projecttitle.setForeground(new java.awt.Color(255, 255, 255));
         projecttitle.setText("VDS");
 
-        lbusername.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lbusername.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         lbusername.setForeground(new java.awt.Color(255, 255, 255));
         lbusername.setText("Username:");
 
-        lbpassword.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lbpassword.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         lbpassword.setForeground(new java.awt.Color(255, 255, 255));
         lbpassword.setText("Password :");
 
         btnlogin.setBackground(new java.awt.Color(0, 0, 0));
-        btnlogin.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnlogin.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
         btnlogin.setForeground(new java.awt.Color(255, 255, 255));
         btnlogin.setText("LOGIN");
         btnlogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -95,7 +95,7 @@ public class MainJFrame extends javax.swing.JFrame {
         });
 
         btnlogout.setBackground(new java.awt.Color(0, 0, 0));
-        btnlogout.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnlogout.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
         btnlogout.setForeground(new java.awt.Color(255, 255, 255));
         btnlogout.setText("LOGOUT");
         btnlogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -156,32 +156,32 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(70, 130, 180));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/were-all-in-this-together-together.gif"))); // NOI18N
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 84, -1, -1));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/106824234-1610588757413-gettyimages-1221622538-a_ac_42eps.png"))); // NOI18N
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 640, -1));
 
         jLabel3.setBackground(new java.awt.Color(102, 153, 255));
-        jLabel3.setFont(new java.awt.Font("Monotype Corsiva", 1, 48)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Vaccine Management System");
+        jLabel3.setText("Vaccine Distribution System");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 600, 570, 70));
 
         jLabel4.setBackground(new java.awt.Color(102, 153, 255));
-        jLabel4.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Karthik Sunil - 002910070");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 110, 300, 70));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 300, 70));
 
         jLabel5.setBackground(new java.awt.Color(102, 153, 255));
-        jLabel5.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Freya Dsouza - 002756302");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 200, 310, 70));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 310, 70));
 
         jLabel6.setBackground(new java.awt.Color(102, 153, 255));
-        jLabel6.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Soham Shah - 002703848");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 290, 300, 70));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 510, 300, 70));
 
         container.add(jPanel2, "card2");
 

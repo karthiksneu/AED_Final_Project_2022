@@ -232,13 +232,15 @@ public class ManageCDCUserAccount extends javax.swing.JPanel {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Manage CDC Admin");
 
+        jLabel6.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Last Name:");
 
+        jLabel5.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("First Name:");
 
-        btnback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
+        btnback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
         btnback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnbackActionPerformed(evt);
@@ -246,7 +248,7 @@ public class ManageCDCUserAccount extends javax.swing.JPanel {
         });
 
         btnremove.setBackground(new java.awt.Color(0, 0, 0));
-        btnremove.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnremove.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnremove.setForeground(new java.awt.Color(255, 255, 255));
         btnremove.setText("Remove Admin");
         btnremove.addActionListener(new java.awt.event.ActionListener() {
@@ -256,7 +258,7 @@ public class ManageCDCUserAccount extends javax.swing.JPanel {
         });
 
         btnaddadmin.setBackground(new java.awt.Color(0, 0, 0));
-        btnaddadmin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnaddadmin.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnaddadmin.setForeground(new java.awt.Color(255, 255, 255));
         btnaddadmin.setText("Create Admin");
         btnaddadmin.addActionListener(new java.awt.event.ActionListener() {
@@ -284,13 +286,15 @@ public class ManageCDCUserAccount extends javax.swing.JPanel {
         tbladmin.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tbladmin);
 
+        jLabel8.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Password:");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("October Compressed Devanagari", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("List of Admins:");
 
+        jLabel7.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("UserName:");
 

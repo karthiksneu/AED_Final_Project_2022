@@ -95,7 +95,7 @@ public class ManageVaccineCatalog extends javax.swing.JPanel {
         }
 
         btnadd.setBackground(new java.awt.Color(0, 0, 0));
-        btnadd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnadd.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnadd.setForeground(new java.awt.Color(255, 255, 255));
         btnadd.setText("Add Vaccine");
         btnadd.addActionListener(new java.awt.event.ActionListener() {
@@ -105,7 +105,7 @@ public class ManageVaccineCatalog extends javax.swing.JPanel {
         });
 
         btnremove.setBackground(new java.awt.Color(0, 0, 0));
-        btnremove.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnremove.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnremove.setForeground(new java.awt.Color(255, 255, 255));
         btnremove.setText("Remove Vaccine");
         btnremove.addActionListener(new java.awt.event.ActionListener() {
@@ -114,16 +114,17 @@ public class ManageVaccineCatalog extends javax.swing.JPanel {
             }
         });
 
-        btnback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
+        btnback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
         btnback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnbackActionPerformed(evt);
             }
         });
 
-        btnref.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnref.setBackground(new java.awt.Color(0, 0, 0));
+        btnref.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnref.setForeground(new java.awt.Color(255, 255, 255));
-        btnref.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (2).png"))); // NOI18N
+        btnref.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/MicrosoftTeams-image (2).png"))); // NOI18N
         btnref.setText("Refresh");
         btnref.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,7 +174,7 @@ public class ManageVaccineCatalog extends javax.swing.JPanel {
                     .addComponent(btnremove))
                 .addGap(26, 26, 26)
                 .addComponent(btnback)
-                .addContainerGap(244, Short.MAX_VALUE))
+                .addContainerGap(164, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

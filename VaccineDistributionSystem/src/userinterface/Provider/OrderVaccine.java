@@ -230,7 +230,7 @@ public class OrderVaccine extends javax.swing.JPanel {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Create Vaccine Order");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("October Compressed Devanagari", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Manufacturer:");
 
@@ -241,16 +241,16 @@ public class OrderVaccine extends javax.swing.JPanel {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("October Compressed Devanagari", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Manufacturer Vaccine Catalog:");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("October Compressed Devanagari", 0, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Vaccine Code:");
 
         btnsrch.setBackground(new java.awt.Color(0, 0, 0));
-        btnsrch.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnsrch.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnsrch.setForeground(new java.awt.Color(255, 255, 255));
         btnsrch.setText("Search");
         btnsrch.addActionListener(new java.awt.event.ActionListener() {
@@ -277,7 +277,7 @@ public class OrderVaccine extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblmanu);
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("October Compressed Devanagari", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Cart:");
 
@@ -299,12 +299,12 @@ public class OrderVaccine extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(tblcart);
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("October Compressed Devanagari", 0, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Quantity:");
 
         btnaddcart.setBackground(new java.awt.Color(0, 0, 0));
-        btnaddcart.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnaddcart.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnaddcart.setForeground(new java.awt.Color(255, 255, 255));
         btnaddcart.setText("Add to Cart");
         btnaddcart.addActionListener(new java.awt.event.ActionListener() {
@@ -313,6 +313,7 @@ public class OrderVaccine extends javax.swing.JPanel {
             }
         });
 
+        btnchange.setBackground(new java.awt.Color(0, 0, 0));
         btnchange.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnchange.setForeground(new java.awt.Color(255, 255, 255));
         btnchange.setText("Modify");
@@ -322,12 +323,12 @@ public class OrderVaccine extends javax.swing.JPanel {
             }
         });
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("October Compressed Devanagari", 0, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Quantity:");
 
         btnremove.setBackground(new java.awt.Color(0, 0, 0));
-        btnremove.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnremove.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnremove.setForeground(new java.awt.Color(255, 255, 255));
         btnremove.setText("Remove");
         btnremove.addActionListener(new java.awt.event.ActionListener() {
@@ -337,7 +338,7 @@ public class OrderVaccine extends javax.swing.JPanel {
         });
 
         btncheckout.setBackground(new java.awt.Color(0, 0, 0));
-        btncheckout.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btncheckout.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btncheckout.setForeground(new java.awt.Color(255, 255, 255));
         btncheckout.setText("Check Out");
         btncheckout.addActionListener(new java.awt.event.ActionListener() {
@@ -352,7 +353,7 @@ public class OrderVaccine extends javax.swing.JPanel {
 
         txtamt.setEnabled(false);
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("October Compressed Devanagari", 0, 12)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Set Contract: ");
 
@@ -381,7 +382,7 @@ public class OrderVaccine extends javax.swing.JPanel {
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(cbmaulist, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 179, Short.MAX_VALUE)
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtvacccode, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -467,7 +468,7 @@ public class OrderVaccine extends javax.swing.JPanel {
                         .addComponent(jLabel10)
                         .addComponent(cbordertype, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(btncheckout, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

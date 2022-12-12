@@ -94,7 +94,7 @@ public class ViewShippedOrders extends javax.swing.JPanel {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Store Shipped Orders");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Order Number: ");
 
@@ -120,7 +120,7 @@ public class ViewShippedOrders extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tbldetails);
 
         btnstore.setBackground(new java.awt.Color(0, 0, 0));
-        btnstore.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnstore.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnstore.setForeground(new java.awt.Color(255, 255, 255));
         btnstore.setText("Store Vaccines");
         btnstore.addActionListener(new java.awt.event.ActionListener() {
@@ -129,7 +129,7 @@ public class ViewShippedOrders extends javax.swing.JPanel {
             }
         });
 
-        btnback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
+        btnback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
         btnback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnbackActionPerformed(evt);
@@ -180,7 +180,7 @@ public class ViewShippedOrders extends javax.swing.JPanel {
                         .addGap(38, 38, 38)
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(btnstore, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

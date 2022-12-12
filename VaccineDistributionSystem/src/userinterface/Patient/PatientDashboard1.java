@@ -67,12 +67,12 @@ public class PatientDashboard1 extends javax.swing.JPanel {
 
         mainMenu.setBackground(new java.awt.Color(70, 130, 180));
 
-        lblMainMenu.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        lblMainMenu.setFont(new java.awt.Font("October Compressed Devanagari", 1, 14)); // NOI18N
         lblMainMenu.setForeground(new java.awt.Color(255, 255, 255));
         lblMainMenu.setText("Main Menu:");
 
         btnViewAdministeredVaccines.setBackground(new java.awt.Color(0, 0, 0));
-        btnViewAdministeredVaccines.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnViewAdministeredVaccines.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnViewAdministeredVaccines.setForeground(new java.awt.Color(255, 255, 255));
         btnViewAdministeredVaccines.setText("View Administered Vaccines");
         btnViewAdministeredVaccines.addActionListener(new java.awt.event.ActionListener() {
@@ -81,7 +81,7 @@ public class PatientDashboard1 extends javax.swing.JPanel {
             }
         });
 
-        lblTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(255, 255, 255));
         lblTitle.setText("PATIENT");
 
@@ -111,7 +111,7 @@ public class PatientDashboard1 extends javax.swing.JPanel {
                 .addComponent(lblMainMenu)
                 .addGap(18, 18, 18)
                 .addComponent(btnViewAdministeredVaccines)
-                .addContainerGap(416, Short.MAX_VALUE))
+                .addContainerGap(411, Short.MAX_VALUE))
         );
 
         jSplitPane1.setTopComponent(mainMenu);

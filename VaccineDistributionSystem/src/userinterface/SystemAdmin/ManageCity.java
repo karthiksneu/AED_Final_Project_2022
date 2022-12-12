@@ -99,12 +99,12 @@ public class ManageCity extends javax.swing.JPanel {
         setBackground(new java.awt.Color(70, 130, 180));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Manage City");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("State: ");
 
@@ -138,12 +138,12 @@ public class ManageCity extends javax.swing.JPanel {
             tbcityname.getColumnModel().getColumn(0).setResizable(false);
         }
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("City Name:");
 
         btnaddcity.setBackground(new java.awt.Color(0, 0, 0));
-        btnaddcity.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnaddcity.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnaddcity.setForeground(new java.awt.Color(255, 255, 255));
         btnaddcity.setText("Add City");
         btnaddcity.addActionListener(new java.awt.event.ActionListener() {
@@ -153,7 +153,7 @@ public class ManageCity extends javax.swing.JPanel {
         });
 
         btnremove.setBackground(new java.awt.Color(0, 0, 0));
-        btnremove.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnremove.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnremove.setForeground(new java.awt.Color(255, 255, 255));
         btnremove.setText("Remove City");
         btnremove.addActionListener(new java.awt.event.ActionListener() {
@@ -162,7 +162,7 @@ public class ManageCity extends javax.swing.JPanel {
             }
         });
 
-        btnback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
+        btnback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
         btnback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnbackActionPerformed(evt);
@@ -205,7 +205,7 @@ public class ManageCity extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(59, 59, 59)
                         .addComponent(jLabel5)))
-                .addContainerGap(103, Short.MAX_VALUE))
+                .addContainerGap(115, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -230,7 +230,7 @@ public class ManageCity extends javax.swing.JPanel {
                 .addComponent(btnback)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel5)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

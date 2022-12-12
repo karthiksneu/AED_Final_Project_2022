@@ -92,7 +92,7 @@ public class SysAdminDashboard extends javax.swing.JPanel {
         mainMenuContainer.setBackground(new java.awt.Color(70, 130, 180));
 
         btnmanstate.setBackground(new java.awt.Color(0, 0, 0));
-        btnmanstate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnmanstate.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnmanstate.setForeground(new java.awt.Color(255, 255, 255));
         btnmanstate.setText("Manage States ");
         btnmanstate.addActionListener(new java.awt.event.ActionListener() {
@@ -102,7 +102,7 @@ public class SysAdminDashboard extends javax.swing.JPanel {
         });
 
         btnmancity.setBackground(new java.awt.Color(0, 0, 0));
-        btnmancity.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnmancity.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnmancity.setForeground(new java.awt.Color(255, 255, 255));
         btnmancity.setText("Manage Cities");
         btnmancity.addActionListener(new java.awt.event.ActionListener() {
@@ -112,7 +112,7 @@ public class SysAdminDashboard extends javax.swing.JPanel {
         });
 
         btnmanmanuf.setBackground(new java.awt.Color(0, 0, 0));
-        btnmanmanuf.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnmanmanuf.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnmanmanuf.setForeground(new java.awt.Color(255, 255, 255));
         btnmanmanuf.setText("Manage Manufacturers");
         btnmanmanuf.addActionListener(new java.awt.event.ActionListener() {
@@ -122,7 +122,7 @@ public class SysAdminDashboard extends javax.swing.JPanel {
         });
 
         btnmanprovi.setBackground(new java.awt.Color(0, 0, 0));
-        btnmanprovi.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnmanprovi.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnmanprovi.setForeground(new java.awt.Color(255, 255, 255));
         btnmanprovi.setText("Manage Providers");
         btnmanprovi.addActionListener(new java.awt.event.ActionListener() {
@@ -132,7 +132,7 @@ public class SysAdminDashboard extends javax.swing.JPanel {
         });
 
         btnmanvacc.setBackground(new java.awt.Color(0, 0, 0));
-        btnmanvacc.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnmanvacc.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnmanvacc.setForeground(new java.awt.Color(255, 255, 255));
         btnmanvacc.setText("Manage Vaccine Catalog");
         btnmanvacc.addActionListener(new java.awt.event.ActionListener() {
@@ -142,7 +142,7 @@ public class SysAdminDashboard extends javax.swing.JPanel {
         });
 
         btnmandisease.setBackground(new java.awt.Color(0, 0, 0));
-        btnmandisease.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnmandisease.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnmandisease.setForeground(new java.awt.Color(255, 255, 255));
         btnmandisease.setText("Manage Disease Catalog");
         btnmandisease.addActionListener(new java.awt.event.ActionListener() {
@@ -152,7 +152,7 @@ public class SysAdminDashboard extends javax.swing.JPanel {
         });
 
         btnmanacct.setBackground(new java.awt.Color(0, 0, 0));
-        btnmanacct.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnmanacct.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnmanacct.setForeground(new java.awt.Color(255, 255, 255));
         btnmanacct.setText("Manage User Accounts");
         btnmanacct.addActionListener(new java.awt.event.ActionListener() {
@@ -214,7 +214,7 @@ public class SysAdminDashboard extends javax.swing.JPanel {
                 .addComponent(btnmanacct)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addContainerGap(159, Short.MAX_VALUE))
         );
 
         jSplitPane1.setLeftComponent(mainMenuContainer);

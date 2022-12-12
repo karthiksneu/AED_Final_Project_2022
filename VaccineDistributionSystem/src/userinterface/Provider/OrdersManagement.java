@@ -164,7 +164,7 @@ public class OrdersManagement extends javax.swing.JPanel {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Manage Orders");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Order Status:");
 
@@ -188,7 +188,7 @@ public class OrdersManagement extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblrorder);
 
         btnview1.setBackground(new java.awt.Color(0, 0, 0));
-        btnview1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnview1.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnview1.setForeground(new java.awt.Color(255, 255, 255));
         btnview1.setText("View Details");
         btnview1.addActionListener(new java.awt.event.ActionListener() {
@@ -197,7 +197,7 @@ public class OrdersManagement extends javax.swing.JPanel {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Shipped Orders:");
 
@@ -221,7 +221,7 @@ public class OrdersManagement extends javax.swing.JPanel {
         jScrollPane2.setViewportView(tblship);
 
         btnviewinven.setBackground(new java.awt.Color(0, 0, 0));
-        btnviewinven.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnviewinven.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnviewinven.setForeground(new java.awt.Color(255, 255, 255));
         btnviewinven.setText("View and add to Inventory");
         btnviewinven.addActionListener(new java.awt.event.ActionListener() {
@@ -230,9 +230,10 @@ public class OrdersManagement extends javax.swing.JPanel {
             }
         });
 
-        btnref2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnref2.setBackground(new java.awt.Color(0, 0, 0));
+        btnref2.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnref2.setForeground(new java.awt.Color(255, 255, 255));
-        btnref2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (2).png"))); // NOI18N
+        btnref2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/MicrosoftTeams-image (2).png"))); // NOI18N
         btnref2.setText("Refresh");
         btnref2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -240,9 +241,10 @@ public class OrdersManagement extends javax.swing.JPanel {
             }
         });
 
-        btnref.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnref.setBackground(new java.awt.Color(0, 0, 0));
+        btnref.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnref.setForeground(new java.awt.Color(255, 255, 255));
-        btnref.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (2).png"))); // NOI18N
+        btnref.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/MicrosoftTeams-image (2).png"))); // NOI18N
         btnref.setText("Refresh");
         btnref.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
