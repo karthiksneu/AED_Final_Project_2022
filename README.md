@@ -22,7 +22,7 @@ Organization: Local Health Department, Center of Disease Control, Center of Immu
 
 Roles: Medical Officer, CDC Officer, Center Head, Nurse, Patient, Doctor, Transportation Manager, Delivery Man, Lab Assistant, Inventory Manager and Dealer Head
 
-
+<img width="1211" alt="Screenshot 2022-12-11 at 8 14 17 PM" src="https://user-images.githubusercontent.com/114313259/206962480-d2fc0b39-435f-4cf6-be00-c2af4b51d9f0.png">
 
 # Flow of Project
 Ordering Vaccines:
