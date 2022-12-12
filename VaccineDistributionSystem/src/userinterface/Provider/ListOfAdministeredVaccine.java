@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 
-package UserInterface.Provider;
+package userinterface.Provider;
 
-import Business.Enterprise.Enterprise;
-import Business.Enterprise.HospitalEnterprise;
-import Business.Organization.HospitalOrganization;
-import Business.Organization.Organization;
-import Business.Vaccine.AdministeredVaccineDetails;
+import TheBusiness.Enterprise.Enterprise;
+import TheBusiness.Enterprise.HospitalEnterprise;
+import TheBusiness.Organization.HospitalOrganization;
+import TheBusiness.Organization.Organization;
+import TheBusiness.VaccineManagement.AdministeredVaccineDetails;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -20,16 +20,16 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author soham
  */
-public class AdministeredVaccineListJPanel extends javax.swing.JPanel {
+public class ListOfAdministeredVaccine extends javax.swing.JPanel {
 
     /**
-     * Creates new form AdministeredVaccineListJPanel
+     * Creates new form ListOfAdministeredVaccine
      */
     private JPanel workContainer;
     private Enterprise enterprise;
     
     
-    public AdministeredVaccineListJPanel(JPanel workContainer,Enterprise enterprise ) {
+    public ListOfAdministeredVaccine(JPanel workContainer,Enterprise enterprise ) {
         initComponents();
         this.workContainer = workContainer;
         this.enterprise = enterprise;

@@ -4,16 +4,16 @@
  * and open the template in the editor.
  */
 
-package UserInterface.Provider;
+package userinterface.Provider;
 
-import Business.EcoSystem;
-import Business.Enterprise.HospitalEnterprise;
-import Business.Network.StateNetwork;
-import Business.Organization.HospitalOrganization;
-import Business.Organization.Organization;
-import Business.UserAccount.UserAccount;
-import Business.WorkQueue.ProviderVaccineOrderWorkRequest;
-import Business.WorkQueue.WorkRequest;
+import TheBusiness.Ecosystems;
+import TheBusiness.Enterprise.HospitalEnterprise;
+import TheBusiness.Network.StateNetwork;
+import TheBusiness.Organization.HospitalOrganization;
+import TheBusiness.Organization.Organization;
+import TheBusiness.UserAccountManagement.UserAccount;
+import TheBusiness.WorkOrderQueue.ProviderOrderRequest;
+import TheBusiness.WorkOrderQueue.WorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -23,7 +23,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author soham
  */
-public class ManageClinicOrdersJPanel extends javax.swing.JPanel {
+public class ClinicOrdersManagement extends javax.swing.JPanel {
 
     /**
      * Creates new form ManageOrdersJPanel
@@ -33,10 +33,10 @@ public class ManageClinicOrdersJPanel extends javax.swing.JPanel {
     private HospitalEnterprise hospital;
     private UserAccount userAccount;
     private HospitalOrganization hospitalOrg;
-    private EcoSystem business;
+    private Ecosystems business;
     private StateNetwork state;
     
-    public ManageClinicOrdersJPanel(JPanel workContainer, HospitalEnterprise hospital,HospitalOrganization hospitalOrg,UserAccount userAccount , EcoSystem business, StateNetwork state) {
+    public ClinicOrdersManagement(JPanel workContainer, HospitalEnterprise hospital,HospitalOrganization hospitalOrg,UserAccount userAccount , Ecosystems business, StateNetwork state) {
         initComponents();
         this.workContainer = workContainer;
         this.userAccount = userAccount;
@@ -65,9 +65,9 @@ public class ManageClinicOrdersJPanel extends javax.swing.JPanel {
         
         for(WorkRequest wr: hospitalOrg.getWorkQueue().getWorkRequestList())
         {   
-            if( wr instanceof ProviderVaccineOrderWorkRequest)
+            if( wr instanceof ProviderOrderRequest)
             {
-              ProviderVaccineOrderWorkRequest request = (ProviderVaccineOrderWorkRequest)wr  ;
+              ProviderOrderRequest request = (ProviderOrderRequest)wr  ;
               if(request.isClinicOrder())
               {
                Object[] row = new Object[5];
@@ -85,7 +85,7 @@ public class ManageClinicOrdersJPanel extends javax.swing.JPanel {
     }
     }
     
-    private String getContractDetails(ProviderVaccineOrderWorkRequest request){
+    private String getContractDetails(ProviderOrderRequest request){
         
         if(request.ishalfmonthContract())
             return "Half Monthly";
@@ -225,9 +225,9 @@ public class ManageClinicOrdersJPanel extends javax.swing.JPanel {
             return;
         }
         
-        ProviderVaccineOrderWorkRequest request = (ProviderVaccineOrderWorkRequest)tblorder.getValueAt(selectedRow, 0);
+        ProviderOrderRequest request = (ProviderOrderRequest)tblorder.getValueAt(selectedRow, 0);
         
-        ViewDetailsOfClinicOrderJPanel panel = new ViewDetailsOfClinicOrderJPanel(workContainer, request, state);
+        ViewClinicOrders panel = new ViewClinicOrders(workContainer, request, state);
         workContainer.add("ViewDetailsOfPlacedOrderJPanel", panel);
         CardLayout layout = (CardLayout)workContainer.getLayout();
         layout.next(workContainer);

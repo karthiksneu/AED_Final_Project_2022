@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package UserInterface.Provider;
+package userinterface.Provider;
 
-import Business.EcoSystem;
-import Business.Clinic.Clinic;
-import Business.Enterprise.HospitalEnterprise;
-import Business.Order.OrderItem;
-import Business.Organization.HospitalOrganization;
-import Business.Organization.Organization;
-import Business.Vaccine.VaccineDetails;
+import TheBusiness.Ecosystems;
+import TheBusiness.Clinic.Clinic;
+import TheBusiness.Enterprise.HospitalEnterprise;
+import TheBusiness.OrderManagement.OrderItem;
+import TheBusiness.Organization.HospitalOrganization;
+import TheBusiness.Organization.Organization;
+import TheBusiness.VaccineManagement.VaccineDetails;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -20,18 +20,18 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author soham
  */
-public class ViewInventoryJPanel extends javax.swing.JPanel {
+public class ViewInventory extends javax.swing.JPanel {
 
     /**
-     * Creates new form ViewInventoryJPanel
+     * Creates new form ViewInventory
      */
     private JPanel workContainer;
-    private EcoSystem business;
+    private Ecosystems business;
     private HospitalEnterprise hospitalEnterprise;
     private HospitalOrganization hospitalOrganization;
     private Clinic clinic;
 
-    public ViewInventoryJPanel(JPanel workContainer, EcoSystem business, HospitalEnterprise hospitalEnterprise, HospitalOrganization hospitalOrganization) {
+    public ViewInventory(JPanel workContainer, Ecosystems business, HospitalEnterprise hospitalEnterprise, HospitalOrganization hospitalOrganization) {
         initComponents();
         this.workContainer = workContainer;
         this.business = business;

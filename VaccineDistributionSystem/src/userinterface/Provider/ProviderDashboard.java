@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 
-package UserInterface.Provider;
+package userinterface.Provider;
 
-import Business.EcoSystem;
-import Business.Enterprise.HospitalEnterprise;
-import Business.Network.StateNetwork;
-import Business.Organization.HospitalOrganization;
-import Business.UserAccount.UserAccount;
+import TheBusiness.Ecosystems;
+import TheBusiness.Enterprise.HospitalEnterprise;
+import TheBusiness.Network.StateNetwork;
+import TheBusiness.Organization.HospitalOrganization;
+import TheBusiness.UserAccountManagement.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
@@ -22,20 +22,20 @@ import javax.swing.JPanel;
      
 
 
-public class ProviderWorkAreaJPanel extends javax.swing.JPanel {
+public class ProviderDashboard extends javax.swing.JPanel {
 
     /**
-     * Creates new form ProviderWorkAreaJPanel
+     * Creates new form ProviderDashboard
      */
     
     private JPanel userProcessContainer;
     private UserAccount userAccount;
     private HospitalEnterprise enterprise;
     private HospitalOrganization organization;
-    private EcoSystem business;
+    private Ecosystems business;
     private StateNetwork state;
     
-    public ProviderWorkAreaJPanel(JPanel userProcessContainer,UserAccount userAccount, HospitalEnterprise enterprise, HospitalOrganization organization, EcoSystem business, StateNetwork state) {
+    public ProviderDashboard(JPanel userProcessContainer,UserAccount userAccount, HospitalEnterprise enterprise, HospitalOrganization organization, Ecosystems business, StateNetwork state) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.userAccount = userAccount;
@@ -222,7 +222,7 @@ public class ProviderWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnremoteclinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnremoteclinActionPerformed
         // TODO add your handling code here:
-        ManageClinicOrdersJPanel panel = new ManageClinicOrdersJPanel(workContainer, enterprise, organization, userAccount, business, state);
+        ClinicOrdersManagement panel = new ClinicOrdersManagement(workContainer, enterprise, organization, userAccount, business, state);
         workContainer.add("ManageSatelliteOrdersJPanel", panel);
         CardLayout layout = (CardLayout)workContainer.getLayout();
         layout.next(workContainer);
@@ -230,7 +230,7 @@ public class ProviderWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnviewadminvaccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnviewadminvaccActionPerformed
         // TODO add your handling code here:
-        AdministeredVaccineListJPanel panel = new AdministeredVaccineListJPanel(workContainer, enterprise);
+        ListOfAdministeredVaccine panel = new ListOfAdministeredVaccine(workContainer, enterprise);
         workContainer.add("AdministeredVaccineListJPanel", panel);
         CardLayout layout = (CardLayout)workContainer.getLayout();
         layout.next(workContainer);
@@ -238,7 +238,7 @@ public class ProviderWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnadminvaccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnadminvaccActionPerformed
         // TODO add your handling code here:
-        AdministerVaccineJPanel panel = new AdministerVaccineJPanel(workContainer, enterprise, organization, userAccount, business, state);
+        VaccinatePatient panel = new VaccinatePatient(workContainer, enterprise, organization, userAccount, business, state);
         workContainer.add("AdministerVaccineJPanel", panel);
         CardLayout layout = (CardLayout)workContainer.getLayout();
         layout.next(workContainer);
@@ -246,7 +246,7 @@ public class ProviderWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnviewinvenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnviewinvenActionPerformed
         // TODO add your handling code here:
-        ViewInventoryJPanel panel = new ViewInventoryJPanel(workContainer, business, enterprise, organization);
+        ViewInventory panel = new ViewInventory(workContainer, business, enterprise, organization);
         workContainer.add("ViewInventoryJPanel", panel);
         CardLayout layout = (CardLayout)workContainer.getLayout();
         layout.next(workContainer);
@@ -255,7 +255,7 @@ public class ProviderWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnmanorderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmanorderActionPerformed
         // TODO add your handling code here:
-        ManageOrdersJPanel panel = new ManageOrdersJPanel(workContainer, enterprise, organization, userAccount, business, state);
+        OrdersManagement panel = new OrdersManagement(workContainer, enterprise, organization, userAccount, business, state);
         workContainer.add("ManageOrdersJPanel", panel);
         CardLayout layout = (CardLayout)workContainer.getLayout();
         layout.next(workContainer);
@@ -263,7 +263,7 @@ public class ProviderWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnvaccorderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnvaccorderActionPerformed
         // TODO add your handling code here:
-        PlaceVaccineOrderJPanel panel = new PlaceVaccineOrderJPanel(workContainer, enterprise, organization, userAccount, business, state);
+        OrderVaccine panel = new OrderVaccine(workContainer, enterprise, organization, userAccount, business, state);
         workContainer.add("PlaceVaccineOrderJPanel", panel);
         CardLayout layout = (CardLayout)workContainer.getLayout();
         layout.next(workContainer);

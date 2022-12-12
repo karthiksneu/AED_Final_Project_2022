@@ -4,14 +4,18 @@
  */
 package userinterface;
 
-
+import TheBusiness.Ecosystems;
+import TheBusiness.DB4OUtil.DB4OUtil;
+import TheBusiness.Enterprise.Enterprise;
+import TheBusiness.NationalEnterprise.Manufacturer;
+import TheBusiness.Network.CityNetwork;
+import TheBusiness.Network.StateNetwork;
+import TheBusiness.Organization.Organization;
+import TheBusiness.UserAccountManagement.UserAccount;
 import java.awt.CardLayout;
 import java.awt.Color;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-
-
-
 
 /**
  *
@@ -22,8 +26,14 @@ public class MainJFrame extends javax.swing.JFrame {
     /**
      * Creates new form MainJFrame
      */
+    private Ecosystems business;
+    private DB4OUtil dB40Util = DB4OUtil.getInstance();
+
     public MainJFrame() {
         initComponents();
+        business = dB40Util.retrieveSystem();
+        //Setting the frame size
+        setSize(1500, 800);
     }
 
     /**
@@ -42,9 +52,10 @@ public class MainJFrame extends javax.swing.JFrame {
         txtusername = new javax.swing.JTextField();
         lbpassword = new javax.swing.JLabel();
         txtpassword = new javax.swing.JPasswordField();
-        btnlogin = new javax.swing.JButton();
-        btnlogout = new javax.swing.JButton();
-        workArea = new javax.swing.JPanel();
+        btnLogin = new javax.swing.JButton();
+        btnLogout = new javax.swing.JButton();
+        container = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
         lblTitle = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -65,64 +76,64 @@ public class MainJFrame extends javax.swing.JFrame {
         lbusername.setForeground(new java.awt.Color(255, 255, 255));
         lbusername.setText("Username:");
         controlPanel.add(lbusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 163, -1, -1));
-
-        txtusername.setBackground(new java.awt.Color(255, 255, 255));
         controlPanel.add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 197, 225, 40));
 
         lbpassword.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lbpassword.setForeground(new java.awt.Color(255, 255, 255));
         lbpassword.setText("Password :");
         controlPanel.add(lbpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 243, -1, 26));
-
-        txtpassword.setBackground(new java.awt.Color(255, 255, 255));
         controlPanel.add(txtpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 275, 225, 38));
 
-        btnlogin.setBackground(new java.awt.Color(95, 69, 216));
-        btnlogin.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btnlogin.setForeground(new java.awt.Color(255, 255, 255));
-        btnlogin.setText("LOGIN");
-        btnlogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnlogin.addActionListener(new java.awt.event.ActionListener() {
+        btnLogin.setBackground(new java.awt.Color(95, 69, 216));
+        btnLogin.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnLogin.setForeground(new java.awt.Color(255, 255, 255));
+        btnLogin.setText("LOGIN");
+        btnLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnloginActionPerformed(evt);
+                btnLoginActionPerformed(evt);
             }
         });
-        controlPanel.add(btnlogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 331, 225, 50));
+        controlPanel.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 331, 225, 50));
 
-        btnlogout.setBackground(new java.awt.Color(95, 69, 216));
-        btnlogout.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btnlogout.setForeground(new java.awt.Color(255, 255, 255));
-        btnlogout.setText("LOGOUT");
-        btnlogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnlogout.addActionListener(new java.awt.event.ActionListener() {
+        btnLogout.setBackground(new java.awt.Color(95, 69, 216));
+        btnLogout.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnLogout.setForeground(new java.awt.Color(255, 255, 255));
+        btnLogout.setText("LOGOUT");
+        btnLogout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnlogoutActionPerformed(evt);
+                btnLogoutActionPerformed(evt);
             }
         });
-        controlPanel.add(btnlogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 406, 225, 41));
+        controlPanel.add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 406, 225, 41));
 
         jSplitPane1.setLeftComponent(controlPanel);
 
-        workArea.setBackground(new java.awt.Color(170, 183, 233));
-        workArea.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        container.setBackground(new java.awt.Color(170, 183, 233));
+        container.setLayout(new java.awt.CardLayout());
+
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblTitle.setFont(new java.awt.Font("Helvetica Neue", 3, 36)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(255, 255, 255));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitle.setLabelFor(workArea);
+        lblTitle.setLabelFor(container);
         lblTitle.setText("Vaccine Distribution System");
-        workArea.add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 35, 760, -1));
+        jPanel1.add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 35, 760, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/106824234-1610588757413-gettyimages-1221622538-a_ac_42eps.png"))); // NOI18N
         jLabel1.setText("jLabel1");
-        workArea.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 690, 420));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 690, 420));
 
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Created by Karthik Sunil, Freya Dsouza, Soham Shah");
-        workArea.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 630, 760, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 630, 760, -1));
 
-        jSplitPane1.setRightComponent(workArea);
+        container.add(jPanel1, "card2");
+
+        jSplitPane1.setRightComponent(container);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -138,17 +149,169 @@ public class MainJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnloginActionPerformed
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
 
-       
+        String username = txtusername.getText();
+        if (username.trim().equalsIgnoreCase("")) {
+            JOptionPane.showMessageDialog(null, "Hello, Please enter your Username!");
+            return;
 
-    }//GEN-LAST:event_btnloginActionPerformed
+        }
+        char[] passwordCharArray = txtpassword.getPassword();
+        String password = String.valueOf(passwordCharArray);
+        if (password.trim().equalsIgnoreCase("")) {
+            JOptionPane.showMessageDialog(null, "Hello, Please enter your Password!");
+            return;
 
-    private void btnlogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlogoutActionPerformed
+        }
+
+        Enterprise isEnterprise = null;
+        Organization organization = null;
+        StateNetwork stateNetwork = null;
+
+        UserAccount userAccount = business.getUserAccountDirectory().authenticateUser(username, password);
+
+        if (userAccount == null) {
+
+            userAccount = business.getCdc().getUserAccountDirectory().authenticateUser(username, password);
+            if (userAccount == null) {
+                for (Organization org : business.getCdc().getOrganizationDirectory().getOrganizationList()) {
+                    userAccount = org.getUserAccountDirectory().authenticateUser(username, password);
+                    if (userAccount != null) {
+                        organization = org;
+                        break;
+                    }
+                }
+            }
+            if (userAccount != null) {
+                isEnterprise = business.getCdc();
+
+            }
+        }
+        if (userAccount == null) {
+            for (Manufacturer manufacturer : business.getManufacturerDirectory().getManufacturerDirectory()) {
+                userAccount = manufacturer.getUserAccountDirectory().authenticateUser(username, password);
+
+                if (userAccount == null) {
+                    for (Organization org : manufacturer.getOrganizationDirectory().getOrganizationList()) {
+                        userAccount = org.getUserAccountDirectory().authenticateUser(username, password);
+                        if (userAccount != null) {
+                            break;
+                        }
+                    }
+                }
+                if (userAccount != null) {
+                    isEnterprise = manufacturer;
+                    break;
+                }
+            }
+
+        }
+        if (userAccount == null) {
+
+            userAccount = business.getDistributor().getUserAccountDirectory().authenticateUser(username, password);
+            if (userAccount == null) {
+                for (Organization org : business.getDistributor().getOrganizationDirectory().getOrganizationList()) {
+                    userAccount = org.getUserAccountDirectory().authenticateUser(username, password);
+                    if (userAccount != null) {
+                        organization = org;
+                        break;
+                    }
+                }
+            }
+            if (userAccount != null) {
+                isEnterprise = business.getDistributor();
+            }
+
+        }
+        if (userAccount == null) {
+            for (StateNetwork state : business.getStateList()) {
+                if (userAccount == null) {
+                    userAccount = state.getLocalHealthDepartment().getUserAccountDirectory().authenticateUser(username, password);
+                    if (userAccount == null) {
+                        for (Organization org : state.getLocalHealthDepartment().getOrganizationDirectory().getOrganizationList()) {
+                            userAccount = org.getUserAccountDirectory().authenticateUser(username, password);
+                            if (userAccount != null) {
+                                stateNetwork = state;
+                                organization = org;
+                                break;
+                            }
+                        }
+                    }
+                    if (userAccount != null) {
+                        isEnterprise = state.getLocalHealthDepartment();
+
+                    }
+                    if (userAccount == null) {
+
+                        for (CityNetwork city : state.getCityList()) {
+                            for (Enterprise hospital : city.getEnterpriseDirectory().getEnterpriseDirectory()) {
+                                userAccount = hospital.getUserAccountDirectory().authenticateUser(username, password);
+                                if (userAccount == null) {
+                                    for (Organization o : hospital.getOrganizationDirectory().getOrganizationList()) {
+                                        userAccount = o.getUserAccountDirectory().authenticateUser(username, password);
+
+                                        if (userAccount != null) {
+                                            stateNetwork = state;
+                                            isEnterprise = hospital;
+                                            organization = o;
+                                            break;
+
+                                        }
+                                    }
+                                } else {
+
+                                    isEnterprise = hospital;
+                                    break;
+                                }
+
+                                if (organization != null) {
+                                    break;
+                                }
+
+                            }
+                            if (isEnterprise != null) {
+                                break;
+                            }
+                        }
+
+                    } else {
+                        isEnterprise = state.getLocalHealthDepartment();
+                        break;
+                    }
+
+                }
+            }
+        }
+
+        if (userAccount == null) {
+            JOptionPane.showMessageDialog(null, "Sorry, Please Enter Correct Credentials !");
+
+        } else {
+
+            CardLayout layout = (CardLayout) container.getLayout();
+            container.add("WorkArea", userAccount.getRole().createWorkArea(container, userAccount, isEnterprise, organization, business, stateNetwork));
+            layout.next(container);
+
+        }
+
+    }//GEN-LAST:event_btnLoginActionPerformed
+
+    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         // TODO add your handling code here:
-       
-    }//GEN-LAST:event_btnlogoutActionPerformed
+        container.removeAll();
+        txtusername.setText(null);
+        txtpassword.setText(null);
+
+        JPanel blankJP = new JPanel();
+        blankJP.setBackground(new java.awt.Color(102, 153, 255));
+        container.add("blank", blankJP);
+        CardLayout crdLyt = (CardLayout) container.getLayout();
+        crdLyt.next(container);
+
+        dB40Util.storeSystem(business);
+    }//GEN-LAST:event_btnLogoutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -186,11 +349,13 @@ public class MainJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnlogin;
-    private javax.swing.JButton btnlogout;
+    private javax.swing.JButton btnLogin;
+    private javax.swing.JButton btnLogout;
+    private javax.swing.JPanel container;
     private javax.swing.JPanel controlPanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JLabel lblTitle;
     private javax.swing.JLabel lbpassword;
@@ -198,6 +363,5 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel projecttitle;
     private javax.swing.JPasswordField txtpassword;
     private javax.swing.JTextField txtusername;
-    private javax.swing.JPanel workArea;
     // End of variables declaration//GEN-END:variables
 }

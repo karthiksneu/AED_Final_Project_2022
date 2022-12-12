@@ -37,7 +37,7 @@ public class AddVaccines extends javax.swing.JPanel {
     private void populateDiseaseCombo(){
         cbdislist.removeAllItems();
         
-        for(Disease disease : business.getDiseaseDirectory().getdiseaseDirectory())
+        for(Disease disease : business.getDiseaseDirectory().getdiseaseDir())
         {
             cbdislist.addItem(disease);
         }
