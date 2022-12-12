@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author DELL
+ * @author karthik
  */
 
 //Initializing class ManufacturerRole that extends Role

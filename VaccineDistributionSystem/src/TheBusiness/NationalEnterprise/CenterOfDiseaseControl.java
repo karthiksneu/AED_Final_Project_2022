@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author DELL
+ * @author karthik
  */
 
 //Initializing class CenterOfDiseaseControl extends Enterprise

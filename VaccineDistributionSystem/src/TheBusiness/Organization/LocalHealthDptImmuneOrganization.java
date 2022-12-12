@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author DELL
+ * @author karthik
  */
 
 //INitializing our LocalHealthDptImmuneOrganization that extends our Organization Entity

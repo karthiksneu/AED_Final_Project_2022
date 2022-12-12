@@ -18,7 +18,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author DELL
+ * @author karthik
  */
 //Initializing class ProviderRole that extends Role
 public class ProviderRole extends Role{

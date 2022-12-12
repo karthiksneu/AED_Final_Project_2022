@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author DELL
+ * @author karthik
  */
 
 //Initializing our abstract Role class considerng the below roles in this project

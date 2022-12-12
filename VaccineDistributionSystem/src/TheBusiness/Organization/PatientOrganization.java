@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author DELL
+ * @author karthik
  */
 
 //INitializing our PatientOrganization that extends our Organization Entity
