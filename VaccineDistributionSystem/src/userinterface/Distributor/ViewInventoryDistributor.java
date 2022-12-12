@@ -27,8 +27,8 @@ public class ViewInventoryDistributor extends javax.swing.JPanel {
         initComponents();
         this.workContainer = workContainer;
         this.warehouse = warehouse;
-        txt1.setText(String.valueOf(warehouse.getId()));
-        txt2.setText(String.valueOf(warehouse.getLocation()));
+        txtWarehouseId.setText(String.valueOf(warehouse.getId()));
+        txtLocation.setText(String.valueOf(warehouse.getLocation()));
         populateTable();
 
     }
@@ -65,34 +65,34 @@ public class ViewInventoryDistributor extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbl1 = new javax.swing.JLabel();
-        lbl2 = new javax.swing.JLabel();
-        txt1 = new javax.swing.JTextField();
-        lbl3 = new javax.swing.JLabel();
-        txt2 = new javax.swing.JTextField();
+        lblTitle = new javax.swing.JLabel();
+        lblWarehouseId = new javax.swing.JLabel();
+        txtWarehouseId = new javax.swing.JTextField();
+        lblLocation = new javax.swing.JLabel();
+        txtLocation = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblinven = new javax.swing.JTable();
         jSeparator1 = new javax.swing.JSeparator();
-        btn1 = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(70, 130, 180));
 
-        lbl1.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
-        lbl1.setForeground(new java.awt.Color(255, 255, 255));
-        lbl1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbl1.setText("View Inventory");
+        lblTitle.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitle.setText("View Inventory");
 
-        lbl2.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
-        lbl2.setForeground(new java.awt.Color(255, 255, 255));
-        lbl2.setText("Warehouse ID:");
+        lblWarehouseId.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
+        lblWarehouseId.setForeground(new java.awt.Color(255, 255, 255));
+        lblWarehouseId.setText("Warehouse ID:");
 
-        txt1.setEnabled(false);
+        txtWarehouseId.setEnabled(false);
 
-        lbl3.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
-        lbl3.setForeground(new java.awt.Color(255, 255, 255));
-        lbl3.setText("Location:");
+        lblLocation.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
+        lblLocation.setForeground(new java.awt.Color(255, 255, 255));
+        lblLocation.setText("Location:");
 
-        txt2.setEnabled(false);
+        txtLocation.setEnabled(false);
 
         tblinven.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -113,12 +113,12 @@ public class ViewInventoryDistributor extends javax.swing.JPanel {
         tblinven.getTableHeader().setReorderingAllowed(false);
         jScrollPane2.setViewportView(tblinven);
 
-        btn1.setForeground(new java.awt.Color(255, 255, 255));
-        btn1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
-        btn1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn1.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setForeground(new java.awt.Color(255, 255, 255));
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
+        btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn1ActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
 
@@ -136,18 +136,18 @@ public class ViewInventoryDistributor extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 1, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(btn1)
+                                .addComponent(btnBack)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lbl1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lbl2)
+                        .addComponent(lblWarehouseId)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtWarehouseId, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lbl3)
+                        .addComponent(lblLocation)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt2, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtLocation, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -156,41 +156,41 @@ public class ViewInventoryDistributor extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btn1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                        .addComponent(btnBack)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbl2)
-                            .addComponent(txt1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbl3)
-                            .addComponent(txt2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblWarehouseId)
+                            .addComponent(txtWarehouseId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblLocation)
+                            .addComponent(txtLocation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(135, 135, 135))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lbl1)
+                        .addComponent(lblTitle)
                         .addGap(290, 290, 290)
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         workContainer.remove(this);
         CardLayout layout = (CardLayout) workContainer.getLayout();
         layout.previous(workContainer);
-    }//GEN-LAST:event_btn1ActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn1;
+    private javax.swing.JButton btnBack;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JLabel lbl1;
-    private javax.swing.JLabel lbl2;
-    private javax.swing.JLabel lbl3;
+    private javax.swing.JLabel lblLocation;
+    private javax.swing.JLabel lblTitle;
+    private javax.swing.JLabel lblWarehouseId;
     private javax.swing.JTable tblinven;
-    private javax.swing.JTextField txt1;
-    private javax.swing.JTextField txt2;
+    private javax.swing.JTextField txtLocation;
+    private javax.swing.JTextField txtWarehouseId;
     // End of variables declaration//GEN-END:variables
 }

@@ -52,7 +52,7 @@ public class ContractAndShipDetails extends javax.swing.JPanel {
         this.business = business;
         this.request = request;
         this.distributorEnterprise = distributorEnterprise;
-        txt1.setText(String.valueOf(request.getVaccineOrder().getOrderNumber()));
+        txtOrderNumber.setText(String.valueOf(request.getVaccineOrder().getOrderNumber()));
         displayContractDetails();
         calculateTotalCostOfOrder();
         populateOrderTable();
@@ -64,11 +64,11 @@ public class ContractAndShipDetails extends javax.swing.JPanel {
     private void displayContractDetails(){
         
         if(request.ishalfmonthContract())
-            txt3.setText("Half Monthly");
+            txtContract.setText("Half Monthly");
         if(request.isfullMonthContract())
-            txt3.setText("Monthly");
+            txtContract.setText("Monthly");
         if(request.isasReq())
-            txt3.setText("As Required");
+            txtContract.setText("As Required");
         
     }
     
@@ -80,7 +80,7 @@ public class ContractAndShipDetails extends javax.swing.JPanel {
         {
             total = total + (oi.getVaccineDetails().getVaccinePrice()*oi.getQuantity());
         }
-        txt2.setText(String.valueOf(total));
+        txtTotalCostOfOrder.setText(String.valueOf(total));
     }
     
     
@@ -124,36 +124,36 @@ public class ContractAndShipDetails extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbl1 = new javax.swing.JLabel();
-        lbl2 = new javax.swing.JLabel();
-        txt1 = new javax.swing.JTextField();
+        lblTitle = new javax.swing.JLabel();
+        lblOrderNumber = new javax.swing.JLabel();
+        txtOrderNumber = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblorder = new javax.swing.JTable();
-        lbl3 = new javax.swing.JLabel();
+        lblOrderParticulars = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblinven = new javax.swing.JTable();
         jSeparator1 = new javax.swing.JSeparator();
-        lbl4 = new javax.swing.JLabel();
-        btn1 = new javax.swing.JButton();
-        lbl5 = new javax.swing.JLabel();
-        txt2 = new javax.swing.JTextField();
-        btn2 = new javax.swing.JButton();
-        lbl6 = new javax.swing.JLabel();
-        txt3 = new javax.swing.JTextField();
-        btn3 = new javax.swing.JButton();
+        lblInventoryCheck = new javax.swing.JLabel();
+        btnShipOrder = new javax.swing.JButton();
+        lblTotalCostOfOrder = new javax.swing.JLabel();
+        txtTotalCostOfOrder = new javax.swing.JTextField();
+        btnCheckInventory = new javax.swing.JButton();
+        lblContract = new javax.swing.JLabel();
+        txtContract = new javax.swing.JTextField();
+        btnBack = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(70, 130, 180));
 
-        lbl1.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
-        lbl1.setForeground(new java.awt.Color(255, 255, 255));
-        lbl1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbl1.setText("View Contract Details and Ship");
+        lblTitle.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitle.setText("View Contract Details and Ship");
 
-        lbl2.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
-        lbl2.setForeground(new java.awt.Color(255, 255, 255));
-        lbl2.setText("Order Number:");
+        lblOrderNumber.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
+        lblOrderNumber.setForeground(new java.awt.Color(255, 255, 255));
+        lblOrderNumber.setText("Order Number:");
 
-        txt1.setEnabled(false);
+        txtOrderNumber.setEnabled(false);
 
         tblorder.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -174,9 +174,9 @@ public class ContractAndShipDetails extends javax.swing.JPanel {
         tblorder.getTableHeader().setReorderingAllowed(false);
         jScrollPane2.setViewportView(tblorder);
 
-        lbl3.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
-        lbl3.setForeground(new java.awt.Color(255, 255, 255));
-        lbl3.setText("Order Particulars:");
+        lblOrderParticulars.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        lblOrderParticulars.setForeground(new java.awt.Color(255, 255, 255));
+        lblOrderParticulars.setText("Order Particulars:");
 
         tblinven.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -197,51 +197,51 @@ public class ContractAndShipDetails extends javax.swing.JPanel {
         tblinven.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tblinven);
 
-        lbl4.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
-        lbl4.setForeground(new java.awt.Color(255, 255, 255));
-        lbl4.setText("Inventory Check:");
+        lblInventoryCheck.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        lblInventoryCheck.setForeground(new java.awt.Color(255, 255, 255));
+        lblInventoryCheck.setText("Inventory Check:");
 
-        btn1.setBackground(new java.awt.Color(0, 0, 0));
-        btn1.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
-        btn1.setForeground(new java.awt.Color(255, 255, 255));
-        btn1.setText("Ship order");
-        btn1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn1.addActionListener(new java.awt.event.ActionListener() {
+        btnShipOrder.setBackground(new java.awt.Color(0, 0, 0));
+        btnShipOrder.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        btnShipOrder.setForeground(new java.awt.Color(255, 255, 255));
+        btnShipOrder.setText("Ship order");
+        btnShipOrder.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnShipOrder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn1ActionPerformed(evt);
+                btnShipOrderActionPerformed(evt);
             }
         });
 
-        lbl5.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
-        lbl5.setForeground(new java.awt.Color(255, 255, 255));
-        lbl5.setText("Total Cost of the Order:");
+        lblTotalCostOfOrder.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
+        lblTotalCostOfOrder.setForeground(new java.awt.Color(255, 255, 255));
+        lblTotalCostOfOrder.setText("Total Cost of the Order:");
 
-        txt2.setEnabled(false);
+        txtTotalCostOfOrder.setEnabled(false);
 
-        btn2.setBackground(new java.awt.Color(0, 0, 0));
-        btn2.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
-        btn2.setForeground(new java.awt.Color(255, 255, 255));
-        btn2.setText("Check Inventory");
-        btn2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn2.addActionListener(new java.awt.event.ActionListener() {
+        btnCheckInventory.setBackground(new java.awt.Color(0, 0, 0));
+        btnCheckInventory.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        btnCheckInventory.setForeground(new java.awt.Color(255, 255, 255));
+        btnCheckInventory.setText("Check Inventory");
+        btnCheckInventory.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCheckInventory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn2ActionPerformed(evt);
+                btnCheckInventoryActionPerformed(evt);
             }
         });
 
-        lbl6.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
-        lbl6.setForeground(new java.awt.Color(255, 255, 255));
-        lbl6.setText("Contract :");
+        lblContract.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
+        lblContract.setForeground(new java.awt.Color(255, 255, 255));
+        lblContract.setText("Contract :");
 
-        txt3.setEnabled(false);
+        txtContract.setEnabled(false);
 
-        btn3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btn3.setForeground(new java.awt.Color(255, 255, 255));
-        btn3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
-        btn3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn3.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnBack.setForeground(new java.awt.Color(255, 255, 255));
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
+        btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn3ActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
 
@@ -253,30 +253,30 @@ public class ContractAndShipDetails extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btn3)
+                        .addComponent(btnBack)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lbl1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jScrollPane2)
                     .addComponent(jScrollPane1)
                     .addComponent(jSeparator1)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbl3)
-                            .addComponent(lbl4)
+                            .addComponent(lblOrderParticulars)
+                            .addComponent(lblInventoryCheck)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(lbl2)
+                                .addComponent(lblOrderNumber)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtOrderNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(lbl5)
+                                .addComponent(lblTotalCostOfOrder)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt2, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtTotalCostOfOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(lbl6)
+                                .addComponent(lblContract)
                                 .addGap(18, 18, 18)
-                                .addComponent(txt3, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(btn2, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtContract, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnCheckInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnShipOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 100, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -286,37 +286,37 @@ public class ContractAndShipDetails extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lbl1)
+                        .addComponent(lblTitle)
                         .addGap(35, 35, 35))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btn3, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl2)
-                    .addComponent(txt1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl5)
-                    .addComponent(txt2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl6)
-                    .addComponent(txt3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblOrderNumber)
+                    .addComponent(txtOrderNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTotalCostOfOrder)
+                    .addComponent(txtTotalCostOfOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblContract)
+                    .addComponent(txtContract, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lbl3)
+                .addComponent(lblOrderParticulars)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btn2)
+                .addComponent(btnCheckInventory)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lbl4)
+                .addComponent(lblInventoryCheck)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btn1)
+                .addComponent(btnShipOrder)
                 .addGap(32, 32, 32))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
+    private void btnCheckInventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCheckInventoryActionPerformed
         // TODO add your handling code here:
          int rowCount = tblinven.getRowCount();
         DefaultTableModel defaulttabelmodel = (DefaultTableModel)tblinven.getModel();
@@ -396,9 +396,9 @@ public class ContractAndShipDetails extends javax.swing.JPanel {
         }
         
 
-    }//GEN-LAST:event_btn2ActionPerformed
+    }//GEN-LAST:event_btnCheckInventoryActionPerformed
 
-    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+    private void btnShipOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShipOrderActionPerformed
 
         // TODO add your handling code here:
   
@@ -499,33 +499,33 @@ public class ContractAndShipDetails extends javax.swing.JPanel {
 
         
         
-    }//GEN-LAST:event_btn1ActionPerformed
+    }//GEN-LAST:event_btnShipOrderActionPerformed
 
-    private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         workContainer.remove(this);
         CardLayout layout = (CardLayout) workContainer.getLayout();
         layout.previous(workContainer);
-    }//GEN-LAST:event_btn3ActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn1;
-    private javax.swing.JButton btn2;
-    private javax.swing.JButton btn3;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnCheckInventory;
+    private javax.swing.JButton btnShipOrder;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JLabel lbl1;
-    private javax.swing.JLabel lbl2;
-    private javax.swing.JLabel lbl3;
-    private javax.swing.JLabel lbl4;
-    private javax.swing.JLabel lbl5;
-    private javax.swing.JLabel lbl6;
+    private javax.swing.JLabel lblContract;
+    private javax.swing.JLabel lblInventoryCheck;
+    private javax.swing.JLabel lblOrderNumber;
+    private javax.swing.JLabel lblOrderParticulars;
+    private javax.swing.JLabel lblTitle;
+    private javax.swing.JLabel lblTotalCostOfOrder;
     private javax.swing.JTable tblinven;
     private javax.swing.JTable tblorder;
-    private javax.swing.JTextField txt1;
-    private javax.swing.JTextField txt2;
-    private javax.swing.JTextField txt3;
+    private javax.swing.JTextField txtContract;
+    private javax.swing.JTextField txtOrderNumber;
+    private javax.swing.JTextField txtTotalCostOfOrder;
     // End of variables declaration//GEN-END:variables
 }

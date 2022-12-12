@@ -10,41 +10,40 @@ import java.util.ArrayList;
 
 /**
  *
- * @author karthik
+ * @author vinithhiteshharsora
  */
 
-
+//Calling DiseaseDirectory Class
 public class DiseaseDirectory {
     
-    private ArrayList<Disease> diseaseDir;
+    private ArrayList<Disease> diseaseDirectory;
 
-    //Creating constructor for DiseaseDirectory which initializes the arraylist
     public DiseaseDirectory() {
         
-        diseaseDir = new ArrayList<>();
+        diseaseDirectory = new ArrayList<>();
     }
 
-    public ArrayList<Disease> getdiseaseDir() {
-        return diseaseDir;
+    public ArrayList<Disease> getdiseaseDirectory() {
+        return diseaseDirectory;
     }
 
-    public void setdiseaseDir(ArrayList<Disease> diseaseDir) {
-        this.diseaseDir = diseaseDir;
+    public void setdiseaseDirectory(ArrayList<Disease> diseaseDirectory) {
+        this.diseaseDirectory = diseaseDirectory;
     }
     
     
     public Disease addNewDisease(){
         
-        Disease newDir = new Disease();
-        diseaseDir.add(newDir);
-        return newDir;        
+        Disease newD = new Disease();
+        diseaseDirectory.add(newD);
+        return newD;        
         
     }
     
     
     public void removeDisease(Disease disease){
         
-        diseaseDir.remove(disease);
+        diseaseDirectory.remove(disease);
     }
     
     

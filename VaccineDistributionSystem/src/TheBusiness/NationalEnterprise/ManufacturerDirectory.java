@@ -3,48 +3,46 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package TheBusiness.NationalEnterprise;
 
 import java.util.ArrayList;
 
 /**
  *
- * @author karthik
- * 
+ * @author DELL
  */
 
-//Creating a class ManufacturerDirectory
+//Initializing class ManufacturerDirectory
 public class ManufacturerDirectory {
-
-    private ArrayList<Manufacturer> manufacturerDir;
-
-    //Creating a constructor for ManufacturerDirectory
-    public ManufacturerDirectory() {
-
-        manufacturerDir = new ArrayList<>();
-
-    }
     
-    public Manufacturer addNewManufacturer(String name) {
+    private ArrayList<Manufacturer> manufacturerDirectory;
 
-        Manufacturer newManu = new Manufacturer(name);
-        manufacturerDir.add(newManu);
-        return newManu;
-    }
-
-    public void removeManufacturer(Manufacturer manf) {
-
-        manufacturerDir.remove(manf);
+    public ManufacturerDirectory() {
+        
+        manufacturerDirectory = new ArrayList<>();
+        
     }
 
     public ArrayList<Manufacturer> getManufacturerDirectory() {
-        return manufacturerDir;
+        return manufacturerDirectory;
     }
 
-    public void setManufacturerDirectory(ArrayList<Manufacturer> manufacturerDir) {
-        this.manufacturerDir = manufacturerDir;
+    public void setManufacturerDirectory(ArrayList<Manufacturer> manufacturerDirectory) {
+        this.manufacturerDirectory = manufacturerDirectory;
     }
-
     
-
+    public Manufacturer addNewManufacturer(String name){
+        
+        Manufacturer nm = new Manufacturer(name);
+        manufacturerDirectory.add(nm);
+        return nm;  
+    }
+    
+    public void removeManufacturer(Manufacturer m){
+        
+        manufacturerDirectory.remove(m);
+    }
+    
+    
 }

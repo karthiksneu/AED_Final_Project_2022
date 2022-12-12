@@ -27,17 +27,17 @@
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="btnback" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnBack" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel1" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel5" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblRole" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblPerson" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblUserName" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblPassword" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -48,11 +48,11 @@
                                   </Group>
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="txtrole" pref="176" max="32767" attributes="0"/>
-                                          <Component id="btnmodify" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txtperson" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="txtuname" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="txtpass" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="txtRole" pref="176" max="32767" attributes="0"/>
+                                          <Component id="btnUpdateUserAccount" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtPerson" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="txtUserName" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="txtPassword" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
@@ -62,9 +62,9 @@
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblOrganization" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="txtorg" min="-2" pref="175" max="-2" attributes="0"/>
+                      <Component id="txtOrganization" min="-2" pref="175" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -77,35 +77,35 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnback" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnBack" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtorg" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtOrganization" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblOrganization" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtperson" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtPerson" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblPerson" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtrole" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtRole" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblRole" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtuname" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblUserName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtUserName" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtpass" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtPassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblPassword" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnmodify" min="-2" max="-2" attributes="0"/>
+              <Component id="btnUpdateUserAccount" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="jLabel7" max="32767" attributes="0"/>
           </Group>
@@ -113,7 +113,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel5">
+    <Component class="javax.swing.JLabel" name="lblUserName">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="October Compressed Devanagari" size="14" style="0"/>
@@ -124,19 +124,19 @@
         <Property name="text" type="java.lang.String" value="Username:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtuname">
+    <Component class="javax.swing.JTextField" name="txtUserName">
     </Component>
-    <Component class="javax.swing.JButton" name="btnback">
+    <Component class="javax.swing.JButton" name="btnBack">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnbackActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBackActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel6">
+    <Component class="javax.swing.JLabel" name="lblPassword">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="October Compressed Devanagari" size="14" style="0"/>
@@ -147,7 +147,7 @@
         <Property name="text" type="java.lang.String" value="Password:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtpass">
+    <Component class="javax.swing.JTextField" name="txtPassword">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
@@ -161,7 +161,7 @@
         <Property name="text" type="java.lang.String" value="View/Update User Account"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnmodify">
+    <Component class="javax.swing.JButton" name="btnUpdateUserAccount">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="0" type="rgb"/>
@@ -175,10 +175,10 @@
         <Property name="text" type="java.lang.String" value="Update User Account"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnmodifyActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpdateUserAccountActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="lblOrganization">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="October Compressed Devanagari" size="14" style="0"/>
@@ -189,7 +189,7 @@
         <Property name="text" type="java.lang.String" value="Organization:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="lblPerson">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="October Compressed Devanagari" size="14" style="0"/>
@@ -200,7 +200,7 @@
         <Property name="text" type="java.lang.String" value="Person:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
+    <Component class="javax.swing.JLabel" name="lblRole">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="October Compressed Devanagari" size="14" style="0"/>
@@ -211,17 +211,17 @@
         <Property name="text" type="java.lang.String" value="Role:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtorg">
+    <Component class="javax.swing.JTextField" name="txtOrganization">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtperson">
+    <Component class="javax.swing.JTextField" name="txtPerson">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtrole">
+    <Component class="javax.swing.JTextField" name="txtRole">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>

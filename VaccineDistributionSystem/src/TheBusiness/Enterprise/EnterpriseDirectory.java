@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package TheBusiness.Enterprise;
 
 import TheBusiness.NationalEnterprise.CenterOfDiseaseControl;
@@ -12,11 +13,11 @@ import java.util.ArrayList;
 
 /**
  *
- * @author karthik
- *
+ * @author vinithhiteshharsora
  */
-public class EnterpriseDirectory {
 
+//Initializing Enterprise Directory class
+public class EnterpriseDirectory {
     private ArrayList<Enterprise> enterpriseDirectory;
 
     public EnterpriseDirectory() {
@@ -30,38 +31,44 @@ public class EnterpriseDirectory {
     public void setEnterpriseList(ArrayList<Enterprise> enterpriseDirectory) {
         this.enterpriseDirectory = enterpriseDirectory;
     }
-
-    public Enterprise addEnterprise(String name, Enterprise.EnterpriseType type) {
-
+    
+    
+    public Enterprise addEnterprise(String name, Enterprise.EnterpriseType type){
+        
         Enterprise enterprise = null;
-
-        if (type == Enterprise.EnterpriseType.Hospital) {
-
+        
+        
+        if(type == Enterprise.EnterpriseType.Hospital){
+            
             enterprise = new HospitalEnterprise(name);
             enterpriseDirectory.add(enterprise);
-        } else if (type == Enterprise.EnterpriseType.CDC) {
-
+        }
+        else if(type == Enterprise.EnterpriseType.CDC){
+            
             enterprise = new CenterOfDiseaseControl(name);
             enterpriseDirectory.add(enterprise);
-        } else if (type == Enterprise.EnterpriseType.Distributor) {
-
+        }
+        else if(type == Enterprise.EnterpriseType.Distributor){
+            
             enterprise = new Distributor(name);
             enterpriseDirectory.add(enterprise);
-        } else if (type == Enterprise.EnterpriseType.Manufacturer) {
-
+        }
+        else if(type == Enterprise.EnterpriseType.Manufacturer){
+            
             enterprise = new Manufacturer(name);
             enterpriseDirectory.add(enterprise);
-        } else if (type == Enterprise.EnterpriseType.LocalHealthDepartment) {
-
+        }
+        else if(type == Enterprise.EnterpriseType.LocalHealthDepartment){
+            
             enterprise = new LocalHealthDepartment(name);
             enterpriseDirectory.add(enterprise);
         }
         return enterprise;
     }
-
-    public void removeEnterprise(Enterprise enterprise) {
-
+    
+    public void removeEnterprise(Enterprise enterprise){
+        
         enterpriseDirectory.remove(enterprise);
     }
-
+    
 }

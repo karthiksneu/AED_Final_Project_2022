@@ -73,20 +73,20 @@ public class ManagePersonnel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbl1 = new javax.swing.JLabel();
+        lblTitle = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblperson = new javax.swing.JTable();
-        btn1 = new javax.swing.JButton();
-        btn2 = new javax.swing.JButton();
-        btn3 = new javax.swing.JButton();
-        btn4 = new javax.swing.JButton();
+        btnCreateNewPerson = new javax.swing.JButton();
+        btnViewUpdatePerson = new javax.swing.JButton();
+        btnRemovePerson = new javax.swing.JButton();
+        btnRefresh = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(70, 130, 180));
 
-        lbl1.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
-        lbl1.setForeground(new java.awt.Color(255, 255, 255));
-        lbl1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbl1.setText("Manage Persons");
+        lblTitle.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitle.setText("Manage Persons");
 
         tblperson.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -114,44 +114,44 @@ public class ManagePersonnel extends javax.swing.JPanel {
             tblperson.getColumnModel().getColumn(4).setResizable(false);
         }
 
-        btn1.setBackground(new java.awt.Color(0, 0, 0));
-        btn1.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
-        btn1.setForeground(new java.awt.Color(255, 255, 255));
-        btn1.setText("Create New Person >>");
-        btn1.addActionListener(new java.awt.event.ActionListener() {
+        btnCreateNewPerson.setBackground(new java.awt.Color(0, 0, 0));
+        btnCreateNewPerson.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        btnCreateNewPerson.setForeground(new java.awt.Color(255, 255, 255));
+        btnCreateNewPerson.setText("Create New Person >>");
+        btnCreateNewPerson.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn1ActionPerformed(evt);
+                btnCreateNewPersonActionPerformed(evt);
             }
         });
 
-        btn2.setBackground(new java.awt.Color(0, 0, 0));
-        btn2.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
-        btn2.setForeground(new java.awt.Color(255, 255, 255));
-        btn2.setText("View / Update Person");
-        btn2.addActionListener(new java.awt.event.ActionListener() {
+        btnViewUpdatePerson.setBackground(new java.awt.Color(0, 0, 0));
+        btnViewUpdatePerson.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        btnViewUpdatePerson.setForeground(new java.awt.Color(255, 255, 255));
+        btnViewUpdatePerson.setText("View / Update Person");
+        btnViewUpdatePerson.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn2ActionPerformed(evt);
+                btnViewUpdatePersonActionPerformed(evt);
             }
         });
 
-        btn3.setBackground(new java.awt.Color(0, 0, 0));
-        btn3.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
-        btn3.setForeground(new java.awt.Color(255, 255, 255));
-        btn3.setText("Remove Person");
-        btn3.addActionListener(new java.awt.event.ActionListener() {
+        btnRemovePerson.setBackground(new java.awt.Color(0, 0, 0));
+        btnRemovePerson.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        btnRemovePerson.setForeground(new java.awt.Color(255, 255, 255));
+        btnRemovePerson.setText("Remove Person");
+        btnRemovePerson.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn3ActionPerformed(evt);
+                btnRemovePersonActionPerformed(evt);
             }
         });
 
-        btn4.setBackground(new java.awt.Color(0, 0, 0));
-        btn4.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
-        btn4.setForeground(new java.awt.Color(255, 255, 255));
-        btn4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (2).png"))); // NOI18N
-        btn4.setText("Refresh");
-        btn4.addActionListener(new java.awt.event.ActionListener() {
+        btnRefresh.setBackground(new java.awt.Color(0, 0, 0));
+        btnRefresh.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        btnRefresh.setForeground(new java.awt.Color(255, 255, 255));
+        btnRefresh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (2).png"))); // NOI18N
+        btnRefresh.setText("Refresh");
+        btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn4ActionPerformed(evt);
+                btnRefreshActionPerformed(evt);
             }
         });
 
@@ -163,18 +163,18 @@ public class ManagePersonnel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btn4)
+                        .addComponent(btnRefresh)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lbl1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(133, 133, 133))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 598, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btn2)
+                        .addComponent(btnViewUpdatePerson)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn3)
+                        .addComponent(btnRemovePerson)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnCreateNewPerson, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -182,20 +182,20 @@ public class ManagePersonnel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl1)
-                    .addComponent(btn4, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(lblTitle)
+                    .addComponent(btnRefresh, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn1)
-                    .addComponent(btn2)
-                    .addComponent(btn3))
+                    .addComponent(btnCreateNewPerson)
+                    .addComponent(btnViewUpdatePerson)
+                    .addComponent(btnRemovePerson))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
+    private void btnRemovePersonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemovePersonActionPerformed
         // TODO add your handling code here:
          int row = tblperson.getSelectedRow();
         if(row<0) {
@@ -211,17 +211,17 @@ public class ManagePersonnel extends javax.swing.JPanel {
         
         
         
-    }//GEN-LAST:event_btn3ActionPerformed
+    }//GEN-LAST:event_btnRemovePersonActionPerformed
 
-    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+    private void btnCreateNewPersonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateNewPersonActionPerformed
         // TODO add your handling code here:
         CreatePerson panel = new CreatePerson(workContainer, enterprise);
         workContainer.add("CreateEmployeeJPanel", panel);
         CardLayout layout = (CardLayout)workContainer.getLayout();
         layout.next(workContainer);
-    }//GEN-LAST:event_btn1ActionPerformed
+    }//GEN-LAST:event_btnCreateNewPersonActionPerformed
 
-    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
+    private void btnViewUpdatePersonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewUpdatePersonActionPerformed
         // TODO add your handling code here:
         int row = tblperson.getSelectedRow();
         if(row<0) {
@@ -237,21 +237,21 @@ public class ManagePersonnel extends javax.swing.JPanel {
         workContainer.add("ViewPersonJPanel", panel);
         CardLayout layout = (CardLayout)workContainer.getLayout();
         layout.next(workContainer);
-    }//GEN-LAST:event_btn2ActionPerformed
+    }//GEN-LAST:event_btnViewUpdatePersonActionPerformed
 
-    private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
+    private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
         // TODO add your handling code here:
         populateTable();
-    }//GEN-LAST:event_btn4ActionPerformed
+    }//GEN-LAST:event_btnRefreshActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn1;
-    private javax.swing.JButton btn2;
-    private javax.swing.JButton btn3;
-    private javax.swing.JButton btn4;
+    private javax.swing.JButton btnCreateNewPerson;
+    private javax.swing.JButton btnRefresh;
+    private javax.swing.JButton btnRemovePerson;
+    private javax.swing.JButton btnViewUpdatePerson;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lbl1;
+    private javax.swing.JLabel lblTitle;
     private javax.swing.JTable tblperson;
     // End of variables declaration//GEN-END:variables
 }

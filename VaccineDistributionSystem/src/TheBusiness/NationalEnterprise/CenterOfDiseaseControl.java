@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package TheBusiness.NationalEnterprise;
 
 import TheBusiness.Enterprise.Enterprise;
@@ -11,22 +12,21 @@ import java.util.ArrayList;
 
 /**
  *
- * @author karthik
- * 
+ * @author DELL
  */
-//Initializing class CenterOfDiseaseControl extends Enterprise
-public class CenterOfDiseaseControl extends Enterprise {
 
-    //Constructor
+//Initializing class CenterOfDiseaseControl extends Enterprise
+public class CenterOfDiseaseControl extends Enterprise{
+
     public CenterOfDiseaseControl(String name) {
         super(name, EnterpriseType.CDC);
-        
     }
 
+    
     @Override
     public ArrayList<Role> getSupportedRole() {
         return null;
-
+        
     }
-
+    
 }

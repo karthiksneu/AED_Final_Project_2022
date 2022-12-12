@@ -23,56 +23,56 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-              <Component id="lbl9" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="btn1" pref="190" max="32767" attributes="0"/>
-                  <Component id="dcdob" alignment="0" max="32767" attributes="0"/>
-                  <Component id="txt6" alignment="0" min="-2" pref="179" max="-2" attributes="0"/>
+              <Component id="lblClinicName" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btnAddPerson" min="-2" pref="190" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="cbdepat" min="-2" pref="190" max="-2" attributes="0"/>
+                          <Component id="txtClinicName" min="-2" pref="179" max="-2" attributes="0"/>
+                          <Component id="dcdob" alignment="0" min="-2" pref="190" max="-2" attributes="0"/>
+                          <Component id="txtPhone" alignment="0" min="-2" pref="190" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="txtEmail" min="-2" pref="104" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="lblAt" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="txtEmailDomain" min="-2" pref="102" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="txtLastName" alignment="0" min="-2" pref="190" max="-2" attributes="0"/>
+                          <Component id="txtFirstName" alignment="0" min="-2" pref="179" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="btn2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="lbl1" pref="714" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel1" min="-2" pref="741" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="lbl7" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lbl8" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lbl6" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lbl4" min="-2" pref="52" max="-2" attributes="0"/>
-                                  <Component id="lbl3" alignment="1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="cbdepat" min="-2" pref="190" max="-2" attributes="0"/>
-                                  <Component id="txt5" alignment="0" min="-2" pref="190" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="txt3" min="-2" pref="104" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="lbl5" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="txt4" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="txt2" min="-2" pref="190" max="-2" attributes="0"/>
-                              </Group>
+                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                              <Component id="lblDateOfBirth" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblDepartment" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblPhone" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblEmail" min="-2" pref="52" max="-2" attributes="0"/>
+                              <Component id="lblLastName" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                              <Component id="lbl2" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txt1" min="-2" pref="179" max="-2" attributes="0"/>
+                              <Component id="lblFirstName" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="btnBack" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblTitle" pref="730" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -84,48 +84,48 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lbl1" min="-2" max="-2" attributes="0"/>
-                  <Component id="btn2" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblTitle" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnBack" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbl2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txt1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblFirstName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtFirstName" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="lbl3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txt2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblLastName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtLastName" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txt3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lbl4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txt4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lbl5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtEmailDomain" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblAt" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbl6" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txt5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblPhone" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtPhone" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="lbl7" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblDateOfBirth" min="-2" max="-2" attributes="0"/>
                   <Component id="dcdob" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbl8" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblDepartment" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="cbdepat" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbl9" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txt6" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblClinicName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtClinicName" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="34" max="32767" attributes="0"/>
-              <Component id="btn1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="8" max="32767" attributes="0"/>
+              <Component id="btnAddPerson" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" pref="217" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
@@ -134,7 +134,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="lbl1">
+    <Component class="javax.swing.JLabel" name="lblTitle">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="October Compressed Devanagari" size="24" style="1"/>
@@ -146,7 +146,7 @@
         <Property name="text" type="java.lang.String" value="Create Person"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbl2">
+    <Component class="javax.swing.JLabel" name="lblFirstName">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="October Compressed Devanagari" size="14" style="0"/>
@@ -157,14 +157,14 @@
         <Property name="text" type="java.lang.String" value="First Name: "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt1">
+    <Component class="javax.swing.JTextField" name="txtFirstName">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtFirstNameActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt2">
+    <Component class="javax.swing.JTextField" name="txtLastName">
     </Component>
-    <Component class="javax.swing.JLabel" name="lbl3">
+    <Component class="javax.swing.JLabel" name="lblLastName">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="October Compressed Devanagari" size="14" style="0"/>
@@ -175,9 +175,9 @@
         <Property name="text" type="java.lang.String" value="Last Name: "/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt3">
+    <Component class="javax.swing.JTextField" name="txtEmail">
     </Component>
-    <Component class="javax.swing.JLabel" name="lbl4">
+    <Component class="javax.swing.JLabel" name="lblEmail">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="October Compressed Devanagari" size="14" style="0"/>
@@ -189,7 +189,7 @@
         <Property name="text" type="java.lang.String" value="email:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbl5">
+    <Component class="javax.swing.JLabel" name="lblAt">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -197,9 +197,9 @@
         <Property name="text" type="java.lang.String" value="@"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt4">
+    <Component class="javax.swing.JTextField" name="txtEmailDomain">
     </Component>
-    <Component class="javax.swing.JLabel" name="lbl6">
+    <Component class="javax.swing.JLabel" name="lblPhone">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="October Compressed Devanagari" size="14" style="0"/>
@@ -210,9 +210,9 @@
         <Property name="text" type="java.lang.String" value="Phone:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt5">
+    <Component class="javax.swing.JTextField" name="txtPhone">
     </Component>
-    <Component class="javax.swing.JLabel" name="lbl7">
+    <Component class="javax.swing.JLabel" name="lblDateOfBirth">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="October Compressed Devanagari" size="14" style="0"/>
@@ -225,7 +225,7 @@
     </Component>
     <Component class="com.toedter.calendar.JDateChooser" name="dcdob">
     </Component>
-    <Component class="javax.swing.JButton" name="btn1">
+    <Component class="javax.swing.JButton" name="btnAddPerson">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="0" type="rgb"/>
@@ -239,10 +239,10 @@
         <Property name="text" type="java.lang.String" value="Add Person"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddPersonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbl8">
+    <Component class="javax.swing.JLabel" name="lblDepartment">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="October Compressed Devanagari" size="14" style="0"/>
@@ -271,7 +271,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbdepatActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbl9">
+    <Component class="javax.swing.JLabel" name="lblClinicName">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="October Compressed Devanagari" size="14" style="0"/>
@@ -282,7 +282,7 @@
         <Property name="text" type="java.lang.String" value="Clinic Name:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt6">
+    <Component class="javax.swing.JTextField" name="txtClinicName">
       <Properties>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
@@ -294,14 +294,14 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btn2">
+    <Component class="javax.swing.JButton" name="btnBack">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"/>
+          <Image iconType="3" name="/userinterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBackActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

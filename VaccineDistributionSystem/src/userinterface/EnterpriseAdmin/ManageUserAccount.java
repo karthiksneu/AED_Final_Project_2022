@@ -88,21 +88,21 @@ public class ManageUserAccount extends javax.swing.JPanel {
 
         jScrollPane2 = new javax.swing.JScrollPane();
         jEditorPane1 = new javax.swing.JEditorPane();
-        lbl1 = new javax.swing.JLabel();
+        lblTitle = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblaccts = new javax.swing.JTable();
-        btn1 = new javax.swing.JButton();
-        btn2 = new javax.swing.JButton();
-        btn3 = new javax.swing.JButton();
+        btnCreateNewUserAccount = new javax.swing.JButton();
+        btnViewUpdateUserAccount = new javax.swing.JButton();
+        btnRemoveUser = new javax.swing.JButton();
 
         jScrollPane2.setViewportView(jEditorPane1);
 
         setBackground(new java.awt.Color(70, 130, 180));
 
-        lbl1.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
-        lbl1.setForeground(new java.awt.Color(255, 255, 255));
-        lbl1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbl1.setText("Manage User Accounts");
+        lblTitle.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitle.setText("Manage User Accounts");
 
         tblaccts.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -130,33 +130,33 @@ public class ManageUserAccount extends javax.swing.JPanel {
             tblaccts.getColumnModel().getColumn(4).setResizable(false);
         }
 
-        btn1.setBackground(new java.awt.Color(0, 0, 0));
-        btn1.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
-        btn1.setForeground(new java.awt.Color(255, 255, 255));
-        btn1.setText("Create New User Account >>");
-        btn1.addActionListener(new java.awt.event.ActionListener() {
+        btnCreateNewUserAccount.setBackground(new java.awt.Color(0, 0, 0));
+        btnCreateNewUserAccount.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        btnCreateNewUserAccount.setForeground(new java.awt.Color(255, 255, 255));
+        btnCreateNewUserAccount.setText("Create New User Account >>");
+        btnCreateNewUserAccount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn1ActionPerformed(evt);
+                btnCreateNewUserAccountActionPerformed(evt);
             }
         });
 
-        btn2.setBackground(new java.awt.Color(0, 0, 0));
-        btn2.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
-        btn2.setForeground(new java.awt.Color(255, 255, 255));
-        btn2.setText("View / Update User Account");
-        btn2.addActionListener(new java.awt.event.ActionListener() {
+        btnViewUpdateUserAccount.setBackground(new java.awt.Color(0, 0, 0));
+        btnViewUpdateUserAccount.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        btnViewUpdateUserAccount.setForeground(new java.awt.Color(255, 255, 255));
+        btnViewUpdateUserAccount.setText("View / Update User Account");
+        btnViewUpdateUserAccount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn2ActionPerformed(evt);
+                btnViewUpdateUserAccountActionPerformed(evt);
             }
         });
 
-        btn3.setBackground(new java.awt.Color(0, 0, 0));
-        btn3.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
-        btn3.setForeground(new java.awt.Color(255, 255, 255));
-        btn3.setText("Remove User");
-        btn3.addActionListener(new java.awt.event.ActionListener() {
+        btnRemoveUser.setBackground(new java.awt.Color(0, 0, 0));
+        btnRemoveUser.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        btnRemoveUser.setForeground(new java.awt.Color(255, 255, 255));
+        btnRemoveUser.setText("Remove User");
+        btnRemoveUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn3ActionPerformed(evt);
+                btnRemoveUserActionPerformed(evt);
             }
         });
 
@@ -167,42 +167,42 @@ public class ManageUserAccount extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 669, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btn2)
+                        .addComponent(btnViewUpdateUserAccount)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn3, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnRemoveUser, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn1)))
+                        .addComponent(btnCreateNewUserAccount)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lbl1)
+                .addComponent(lblTitle)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn1)
-                    .addComponent(btn2)
-                    .addComponent(btn3))
+                    .addComponent(btnCreateNewUserAccount)
+                    .addComponent(btnViewUpdateUserAccount)
+                    .addComponent(btnRemoveUser))
                 .addContainerGap(88, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+    private void btnCreateNewUserAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateNewUserAccountActionPerformed
         // TODO add your handling code here:
          CreateUserAccount panel = new CreateUserAccount(workContainer, enterprise , this, business);
         workContainer.add("CreateUserAccountJPanel", panel);
         CardLayout layout = (CardLayout)workContainer.getLayout();
         layout.next(workContainer);
-    }//GEN-LAST:event_btn1ActionPerformed
+    }//GEN-LAST:event_btnCreateNewUserAccountActionPerformed
 
-    private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
+    private void btnRemoveUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoveUserActionPerformed
         // TODO add your handling code here:
         int row = tblaccts.getSelectedRow();
         if(row<0) {
@@ -225,9 +225,9 @@ public class ManageUserAccount extends javax.swing.JPanel {
         }
         populateTable();
         
-    }//GEN-LAST:event_btn3ActionPerformed
+    }//GEN-LAST:event_btnRemoveUserActionPerformed
 
-    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
+    private void btnViewUpdateUserAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewUpdateUserAccountActionPerformed
         // TODO add your handling code here:
         int row = tblaccts.getSelectedRow();
         if(row<0) {
@@ -243,17 +243,17 @@ public class ManageUserAccount extends javax.swing.JPanel {
         CardLayout layout = (CardLayout)workContainer.getLayout();
         layout.next(workContainer);
         
-    }//GEN-LAST:event_btn2ActionPerformed
+    }//GEN-LAST:event_btnViewUpdateUserAccountActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn1;
-    private javax.swing.JButton btn2;
-    private javax.swing.JButton btn3;
+    private javax.swing.JButton btnCreateNewUserAccount;
+    private javax.swing.JButton btnRemoveUser;
+    private javax.swing.JButton btnViewUpdateUserAccount;
     private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JLabel lbl1;
+    private javax.swing.JLabel lblTitle;
     private javax.swing.JTable tblaccts;
     // End of variables declaration//GEN-END:variables
 }

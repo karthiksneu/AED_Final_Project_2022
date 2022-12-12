@@ -10,23 +10,17 @@ import TheBusiness.UserAccountManagement.UserAccount;
 
 /**
  *
- * @author karthik
+ * @author soham
  */
-
-
 public class ConfigureSystem {
-
-    public static Ecosystems configure() {
-        
-        
-        //Creating Ecosystem for loading data
+    
+    public static Ecosystems configure(){
+        //Creating Ecosystem
         Ecosystems business = Ecosystems.getInstance();
         Person person = null;
-        
-        
         //Creating sysadmin user account
-        UserAccount sysAdmin = business.getUserAccountDirectory().createUserAccount("sysadmin", "sysadmin", person, new SystemAdminRole());
+        UserAccount sysAdmin = business.getUserAccountDirectory().createUserAccount("sysadmin", "sysadmin", person, new SystemAdminRole());       
         return business;
     }
-
+    
 }
