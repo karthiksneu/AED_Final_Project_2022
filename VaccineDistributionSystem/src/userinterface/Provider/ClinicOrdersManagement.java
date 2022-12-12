@@ -125,7 +125,7 @@ public class ClinicOrdersManagement extends javax.swing.JPanel {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Manage orders from clinics");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Order Status:");
 
@@ -149,7 +149,7 @@ public class ClinicOrdersManagement extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblorder);
 
         btnview.setBackground(new java.awt.Color(0, 0, 0));
-        btnview.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnview.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnview.setForeground(new java.awt.Color(255, 255, 255));
         btnview.setText("View details");
         btnview.addActionListener(new java.awt.event.ActionListener() {
@@ -158,9 +158,10 @@ public class ClinicOrdersManagement extends javax.swing.JPanel {
             }
         });
 
-        btnref.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnref.setBackground(new java.awt.Color(0, 0, 0));
+        btnref.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnref.setForeground(new java.awt.Color(255, 255, 255));
-        btnref.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (2).png"))); // NOI18N
+        btnref.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/MicrosoftTeams-image (2).png"))); // NOI18N
         btnref.setText("Refresh");
         btnref.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -207,7 +208,7 @@ public class ClinicOrdersManagement extends javax.swing.JPanel {
                 .addComponent(btnview)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

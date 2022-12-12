@@ -54,7 +54,7 @@ public class ManageUserAccount extends javax.swing.JPanel {
         jLabel1.setText("Manage User Account");
 
         btnmangecdc.setBackground(new java.awt.Color(0, 0, 0));
-        btnmangecdc.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnmangecdc.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnmangecdc.setForeground(new java.awt.Color(255, 255, 255));
         btnmangecdc.setText("Manage CDC Admin");
         btnmangecdc.addActionListener(new java.awt.event.ActionListener() {
@@ -64,7 +64,7 @@ public class ManageUserAccount extends javax.swing.JPanel {
         });
 
         btnmandist.setBackground(new java.awt.Color(0, 0, 0));
-        btnmandist.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnmandist.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnmandist.setForeground(new java.awt.Color(255, 255, 255));
         btnmandist.setText("Manage Distributor Admin");
         btnmandist.addActionListener(new java.awt.event.ActionListener() {
@@ -74,7 +74,7 @@ public class ManageUserAccount extends javax.swing.JPanel {
         });
 
         btnmanprov.setBackground(new java.awt.Color(0, 0, 0));
-        btnmanprov.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnmanprov.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnmanprov.setForeground(new java.awt.Color(255, 255, 255));
         btnmanprov.setText("Manage Provider Admin");
         btnmanprov.addActionListener(new java.awt.event.ActionListener() {
@@ -84,7 +84,7 @@ public class ManageUserAccount extends javax.swing.JPanel {
         });
 
         btnmandept.setBackground(new java.awt.Color(0, 0, 0));
-        btnmandept.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnmandept.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnmandept.setForeground(new java.awt.Color(255, 255, 255));
         btnmandept.setText("Manage Local Health Admin");
         btnmandept.addActionListener(new java.awt.event.ActionListener() {
@@ -93,7 +93,7 @@ public class ManageUserAccount extends javax.swing.JPanel {
             }
         });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/002.gif"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/002.gif"))); // NOI18N
         jLabel2.setText("jLabel2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -122,8 +122,8 @@ public class ManageUserAccount extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(btnmangecdc, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnmangecdc, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnmandist)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)

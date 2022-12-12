@@ -119,9 +119,10 @@ public class ViewInventory extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 930, 272));
 
-        brnref.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        brnref.setBackground(new java.awt.Color(0, 0, 0));
+        brnref.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         brnref.setForeground(new java.awt.Color(255, 255, 255));
-        brnref.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (2).png"))); // NOI18N
+        brnref.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/MicrosoftTeams-image (2).png"))); // NOI18N
         brnref.setText("Refresh");
         brnref.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

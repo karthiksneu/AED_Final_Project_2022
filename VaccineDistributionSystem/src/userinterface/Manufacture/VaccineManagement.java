@@ -147,9 +147,9 @@ public class VaccineManagement extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblvacc);
 
         btnRefresh.setBackground(new java.awt.Color(0, 0, 0));
-        btnRefresh.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnRefresh.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnRefresh.setForeground(new java.awt.Color(255, 255, 255));
-        btnRefresh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (2).png"))); // NOI18N
+        btnRefresh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/MicrosoftTeams-image (2).png"))); // NOI18N
         btnRefresh.setText("Refresh");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -166,7 +166,7 @@ public class VaccineManagement extends javax.swing.JPanel {
         lblVaccineCode.setText("Vaccine Code:");
 
         btnRemoveVaccine.setBackground(new java.awt.Color(0, 0, 0));
-        btnRemoveVaccine.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnRemoveVaccine.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnRemoveVaccine.setForeground(new java.awt.Color(255, 255, 255));
         btnRemoveVaccine.setText("Remove Vaccine");
         btnRemoveVaccine.addActionListener(new java.awt.event.ActionListener() {
@@ -176,7 +176,7 @@ public class VaccineManagement extends javax.swing.JPanel {
         });
 
         btnAddVaccine.setBackground(new java.awt.Color(0, 0, 0));
-        btnAddVaccine.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnAddVaccine.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnAddVaccine.setForeground(new java.awt.Color(255, 255, 255));
         btnAddVaccine.setText("Add Vaccine");
         btnAddVaccine.addActionListener(new java.awt.event.ActionListener() {
@@ -186,7 +186,7 @@ public class VaccineManagement extends javax.swing.JPanel {
         });
 
         btnSearch.setBackground(new java.awt.Color(0, 0, 0));
-        btnSearch.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnSearch.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnSearch.setForeground(new java.awt.Color(255, 255, 255));
         btnSearch.setText("Search");
         btnSearch.addActionListener(new java.awt.event.ActionListener() {
@@ -208,7 +208,7 @@ public class VaccineManagement extends javax.swing.JPanel {
                     .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnRefresh)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 149, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
                         .addComponent(lblSearchVaccine)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblVaccineCode)
@@ -247,7 +247,7 @@ public class VaccineManagement extends javax.swing.JPanel {
                     .addComponent(btnAddVaccine))
                 .addGap(54, 54, 54)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addContainerGap(85, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

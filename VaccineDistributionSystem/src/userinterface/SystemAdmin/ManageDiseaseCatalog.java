@@ -99,7 +99,7 @@ public class ManageDiseaseCatalog extends javax.swing.JPanel {
         }
 
         btnaddis.setBackground(new java.awt.Color(0, 0, 0));
-        btnaddis.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnaddis.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnaddis.setForeground(new java.awt.Color(255, 255, 255));
         btnaddis.setText("Add Disease");
         btnaddis.addActionListener(new java.awt.event.ActionListener() {
@@ -109,7 +109,7 @@ public class ManageDiseaseCatalog extends javax.swing.JPanel {
         });
 
         btnremovedis.setBackground(new java.awt.Color(0, 0, 0));
-        btnremovedis.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnremovedis.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnremovedis.setForeground(new java.awt.Color(255, 255, 255));
         btnremovedis.setText("Remove");
         btnremovedis.addActionListener(new java.awt.event.ActionListener() {
@@ -118,16 +118,17 @@ public class ManageDiseaseCatalog extends javax.swing.JPanel {
             }
         });
 
-        btnback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
+        btnback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
         btnback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnbackActionPerformed(evt);
             }
         });
 
-        btnref.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnref.setBackground(new java.awt.Color(0, 0, 0));
+        btnref.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnref.setForeground(new java.awt.Color(255, 255, 255));
-        btnref.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (2).png"))); // NOI18N
+        btnref.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/MicrosoftTeams-image (2).png"))); // NOI18N
         btnref.setText("Refresh");
         btnref.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,7 +180,7 @@ public class ManageDiseaseCatalog extends javax.swing.JPanel {
                 .addComponent(btnback)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

@@ -140,7 +140,7 @@ public class OrderProcessing extends javax.swing.JPanel {
         txtTotalAmountOfOrder.setEnabled(false);
 
         btnShipOrder.setBackground(new java.awt.Color(0, 0, 0));
-        btnShipOrder.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnShipOrder.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnShipOrder.setForeground(new java.awt.Color(255, 255, 255));
         btnShipOrder.setText("Ship Order");
         btnShipOrder.addActionListener(new java.awt.event.ActionListener() {
@@ -149,7 +149,7 @@ public class OrderProcessing extends javax.swing.JPanel {
             }
         });
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);

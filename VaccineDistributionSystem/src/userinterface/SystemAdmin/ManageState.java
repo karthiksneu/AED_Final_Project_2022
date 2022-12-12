@@ -113,7 +113,7 @@ public class ManageState extends javax.swing.JPanel {
             tblstatelist.getColumnModel().getColumn(0).setResizable(false);
         }
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("State Name:");
 
@@ -121,7 +121,7 @@ public class ManageState extends javax.swing.JPanel {
         cbaddedstatelist.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         btnadd.setBackground(new java.awt.Color(0, 0, 0));
-        btnadd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnadd.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnadd.setForeground(new java.awt.Color(255, 255, 255));
         btnadd.setText("Add State");
         btnadd.addActionListener(new java.awt.event.ActionListener() {
@@ -130,7 +130,7 @@ public class ManageState extends javax.swing.JPanel {
             }
         });
 
-        btnback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
+        btnback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
         btnback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnbackActionPerformed(evt);
@@ -138,7 +138,7 @@ public class ManageState extends javax.swing.JPanel {
         });
 
         btnremove.setBackground(new java.awt.Color(0, 0, 0));
-        btnremove.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnremove.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnremove.setForeground(new java.awt.Color(255, 255, 255));
         btnremove.setText("Remove");
         btnremove.addActionListener(new java.awt.event.ActionListener() {
@@ -200,7 +200,7 @@ public class ManageState extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addContainerGap(90, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

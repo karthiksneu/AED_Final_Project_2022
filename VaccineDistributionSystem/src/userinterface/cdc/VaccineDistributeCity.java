@@ -118,7 +118,7 @@ public class VaccineDistributeCity extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tbldetails);
 
         btnViewDetails.setBackground(new java.awt.Color(0, 0, 0));
-        btnViewDetails.setFont(new java.awt.Font("October Compressed Devanagari", 0, 18)); // NOI18N
+        btnViewDetails.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnViewDetails.setForeground(new java.awt.Color(255, 255, 255));
         btnViewDetails.setText("View Details");
         btnViewDetails.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -140,7 +140,7 @@ public class VaccineDistributeCity extends javax.swing.JPanel {
         });
 
         btnViewChart.setBackground(new java.awt.Color(0, 0, 0));
-        btnViewChart.setFont(new java.awt.Font("October Compressed Devanagari", 0, 18)); // NOI18N
+        btnViewChart.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnViewChart.setForeground(new java.awt.Color(255, 255, 255));
         btnViewChart.setText("View Chart");
         btnViewChart.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -152,7 +152,7 @@ public class VaccineDistributeCity extends javax.swing.JPanel {
 
         btnBack.setFont(new java.awt.Font("October Compressed Devanagari", 0, 18)); // NOI18N
         btnBack.setForeground(new java.awt.Color(255, 255, 255));
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
         btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -212,7 +212,7 @@ public class VaccineDistributeCity extends javax.swing.JPanel {
                     .addComponent(btnViewDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnViewChart))
                 .addGap(33, 33, 33)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents

@@ -104,12 +104,12 @@ public class ProviderDashboard extends javax.swing.JPanel {
 
         mainMenu.setBackground(new java.awt.Color(70, 130, 180));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("October Compressed Devanagari", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Main Menu:");
 
         btnvaccorder.setBackground(new java.awt.Color(0, 0, 0));
-        btnvaccorder.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnvaccorder.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnvaccorder.setForeground(new java.awt.Color(255, 255, 255));
         btnvaccorder.setText("Place Vaccine Order");
         btnvaccorder.addActionListener(new java.awt.event.ActionListener() {
@@ -119,7 +119,7 @@ public class ProviderDashboard extends javax.swing.JPanel {
         });
 
         btnmanorder.setBackground(new java.awt.Color(0, 0, 0));
-        btnmanorder.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnmanorder.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnmanorder.setForeground(new java.awt.Color(255, 255, 255));
         btnmanorder.setText("Manage Orders");
         btnmanorder.addActionListener(new java.awt.event.ActionListener() {
@@ -129,7 +129,7 @@ public class ProviderDashboard extends javax.swing.JPanel {
         });
 
         btnviewinven.setBackground(new java.awt.Color(0, 0, 0));
-        btnviewinven.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnviewinven.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnviewinven.setForeground(new java.awt.Color(255, 255, 255));
         btnviewinven.setText("View Inventory");
         btnviewinven.addActionListener(new java.awt.event.ActionListener() {
@@ -139,7 +139,7 @@ public class ProviderDashboard extends javax.swing.JPanel {
         });
 
         btnadminvacc.setBackground(new java.awt.Color(0, 0, 0));
-        btnadminvacc.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnadminvacc.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnadminvacc.setForeground(new java.awt.Color(255, 255, 255));
         btnadminvacc.setText("Administer Vaccine");
         btnadminvacc.addActionListener(new java.awt.event.ActionListener() {
@@ -149,7 +149,7 @@ public class ProviderDashboard extends javax.swing.JPanel {
         });
 
         btnviewadminvacc.setBackground(new java.awt.Color(0, 0, 0));
-        btnviewadminvacc.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnviewadminvacc.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnviewadminvacc.setForeground(new java.awt.Color(255, 255, 255));
         btnviewadminvacc.setText("View Administered Vaccines");
         btnviewadminvacc.addActionListener(new java.awt.event.ActionListener() {
@@ -159,7 +159,7 @@ public class ProviderDashboard extends javax.swing.JPanel {
         });
 
         btnremoteclin.setBackground(new java.awt.Color(0, 0, 0));
-        btnremoteclin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnremoteclin.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnremoteclin.setForeground(new java.awt.Color(255, 255, 255));
         btnremoteclin.setText("Manage Remote Clinic Orders");
         btnremoteclin.addActionListener(new java.awt.event.ActionListener() {
@@ -212,7 +212,7 @@ public class ProviderDashboard extends javax.swing.JPanel {
                 .addComponent(btnviewadminvacc)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnremoteclin)
-                .addContainerGap(254, Short.MAX_VALUE))
+                .addContainerGap(231, Short.MAX_VALUE))
         );
 
         jSplitPane1.setTopComponent(mainMenu);

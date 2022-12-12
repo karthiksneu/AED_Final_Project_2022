@@ -287,7 +287,7 @@ public class ManageProviderUserAccount extends javax.swing.JPanel {
         }
 
         btnremove.setBackground(new java.awt.Color(0, 0, 0));
-        btnremove.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnremove.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnremove.setForeground(new java.awt.Color(255, 255, 255));
         btnremove.setText("Remove Admin");
         btnremove.addActionListener(new java.awt.event.ActionListener() {
@@ -296,27 +296,27 @@ public class ManageProviderUserAccount extends javax.swing.JPanel {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("October Compressed Devanagari", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Add New Admin:");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Provider Enterprise: ");
 
         cbprovlist.setForeground(new java.awt.Color(0, 0, 102));
         cbprovlist.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Username:");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Password:");
 
         btnadd.setBackground(new java.awt.Color(0, 0, 0));
-        btnadd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnadd.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
         btnadd.setForeground(new java.awt.Color(255, 255, 255));
         btnadd.setText("Add Admin");
         btnadd.addActionListener(new java.awt.event.ActionListener() {
@@ -325,18 +325,18 @@ public class ManageProviderUserAccount extends javax.swing.JPanel {
             }
         });
 
-        btnback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
+        btnback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
         btnback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnbackActionPerformed(evt);
             }
         });
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("First Name:");
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Last Name:");
 
@@ -422,7 +422,7 @@ public class ManageProviderUserAccount extends javax.swing.JPanel {
                         .addGap(18, 18, 18)
                         .addComponent(btnback))
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
