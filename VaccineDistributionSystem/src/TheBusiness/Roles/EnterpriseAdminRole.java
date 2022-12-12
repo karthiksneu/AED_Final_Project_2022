@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author DELL
+ * @author karthik
  */
 //Initializing class EnterpriseAdminRole that extends Role
 public class EnterpriseAdminRole extends Role{

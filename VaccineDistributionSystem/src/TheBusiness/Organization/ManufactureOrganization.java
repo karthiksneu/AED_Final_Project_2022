@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author DELL
+ * @author karthik
  */
 
 //INitializing our ManufactureOrganization that extends our Organization Entity

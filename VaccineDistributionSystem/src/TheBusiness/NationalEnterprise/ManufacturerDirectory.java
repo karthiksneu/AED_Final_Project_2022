@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author DELL
+ * @author karthik
  */
 
 //Initializing class ManufacturerDirectory
