@@ -51,11 +51,11 @@ public class DistributorEmplDashboard extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         mainMenu = new javax.swing.JPanel();
-        lbl1 = new javax.swing.JLabel();
-        btn1 = new javax.swing.JButton();
-        btn2 = new javax.swing.JButton();
-        btn3 = new javax.swing.JButton();
-        lbl2 = new javax.swing.JLabel();
+        lblMainMenu = new javax.swing.JLabel();
+        btnManageWarehouse = new javax.swing.JButton();
+        btnManufactureShippedOrders = new javax.swing.JButton();
+        btnProviderOrders = new javax.swing.JButton();
+        lblTitle = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         jLabel4.setText("jLabel4");
@@ -69,7 +69,7 @@ public class DistributorEmplDashboard extends javax.swing.JPanel {
 
         jPanel1.setBackground(new java.awt.Color(70, 130, 180));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/001.gif"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/001.gif"))); // NOI18N
         jLabel1.setText("jLabel1");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -86,7 +86,7 @@ public class DistributorEmplDashboard extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(111, 111, 111)
                 .addComponent(jLabel1)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         workContainer.add(jPanel1, "card2");
@@ -95,46 +95,46 @@ public class DistributorEmplDashboard extends javax.swing.JPanel {
 
         mainMenu.setBackground(new java.awt.Color(70, 130, 180));
 
-        lbl1.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
-        lbl1.setForeground(new java.awt.Color(255, 255, 255));
-        lbl1.setText("Main Menu:");
+        lblMainMenu.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        lblMainMenu.setForeground(new java.awt.Color(255, 255, 255));
+        lblMainMenu.setText("Main Menu:");
 
-        btn1.setBackground(new java.awt.Color(0, 0, 0));
-        btn1.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
-        btn1.setForeground(new java.awt.Color(255, 255, 255));
-        btn1.setText("Manage Warehouse");
-        btn1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn1.addActionListener(new java.awt.event.ActionListener() {
+        btnManageWarehouse.setBackground(new java.awt.Color(0, 0, 0));
+        btnManageWarehouse.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        btnManageWarehouse.setForeground(new java.awt.Color(255, 255, 255));
+        btnManageWarehouse.setText("Manage Warehouse");
+        btnManageWarehouse.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnManageWarehouse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn1ActionPerformed(evt);
+                btnManageWarehouseActionPerformed(evt);
             }
         });
 
-        btn2.setBackground(new java.awt.Color(0, 0, 0));
-        btn2.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
-        btn2.setForeground(new java.awt.Color(255, 255, 255));
-        btn2.setText("Manufacture Shipped Orders");
-        btn2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn2.addActionListener(new java.awt.event.ActionListener() {
+        btnManufactureShippedOrders.setBackground(new java.awt.Color(0, 0, 0));
+        btnManufactureShippedOrders.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        btnManufactureShippedOrders.setForeground(new java.awt.Color(255, 255, 255));
+        btnManufactureShippedOrders.setText("Manufacture Shipped Orders");
+        btnManufactureShippedOrders.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnManufactureShippedOrders.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn2ActionPerformed(evt);
+                btnManufactureShippedOrdersActionPerformed(evt);
             }
         });
 
-        btn3.setBackground(new java.awt.Color(0, 0, 0));
-        btn3.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
-        btn3.setForeground(new java.awt.Color(255, 255, 255));
-        btn3.setText("Provider Orders");
-        btn3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn3.addActionListener(new java.awt.event.ActionListener() {
+        btnProviderOrders.setBackground(new java.awt.Color(0, 0, 0));
+        btnProviderOrders.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        btnProviderOrders.setForeground(new java.awt.Color(255, 255, 255));
+        btnProviderOrders.setText("Provider Orders");
+        btnProviderOrders.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnProviderOrders.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn3ActionPerformed(evt);
+                btnProviderOrdersActionPerformed(evt);
             }
         });
 
-        lbl2.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
-        lbl2.setForeground(new java.awt.Color(255, 255, 255));
-        lbl2.setText("DISTRIBUTOR");
+        lblTitle.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitle.setText("DISTRIBUTOR");
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/distributor2_150x150.jpg"))); // NOI18N
 
@@ -146,14 +146,14 @@ public class DistributorEmplDashboard extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(mainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(mainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(btn3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btn2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnProviderOrders, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnManageWarehouse, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnManufactureShippedOrders, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(mainMenuLayout.createSequentialGroup()
                             .addGap(40, 40, 40)
                             .addGroup(mainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(lbl2)
-                                .addComponent(lbl1))))
+                                .addComponent(lblTitle)
+                                .addComponent(lblMainMenu))))
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -161,15 +161,15 @@ public class DistributorEmplDashboard extends javax.swing.JPanel {
             mainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainMenuLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(lbl2)
+                .addComponent(lblTitle)
                 .addGap(31, 31, 31)
-                .addComponent(lbl1)
+                .addComponent(lblMainMenu)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btn1)
+                .addComponent(btnManageWarehouse)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn2)
+                .addComponent(btnManufactureShippedOrders)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn3)
+                .addComponent(btnProviderOrders)
                 .addGap(33, 33, 33)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(168, Short.MAX_VALUE))
@@ -180,7 +180,7 @@ public class DistributorEmplDashboard extends javax.swing.JPanel {
         add(jSplitPane1, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+    private void btnManageWarehouseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageWarehouseActionPerformed
         // TODO add your handling code here:
         WarehouseManagement panel = new WarehouseManagement(workContainer, enterprise, distributorOrg);
         workContainer.add("ManageWarehouseJPanel", panel);
@@ -189,36 +189,36 @@ public class DistributorEmplDashboard extends javax.swing.JPanel {
         
         
         
-    }//GEN-LAST:event_btn1ActionPerformed
+    }//GEN-LAST:event_btnManageWarehouseActionPerformed
 
-    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
+    private void btnManufactureShippedOrdersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManufactureShippedOrdersActionPerformed
         // TODO add your handling code here:
          OrderManagementFromManufacturer panel = new OrderManagementFromManufacturer(workContainer, enterprise, distributorOrg);
         workContainer.add("ManageOrdersfromManufacturerJPanel", panel);
         CardLayout layout = (CardLayout)workContainer.getLayout();
         layout.next(workContainer);
-    }//GEN-LAST:event_btn2ActionPerformed
+    }//GEN-LAST:event_btnManufactureShippedOrdersActionPerformed
 
-    private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
+    private void btnProviderOrdersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProviderOrdersActionPerformed
         // TODO add your handling code here:
         ProviderOrdersManagement panel = new ProviderOrdersManagement(workContainer, enterprise, distributorOrg, userAccount, business);
         workContainer.add("ManageProviderOrdersJPanel", panel);
         CardLayout layout = (CardLayout)workContainer.getLayout();
         layout.next(workContainer);
-    }//GEN-LAST:event_btn3ActionPerformed
+    }//GEN-LAST:event_btnProviderOrdersActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn1;
-    private javax.swing.JButton btn2;
-    private javax.swing.JButton btn3;
+    private javax.swing.JButton btnManageWarehouse;
+    private javax.swing.JButton btnManufactureShippedOrders;
+    private javax.swing.JButton btnProviderOrders;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSplitPane jSplitPane1;
-    private javax.swing.JLabel lbl1;
-    private javax.swing.JLabel lbl2;
+    private javax.swing.JLabel lblMainMenu;
+    private javax.swing.JLabel lblTitle;
     private javax.swing.JPanel mainMenu;
     private javax.swing.JPanel workContainer;
     // End of variables declaration//GEN-END:variables

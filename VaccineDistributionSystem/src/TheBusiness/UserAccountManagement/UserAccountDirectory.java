@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Dsouza
+ * @author soham
  */
 
 //INitializing Useraccount DIrectory class
@@ -22,47 +22,41 @@ public class UserAccountDirectory {
         userAccountList = new ArrayList<>();
     }
 
-    
     public ArrayList<UserAccount> getUserAccountList() {
         return userAccountList;
     }
     
-    
-    
     public UserAccount authenticateUser(String username, String password){
-        for (UserAccount uacc : userAccountList)
-            if (uacc.getUsername().equals(username) && uacc.getPassword().equals(password)){
-                return uacc;
+        for (UserAccount ua : userAccountList)
+            if (ua.getUsername().equals(username) && ua.getPassword().equals(password)){
+                return ua;
             }
         return null;
     }
     
     public UserAccount createUserAccount(String username, String password, Person employee, Role role){
-        UserAccount uAcc = new UserAccount();
-        uAcc.setUsername(username);
-        uAcc.setPassword(password);
-        uAcc.setPerson(employee);
-        uAcc.setRole(role);
-        userAccountList.add(uAcc);
-        return uAcc;
+        UserAccount uA = new UserAccount();
+        uA.setUsername(username);
+        uA.setPassword(password);
+        uA.setPerson(employee);
+        uA.setRole(role);
+        userAccountList.add(uA);
+        return uA;
     }
     
+    public void removeUserAccount(UserAccount userAccount){
+        
+        userAccountList.remove(userAccount);
+    }
     
-     public boolean checkIfUserAccountExists(String uname){
+    public boolean checkIfUserAccountExists(String username){
         
         for(UserAccount ua: userAccountList){
-            if(ua.getUsername().equals(uname))
+            if(ua.getUsername().equals(username))
             return true;
         }
         return false;
     }
-    
-    public void removeUserAccount(UserAccount userAcc){
-        
-        userAccountList.remove(userAcc);
-    }
-    
-   
     
     
 }

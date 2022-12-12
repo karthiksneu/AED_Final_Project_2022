@@ -73,24 +73,24 @@ public class OrderManagementFromManufacturer extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbl1 = new javax.swing.JLabel();
-        lbl2 = new javax.swing.JLabel();
+        lblTitle = new javax.swing.JLabel();
+        lblReceivedShipments = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblmanorder = new javax.swing.JTable();
-        btn1 = new javax.swing.JButton();
-        btn2 = new javax.swing.JButton();
+        btnStoreVaccine = new javax.swing.JButton();
+        btnRefresh = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(70, 130, 180));
 
-        lbl1.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
-        lbl1.setForeground(new java.awt.Color(255, 255, 255));
-        lbl1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbl1.setText("Manage Orders from Manufacturers");
+        lblTitle.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitle.setText("Manage Orders from Manufacturers");
 
-        lbl2.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
-        lbl2.setForeground(new java.awt.Color(255, 255, 255));
-        lbl2.setText("Received Shipments:");
+        lblReceivedShipments.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
+        lblReceivedShipments.setForeground(new java.awt.Color(255, 255, 255));
+        lblReceivedShipments.setText("Received Shipments:");
 
         tblmanorder.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -111,26 +111,26 @@ public class OrderManagementFromManufacturer extends javax.swing.JPanel {
         tblmanorder.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tblmanorder);
 
-        btn1.setBackground(new java.awt.Color(0, 0, 0));
-        btn1.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
-        btn1.setForeground(new java.awt.Color(255, 255, 255));
-        btn1.setText("Store Vaccines");
-        btn1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn1.addActionListener(new java.awt.event.ActionListener() {
+        btnStoreVaccine.setBackground(new java.awt.Color(0, 0, 0));
+        btnStoreVaccine.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        btnStoreVaccine.setForeground(new java.awt.Color(255, 255, 255));
+        btnStoreVaccine.setText("Store Vaccines");
+        btnStoreVaccine.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnStoreVaccine.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn1ActionPerformed(evt);
+                btnStoreVaccineActionPerformed(evt);
             }
         });
 
-        btn2.setBackground(new java.awt.Color(0, 0, 0));
-        btn2.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
-        btn2.setForeground(new java.awt.Color(255, 255, 255));
-        btn2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (2).png"))); // NOI18N
-        btn2.setText("Refresh");
-        btn2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btn2.addActionListener(new java.awt.event.ActionListener() {
+        btnRefresh.setBackground(new java.awt.Color(0, 0, 0));
+        btnRefresh.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        btnRefresh.setForeground(new java.awt.Color(255, 255, 255));
+        btnRefresh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (2).png"))); // NOI18N
+        btnRefresh.setText("Refresh");
+        btnRefresh.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn2ActionPerformed(evt);
+                btnRefreshActionPerformed(evt);
             }
         });
 
@@ -141,21 +141,17 @@ public class OrderManagementFromManufacturer extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btn2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lbl1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 675, Short.MAX_VALUE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(lbl2)
-                                .addGap(0, 0, Short.MAX_VALUE))))
+                        .addComponent(btnRefresh)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 675, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btn1)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblReceivedShipments)
+                            .addComponent(btnStoreVaccine))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
@@ -169,23 +165,23 @@ public class OrderManagementFromManufacturer extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lbl1)
+                        .addComponent(lblTitle)
                         .addGap(49, 49, 49))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btn2)
+                        .addComponent(btnRefresh)
                         .addGap(18, 18, 18)))
-                .addComponent(lbl2)
+                .addComponent(lblReceivedShipments)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btn1)
+                .addComponent(btnStoreVaccine)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(10, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+    private void btnStoreVaccineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStoreVaccineActionPerformed
         // TODO add your handling code here:
         
         int row = tblmanorder.getSelectedRow();
@@ -204,22 +200,22 @@ public class OrderManagementFromManufacturer extends javax.swing.JPanel {
         workContainer.add("ManageOrdersfromManufacturerJPanel", panel);
         CardLayout layout = (CardLayout)workContainer.getLayout();
         layout.next(workContainer);
-    }//GEN-LAST:event_btn1ActionPerformed
+    }//GEN-LAST:event_btnStoreVaccineActionPerformed
 
-    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
+    private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
         // TODO add your handling code here:
         populateOrderTable();
         
-    }//GEN-LAST:event_btn2ActionPerformed
+    }//GEN-LAST:event_btnRefreshActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn1;
-    private javax.swing.JButton btn2;
+    private javax.swing.JButton btnRefresh;
+    private javax.swing.JButton btnStoreVaccine;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lbl1;
-    private javax.swing.JLabel lbl2;
+    private javax.swing.JLabel lblReceivedShipments;
+    private javax.swing.JLabel lblTitle;
     private javax.swing.JTable tblmanorder;
     // End of variables declaration//GEN-END:variables
 }

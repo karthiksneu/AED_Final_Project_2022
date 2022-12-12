@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Dsouza
+ * @author soham
  */
 
 //Creating CLass VaccineProductCatalog
@@ -33,16 +33,14 @@ public class VaccineProductCatalog {
     
     public VaccineDetails addNewVaccineProduct(){
         
-        VaccineDetails vds = new VaccineDetails();
-        vaccineDetailList.add(vds);
-        return vds;
+        VaccineDetails vd = new VaccineDetails();
+        vaccineDetailList.add(vd);
+        return vd;
 
     }
     
-    
-    //remove method
-    public void removeVaccineProduct(VaccineDetails vaccineProducts){  
-        vaccineDetailList.remove(vaccineProducts);
+    public void removeVaccineProduct(VaccineDetails vaccineProduct){  
+        vaccineDetailList.remove(vaccineProduct);
     }
 
     

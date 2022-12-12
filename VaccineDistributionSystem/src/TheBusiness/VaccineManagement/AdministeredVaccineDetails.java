@@ -12,7 +12,7 @@ import java.util.Date;
 
 /**
  *
- * @author Dsouza
+ * @author soham
  */
 
 //Initialing class AdministeredVaccineDetails
@@ -29,9 +29,6 @@ public class AdministeredVaccineDetails {
 
     
     //getters and setters
-    
-    
-    
     public Patient getPatient() {
         return patient;
     }
@@ -48,7 +45,14 @@ public class AdministeredVaccineDetails {
         this.reasonForFailure = reasonForFailure;
     }
 
-    
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
     public VaccineDetails getVaccineProduct() {
         return vaccineProduct;
     }
@@ -64,15 +68,6 @@ public class AdministeredVaccineDetails {
     public void setDoseNumber(int doseNumber) {
         this.doseNumber = doseNumber;
     }
-    
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
 
     public String getSiteRoute() {
         return loc;
@@ -98,8 +93,6 @@ public class AdministeredVaccineDetails {
         this.provider = provider;
     }
 
-    
-    
     @Override
     public String toString() {
         return vaccineProduct.getVaccineDefinition().getVaccineName();

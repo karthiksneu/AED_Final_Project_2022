@@ -39,12 +39,12 @@ public class CreateUserAccount extends javax.swing.JPanel {
         this.business = business;
         populateOrganizationComboBox();
         this.panel = panel;
-        lbl7.setVisible(false);
-            txt3.setVisible(false);
+        lblSatelliteClinicName.setVisible(false);
+            txtSatelliteClinicName.setVisible(false);
         if(enterprise instanceof HospitalEnterprise)
         {
-            lbl7.setVisible(true);
-            txt3.setVisible(true);
+            lblSatelliteClinicName.setVisible(true);
+            txtSatelliteClinicName.setVisible(true);
         }
     }
     
@@ -213,33 +213,33 @@ public class CreateUserAccount extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbl1 = new javax.swing.JLabel();
-        lbl2 = new javax.swing.JLabel();
+        lblTitle = new javax.swing.JLabel();
+        lblOrganization = new javax.swing.JLabel();
         cborg = new javax.swing.JComboBox();
-        lbl3 = new javax.swing.JLabel();
+        lblPerson = new javax.swing.JLabel();
         cbpname = new javax.swing.JComboBox();
-        lbl4 = new javax.swing.JLabel();
+        lblRole = new javax.swing.JLabel();
         cbrole = new javax.swing.JComboBox();
-        lbl5 = new javax.swing.JLabel();
-        txt1 = new javax.swing.JTextField();
-        lbl6 = new javax.swing.JLabel();
-        txt2 = new javax.swing.JTextField();
-        btn1 = new javax.swing.JButton();
-        btn2 = new javax.swing.JButton();
-        lbl7 = new javax.swing.JLabel();
-        txt3 = new javax.swing.JTextField();
+        lblUsername = new javax.swing.JLabel();
+        txtUsername = new javax.swing.JTextField();
+        lblPassword = new javax.swing.JLabel();
+        txtPassword = new javax.swing.JTextField();
+        btnCreateUserAccount = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
+        lblSatelliteClinicName = new javax.swing.JLabel();
+        txtSatelliteClinicName = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(70, 130, 180));
         setForeground(new java.awt.Color(255, 255, 255));
 
-        lbl1.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
-        lbl1.setForeground(new java.awt.Color(255, 255, 255));
-        lbl1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbl1.setText("Create User Account");
+        lblTitle.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitle.setText("Create User Account");
 
-        lbl2.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
-        lbl2.setForeground(new java.awt.Color(255, 255, 255));
-        lbl2.setText("Organization:");
+        lblOrganization.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
+        lblOrganization.setForeground(new java.awt.Color(255, 255, 255));
+        lblOrganization.setText("Organization:");
 
         cborg.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cborg.addActionListener(new java.awt.event.ActionListener() {
@@ -248,48 +248,53 @@ public class CreateUserAccount extends javax.swing.JPanel {
             }
         });
 
-        lbl3.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
-        lbl3.setForeground(new java.awt.Color(255, 255, 255));
-        lbl3.setText("Person:");
+        lblPerson.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
+        lblPerson.setForeground(new java.awt.Color(255, 255, 255));
+        lblPerson.setText("Person:");
 
         cbpname.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        lbl4.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
-        lbl4.setForeground(new java.awt.Color(255, 255, 255));
-        lbl4.setText("Role:");
+        lblRole.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
+        lblRole.setForeground(new java.awt.Color(255, 255, 255));
+        lblRole.setText("Role:");
 
         cbrole.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        lbl5.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
-        lbl5.setForeground(new java.awt.Color(255, 255, 255));
-        lbl5.setText("Username:");
+        lblUsername.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
+        lblUsername.setForeground(new java.awt.Color(255, 255, 255));
+        lblUsername.setText("Username:");
 
-        lbl6.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
-        lbl6.setForeground(new java.awt.Color(255, 255, 255));
-        lbl6.setText("Password:");
+        lblPassword.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
+        lblPassword.setForeground(new java.awt.Color(255, 255, 255));
+        lblPassword.setText("Password:");
 
-        btn1.setBackground(new java.awt.Color(0, 0, 0));
-        btn1.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
-        btn1.setForeground(new java.awt.Color(255, 255, 255));
-        btn1.setText("Create User Account");
-        btn1.addActionListener(new java.awt.event.ActionListener() {
+        btnCreateUserAccount.setBackground(new java.awt.Color(0, 0, 0));
+        btnCreateUserAccount.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        btnCreateUserAccount.setForeground(new java.awt.Color(255, 255, 255));
+        btnCreateUserAccount.setText("Create User Account");
+        btnCreateUserAccount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn1ActionPerformed(evt);
+                btnCreateUserAccountActionPerformed(evt);
             }
         });
 
-        btn2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
-        btn2.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/ICONS/11122021icons/MicrosoftTeams-image (1).png"))); // NOI18N
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn2ActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
 
-        lbl7.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
-        lbl7.setForeground(new java.awt.Color(255, 255, 255));
-        lbl7.setText("Satellite Clinic Name:");
+        lblSatelliteClinicName.setFont(new java.awt.Font("October Compressed Devanagari", 0, 14)); // NOI18N
+        lblSatelliteClinicName.setForeground(new java.awt.Color(255, 255, 255));
+        lblSatelliteClinicName.setText("Satellite Clinic Name:");
 
-        txt3.setEnabled(false);
+        txtSatelliteClinicName.setEnabled(false);
+        txtSatelliteClinicName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSatelliteClinicNameActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -299,36 +304,31 @@ public class CreateUserAccount extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btn2)
+                        .addComponent(btnBack)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lbl1, javax.swing.GroupLayout.DEFAULT_SIZE, 484, Short.MAX_VALUE))
+                        .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(lbl5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
+                                .addGap(45, 45, 45)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lbl3)
-                                    .addComponent(lbl4))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cbrole, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbl7)
-                            .addComponent(lbl6, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lbl2, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cbpname, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(btn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txt2, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
-                                .addComponent(cborg, 0, 174, Short.MAX_VALUE)
-                                .addComponent(txt3)))
+                                    .addComponent(lblUsername, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblPerson)
+                                    .addComponent(lblRole)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblSatelliteClinicName)
+                                    .addComponent(lblPassword, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lblOrganization, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addGap(36, 36, 36)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cborg, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cbpname, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cbrole, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnCreateUserAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtSatelliteClinicName, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -337,44 +337,44 @@ public class CreateUserAccount extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl1)
-                    .addComponent(btn2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl2, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(cborg, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblTitle)
+                    .addComponent(btnBack))
+                .addGap(79, 79, 79)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblOrganization)
+                    .addComponent(cborg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl7)
-                    .addComponent(txt3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblSatelliteClinicName)
+                    .addComponent(txtSatelliteClinicName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cbpname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl3))
+                    .addComponent(lblPerson))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cbrole, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl4))
+                    .addComponent(lblRole))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl5))
+                    .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblUsername))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl6)
-                    .addComponent(txt2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24)
-                .addComponent(btn1)
-                .addGap(174, 174, 174))
+                    .addComponent(lblPassword)
+                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(btnCreateUserAccount)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         workContainer.remove(this);
         CardLayout layout = (CardLayout) workContainer.getLayout();
         layout.previous(workContainer);
-    }//GEN-LAST:event_btn2ActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
     private void cborgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cborgActionPerformed
         // TODO add your handling code here:
@@ -384,25 +384,25 @@ public class CreateUserAccount extends javax.swing.JPanel {
             populateRoleComboBox(organization);
              if(organization instanceof ClinicOrganization)
         {   ClinicOrganization satOrg = (ClinicOrganization)organization;
-            txt3.setText(satOrg.getClincName());
+            txtSatelliteClinicName.setText(satOrg.getClincName());
         }
              else
-                 txt3.setText("");
+                 txtSatelliteClinicName.setText("");
         }
         
         
     }//GEN-LAST:event_cborgActionPerformed
 
-    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+    private void btnCreateUserAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateUserAccountActionPerformed
         // TODO add your handling code here:
         
-        String userName = txt1.getText();
+        String userName = txtUsername.getText();
         if(userName.trim().equalsIgnoreCase(""))
         {
             JOptionPane.showMessageDialog(null, "Please enter username");
             return;
         }
-        String password = txt2.getText();
+        String password = txtPassword.getText();
          if(password.trim().equalsIgnoreCase(""))
         {
             JOptionPane.showMessageDialog(null, "Please enter password");
@@ -434,24 +434,28 @@ public class CreateUserAccount extends javax.swing.JPanel {
         
         panel.populateTable();
         JOptionPane.showMessageDialog(null, "User Account Created!");
-    }//GEN-LAST:event_btn1ActionPerformed
+    }//GEN-LAST:event_btnCreateUserAccountActionPerformed
+
+    private void txtSatelliteClinicNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSatelliteClinicNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSatelliteClinicNameActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn1;
-    private javax.swing.JButton btn2;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnCreateUserAccount;
     private javax.swing.JComboBox cborg;
     private javax.swing.JComboBox cbpname;
     private javax.swing.JComboBox cbrole;
-    private javax.swing.JLabel lbl1;
-    private javax.swing.JLabel lbl2;
-    private javax.swing.JLabel lbl3;
-    private javax.swing.JLabel lbl4;
-    private javax.swing.JLabel lbl5;
-    private javax.swing.JLabel lbl6;
-    private javax.swing.JLabel lbl7;
-    private javax.swing.JTextField txt1;
-    private javax.swing.JTextField txt2;
-    private javax.swing.JTextField txt3;
+    private javax.swing.JLabel lblOrganization;
+    private javax.swing.JLabel lblPassword;
+    private javax.swing.JLabel lblPerson;
+    private javax.swing.JLabel lblRole;
+    private javax.swing.JLabel lblSatelliteClinicName;
+    private javax.swing.JLabel lblTitle;
+    private javax.swing.JLabel lblUsername;
+    private javax.swing.JTextField txtPassword;
+    private javax.swing.JTextField txtSatelliteClinicName;
+    private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
 }
