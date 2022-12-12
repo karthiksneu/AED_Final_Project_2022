@@ -1,29 +1,23 @@
 /*
-
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package TheBusiness.Enterprise;
-
-
 
 import TheBusiness.Organization.Organization;
 import TheBusiness.Organization.OrganizationDirectory;
 
 /**
  *
-
- * @author karthik
- * 
- * 
+ * @author vinithhiteshharsora
  */
 
 //Initializing abstract class  Enterprise extends Organization
 public abstract class  Enterprise extends Organization{
     
-    private String entprName;
-
+    private String enterpriseName;
     private EnterpriseType enterpriseType;
     private OrganizationDirectory organizationDirectory;
   
@@ -45,15 +39,13 @@ public abstract class  Enterprise extends Organization{
     }
 
 
-    //Creating getter and setter.
 
     public String getEnterpriseName() {
-        return entprName;
+        return enterpriseName;
     }
 
-    public void setEnterpriseName(String entprName) {
-        this.entprName = entprName;
-
+    public void setEnterpriseName(String enterpriseName) {
+        this.enterpriseName = enterpriseName;
     }
     
     
@@ -61,30 +53,25 @@ public abstract class  Enterprise extends Organization{
     public enum EnterpriseType
     {
         Hospital ("Hospital"),
-
+        CDC("CDC"),
         Manufacturer("Manufacturer"),
         Distributor("Distributor"),
-        CDC("CDC"),
         LocalHealthDepartment("Local Health Department");
+        private String value;
         
-        private String val;
-        
-        private EnterpriseType(String val){
-            this.val = val;
+        private EnterpriseType(String value){
+            this.value = value;
         }
         
         public String getValue(){
-            return val;
-
+            return value;
         }
 
         @Override
         public String toString() {
-
-            return val;
+            return value;
         }
               
     }
  
 }
-

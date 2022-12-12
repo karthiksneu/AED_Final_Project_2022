@@ -15,40 +15,45 @@ import TheBusiness.Roles.SystemAdminRole;
 import TheBusiness.VaccineManagement.VaccineDirectory;
 import java.util.ArrayList;
 
+
+
 /**
  *
- * @author karthik
+ * @author soham
  */
+
 //Definig Ecosystem Class
-public class Ecosystems extends Organization {
-
+public class Ecosystems extends Organization{
+    
     private static Ecosystems business;
-
+    
+    private ArrayList<StateNetwork> stateDirectory;
     private CenterOfDiseaseControl cdc;
-    private DiseaseDirectory diseaseDir;
-    private ManufacturerDirectory manufacturerDir;
-    private Distributor dist;
-    private VaccineDirectory vaccineDir;
-    private ArrayList<StateNetwork> stateDir;
-
-    public static Ecosystems getInstance() {
-        if (business == null) {
+    private ManufacturerDirectory manufacturerDirectory;
+    private Distributor distributor;
+    private VaccineDirectory vaccineDirectory;
+    private DiseaseDirectory diseaseDirectory;
+    
+  
+    
+    public static Ecosystems getInstance(){
+        if (business == null){
             business = new Ecosystems();
         }
         return business;
-
+        
     }
 
     private Ecosystems() {
-        super(null);
-
-        this.stateDir = new ArrayList<StateNetwork>();
-        cdc = new CenterOfDiseaseControl("CDC");
-        manufacturerDir = new ManufacturerDirectory();
-        dist = new Distributor("Vaccine Distributor");
-        vaccineDir = new VaccineDirectory();
-        diseaseDir = new DiseaseDirectory();
-
+        super(null); 
+      
+      this.stateDirectory = new ArrayList<StateNetwork>();
+      cdc = new CenterOfDiseaseControl("CDC");
+      manufacturerDirectory = new ManufacturerDirectory();
+      distributor = new Distributor("Vaccine Distributor");
+      vaccineDirectory = new VaccineDirectory();
+      diseaseDirectory = new DiseaseDirectory();
+      
     }
 
     public static Ecosystems getBusiness() {
@@ -56,15 +61,17 @@ public class Ecosystems extends Organization {
     }
 
     public VaccineDirectory getVaccineDirectory() {
-        return vaccineDir;
+        return vaccineDirectory;
     }
 
     public DiseaseDirectory getDiseaseDirectory() {
-        return diseaseDir;
+        return diseaseDirectory;
     }
 
+    
+
     public ArrayList<StateNetwork> getStateList() {
-        return stateDir;
+        return stateDirectory;
     }
 
     public CenterOfDiseaseControl getCdc() {
@@ -72,31 +79,33 @@ public class Ecosystems extends Organization {
     }
 
     public ManufacturerDirectory getManufacturerDirectory() {
-        return manufacturerDir;
+        return manufacturerDirectory;
     }
 
     public Distributor getDistributor() {
-        return dist;
+        return distributor;
     }
-
-    public StateNetwork addNewState(String name) {
-
+    
+    
+    public StateNetwork addNewState(String name){
+        
         StateNetwork state = new StateNetwork();
         state.setStateName(name);
-        stateDir.add(state);
+        stateDirectory.add(state);
         return state;
     }
-
-    public void removeState(StateNetwork state) {
-
-        stateDir.remove(state);
+    
+    public void removeState(StateNetwork state){
+        
+        stateDirectory.remove(state);
     }
-
+ 
     @Override
     public ArrayList<Role> getSupportedRole() {
-        ArrayList<Role> roleList = new ArrayList<Role>();
-        roleList.add(new SystemAdminRole());
-        return roleList;
+       ArrayList<Role> roleList = new ArrayList<Role>();
+       roleList.add(new SystemAdminRole());
+       return roleList;
     }
 
+   
 }

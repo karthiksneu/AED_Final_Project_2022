@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package TheBusiness.Network;
 
 import TheBusiness.Enterprise.Enterprise;
@@ -13,20 +14,25 @@ import TheBusiness.Organization.Organization;
 
 /**
  *
- * @author karthik
- * 
+ * @author DELL
  */
-
-
 //Initializing class CityNetwork for fetching City Name
 public class CityNetwork {
-
-    private EnterpriseDirectory enterpriseDir;
+    
+    private EnterpriseDirectory enterpriseDirectory;
     private String cityName;
 
     public CityNetwork() {
-        this.enterpriseDir = new EnterpriseDirectory();
+        this.enterpriseDirectory = new EnterpriseDirectory();
+        
+    }
 
+    public EnterpriseDirectory getEnterpriseDirectory() {
+        return enterpriseDirectory;
+    }
+
+    public void setEnterpriseDirectory(EnterpriseDirectory enterpriseDirectory) {
+        this.enterpriseDirectory = enterpriseDirectory;
     }
 
     public String getName() {
@@ -37,82 +43,93 @@ public class CityNetwork {
         this.cityName = name;
     }
 
-    public EnterpriseDirectory getEnterpriseDirectory() {
-        return enterpriseDir;
-    }
-
-    public void setEnterpriseDirectory(EnterpriseDirectory enterpriseDir) {
-        this.enterpriseDir = enterpriseDir;
-    }
-
     @Override
     public String toString() {
-        return cityName;
-    }
-
-
-
-    //displays number of failed vaccines in city
-    public int getTotalFailedVaccinesInCity() {
-        int sum = 0;
-        if (enterpriseDir != null) {
-            for (Enterprise enterprise : enterpriseDir.getEnterpriseDirectory()) {
-                if (enterprise instanceof HospitalEnterprise) {
-                    HospitalEnterprise he = (HospitalEnterprise) enterprise;
-                    for (Organization org : he.getOrganizationDirectory().getOrganizationList()) {
-                        if (org instanceof HospitalOrganization) {
-                            HospitalOrganization ho = (HospitalOrganization) org;
-                            sum = sum + ho.getClinic().getTotalVaccinesFailed();
-                        }
-                    }
-                }
-            }
-        }
-
-        return sum;
-
+        return cityName; 
     }
     
-        //displays number of vaccinesadministerdin city
-    public int getTotalVaccinesAdministeredInCity() {
+    //displays number of vaccinesadministerdin city
+    public int getTotalVaccinesAdministeredInCity()
+    {
         int sum = 0;
-        if (enterpriseDir != null) {
-            for (Enterprise enterprise : enterpriseDir.getEnterpriseDirectory()) {
-                if (enterprise instanceof HospitalEnterprise) {
-                    HospitalEnterprise he = (HospitalEnterprise) enterprise;
-                    for (Organization org : he.getOrganizationDirectory().getOrganizationList()) {
-                        if (org instanceof HospitalOrganization) {
-                            HospitalOrganization ho = (HospitalOrganization) org;
+        if(enterpriseDirectory != null)
+        {
+            for(Enterprise enterprise: enterpriseDirectory.getEnterpriseDirectory())
+            {
+                if( enterprise instanceof HospitalEnterprise)
+                {
+                    HospitalEnterprise he = (HospitalEnterprise)enterprise;
+                    for(Organization org : he.getOrganizationDirectory().getOrganizationList())
+                    {
+                        if(org instanceof HospitalOrganization)
+                        {
+                            HospitalOrganization ho = (HospitalOrganization)org;
                             sum = sum + ho.getClinic().getTotalAdministeredVaccines();
                         }
                     }
                 }
             }
         }
-
-        return sum;
-
-    }
-
-    //displays number of distributed vaccines in city
-    public int getTotalVaccinesDistributedInCity() {
+        
+    
+    return sum;
+    
+}
+    //displays number of failed vaccines in city
+    public int getTotalFailedVaccinesInCity()
+    {
         int sum = 0;
-        if (enterpriseDir != null) {
-            for (Enterprise enterprise : enterpriseDir.getEnterpriseDirectory()) {
-                if (enterprise instanceof HospitalEnterprise) {
-                    HospitalEnterprise he = (HospitalEnterprise) enterprise;
-                    for (Organization org : he.getOrganizationDirectory().getOrganizationList()) {
-                        if (org instanceof HospitalOrganization) {
-                            HospitalOrganization ho = (HospitalOrganization) org;
+        if(enterpriseDirectory != null)
+        {
+            for(Enterprise enterprise: enterpriseDirectory.getEnterpriseDirectory())
+            {
+                if( enterprise instanceof HospitalEnterprise)
+                {
+                    HospitalEnterprise he = (HospitalEnterprise)enterprise;
+                    for(Organization org : he.getOrganizationDirectory().getOrganizationList())
+                    {
+                        if(org instanceof HospitalOrganization)
+                        {
+                            HospitalOrganization ho = (HospitalOrganization)org;
+                            sum = sum + ho.getClinic().getTotalVaccinesFailed();
+                        }
+                    }
+                }
+            }
+        }
+        
+    
+    return sum;
+    
+}
+    
+    //displays number of distributed vaccines in city
+    public int getTotalVaccinesDistributedInCity()
+    {
+        int sum = 0;
+        if(enterpriseDirectory != null)
+        {
+            for(Enterprise enterprise: enterpriseDirectory.getEnterpriseDirectory())
+            {
+                if( enterprise instanceof HospitalEnterprise)
+                {
+                    HospitalEnterprise he = (HospitalEnterprise)enterprise;
+                    for(Organization org : he.getOrganizationDirectory().getOrganizationList())
+                    {
+                        if(org instanceof HospitalOrganization)
+                        {
+                            HospitalOrganization ho = (HospitalOrganization)org;
                             sum = sum + ho.getClinic().getTotalStoredVaccines();
                         }
                     }
                 }
             }
         }
-
-        return sum;
-
-    }
-
+        
+    
+    return sum;
+    
+}
+    
+    
 }

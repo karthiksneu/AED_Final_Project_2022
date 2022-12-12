@@ -10,11 +10,9 @@ import java.util.Date;
 
 /**
  *
- * @author Dsouza
+ * @author soham
  */
 //Creating class VaccineDetails
-
-
 public class VaccineDetails {
     
     private Vaccine vaccineDef;
@@ -53,11 +51,9 @@ public class VaccineDetails {
     public Vaccine getVaccineDefinition() {
         return vaccineDef;
     }
-    
-    
 
-    public void setVaccineDefinition(Vaccine vaccineDefn) {
-        this.vaccineDef = vaccineDefn;
+    public void setVaccineDefinition(Vaccine vaccineDef) {
+        this.vaccineDef = vaccineDef;
     }
 
     public int getVaccineId() {
@@ -89,12 +85,9 @@ public class VaccineDetails {
         return vaccinePrice;
     }
 
-    public void setVaccinePrice(double vaccineRate) {
-        this.vaccinePrice = vaccineRate;
+    public void setVaccinePrice(double vaccinePrice) {
+        this.vaccinePrice = vaccinePrice;
     }
-    
-    
-    
 
     @Override
     public String toString() {

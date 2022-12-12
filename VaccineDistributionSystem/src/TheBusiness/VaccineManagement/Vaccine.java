@@ -11,11 +11,10 @@ import TheBusiness.Network.StateNetwork;
 
 /**
  *
- * @author Dsouza
+ * @author soham
  */
 
 //Creating CLass Vaccine
-
 public class Vaccine {
     
     private String vaccineCode;
@@ -31,14 +30,10 @@ public class Vaccine {
         return state;
     }
 
-    
-    
     public void setState(StateNetwork state) {
         this.state = state;
     }
 
-    
-    
 
     public Disease getDisease() {
         return disease;
@@ -65,10 +60,6 @@ public class Vaccine {
         this.vaccineName = vaccineName;
     }
 
-    
-    
-    
-    
     @Override
     public String toString() {
         return vaccineCode;
