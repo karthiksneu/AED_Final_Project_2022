@@ -4,28 +4,28 @@
  * and open the template in the editor.
  */
 
-package UserInterface.LocalHealthDepartment;
+package userinterface.LocalHealthDepartment;
 
-import Business.Network.StateNetwork;
+import TheBusiness.Network.StateNetwork;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
  *
- * @author DELL
+ * @author Dsouza
  */
-public class EnterStatePopulationJPanel extends javax.swing.JPanel {
+public class StatePopulation extends javax.swing.JPanel {
 
   
     private JPanel workContainer;
     private StateNetwork state;
     
-    public EnterStatePopulationJPanel(JPanel workContainer, StateNetwork state) {
+    public StatePopulation(JPanel workContainer, StateNetwork state) {
         initComponents();
         this.workContainer = workContainer;
         this.state = state;
         
-        txtpop.setText(String.valueOf(state.getStatePopulation()));
+        txtCurrentPopulation.setText(String.valueOf(state.getStatePopulation()));
     }
 
     /**
@@ -37,43 +37,44 @@ public class EnterStatePopulationJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lbl1 = new javax.swing.JLabel();
-        lbl2 = new javax.swing.JLabel();
-        txtpop = new javax.swing.JTextField();
-        lbl3 = new javax.swing.JLabel();
+        lblStatePopulation = new javax.swing.JLabel();
+        lblCurrentPopulation = new javax.swing.JLabel();
+        txtCurrentPopulation = new javax.swing.JTextField();
+        lblUpdatePopulation = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        txtpop2 = new javax.swing.JTextField();
-        btndone = new javax.swing.JButton();
+        txtCurrentPopulation2 = new javax.swing.JTextField();
+        btnUpdate = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(70, 130, 180));
+        setBackground(new java.awt.Color(0, 204, 204));
 
-        lbl1.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
-        lbl1.setForeground(new java.awt.Color(255, 255, 255));
-        lbl1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbl1.setText("State Population");
+        lblStatePopulation.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
+        lblStatePopulation.setForeground(new java.awt.Color(255, 255, 255));
+        lblStatePopulation.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblStatePopulation.setText("State Population");
 
-        lbl2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        lbl2.setForeground(new java.awt.Color(255, 255, 255));
-        lbl2.setText("Current Population :");
+        lblCurrentPopulation.setFont(new java.awt.Font("October Compressed Devanagari", 1, 14)); // NOI18N
+        lblCurrentPopulation.setForeground(new java.awt.Color(255, 255, 255));
+        lblCurrentPopulation.setText("Current Population :");
 
-        txtpop.setEnabled(false);
-        txtpop.addActionListener(new java.awt.event.ActionListener() {
+        txtCurrentPopulation.setEnabled(false);
+        txtCurrentPopulation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtpopActionPerformed(evt);
+                txtCurrentPopulationActionPerformed(evt);
             }
         });
 
-        lbl3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        lbl3.setForeground(new java.awt.Color(255, 255, 255));
-        lbl3.setText("Update Population:");
+        lblUpdatePopulation.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        lblUpdatePopulation.setForeground(new java.awt.Color(255, 255, 255));
+        lblUpdatePopulation.setText("Update Population:");
 
-        btndone.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btndone.setForeground(new java.awt.Color(255, 255, 255));
-        btndone.setText("Update");
-        btndone.addActionListener(new java.awt.event.ActionListener() {
+        btnUpdate.setBackground(new java.awt.Color(0, 0, 0));
+        btnUpdate.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        btnUpdate.setForeground(new java.awt.Color(255, 255, 255));
+        btnUpdate.setText("Update");
+        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btndoneActionPerformed(evt);
+                btnUpdateActionPerformed(evt);
             }
         });
 
@@ -86,19 +87,19 @@ public class EnterStatePopulationJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblStatePopulation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(lbl2)
+                                .addComponent(lblCurrentPopulation)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtpop, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(lbl3)
+                                .addComponent(txtCurrentPopulation, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblUpdatePopulation)
                             .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(txtpop2, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtCurrentPopulation2, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btndone)))
+                                .addComponent(btnUpdate)))
                         .addGap(0, 636, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -110,38 +111,38 @@ public class EnterStatePopulationJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lbl1)
+                .addComponent(lblStatePopulation)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl2)
-                    .addComponent(txtpop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblCurrentPopulation)
+                    .addComponent(txtCurrentPopulation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lbl3)
+                .addComponent(lblUpdatePopulation)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtpop2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btndone))
+                    .addComponent(txtCurrentPopulation2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnUpdate))
                 .addGap(28, 28, 28)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtpopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpopActionPerformed
+    private void txtCurrentPopulationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCurrentPopulationActionPerformed
         // TODO add your handling code here:
        
         
-    }//GEN-LAST:event_txtpopActionPerformed
+    }//GEN-LAST:event_txtCurrentPopulationActionPerformed
 
-    private void btndoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndoneActionPerformed
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
         // TODO add your handling code here:
         try{
             int oldPopulation = state.getStatePopulation();
             int oldVaccineLeft = state.getVaccinesLeftForState();
            
-        int population = Integer.parseInt(txtpop2.getText());
+        int population = Integer.parseInt(txtCurrentPopulation2.getText());
         state.setStatePopulation(population);
         
         int populationChange = oldPopulation - population;
@@ -155,24 +156,24 @@ public class EnterStatePopulationJPanel extends javax.swing.JPanel {
         }
         
         
-        txtpop.setText(String.valueOf(state.getStatePopulation()));
+        txtCurrentPopulation.setText(String.valueOf(state.getStatePopulation()));
         }
         catch (Exception e)
         {
             JOptionPane.showMessageDialog(null, "Please enter numeric Value");
             return;
         }
-    }//GEN-LAST:event_btndoneActionPerformed
+    }//GEN-LAST:event_btnUpdateActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btndone;
+    private javax.swing.JButton btnUpdate;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JLabel lbl1;
-    private javax.swing.JLabel lbl2;
-    private javax.swing.JLabel lbl3;
-    private javax.swing.JTextField txtpop;
-    private javax.swing.JTextField txtpop2;
+    private javax.swing.JLabel lblCurrentPopulation;
+    private javax.swing.JLabel lblStatePopulation;
+    private javax.swing.JLabel lblUpdatePopulation;
+    private javax.swing.JTextField txtCurrentPopulation;
+    private javax.swing.JTextField txtCurrentPopulation2;
     // End of variables declaration//GEN-END:variables
 }

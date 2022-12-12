@@ -19,13 +19,13 @@ public class ConfigureSystem {
     public static Ecosystems configure() {
         
         
-        //Creating Ecosystem
+        //Creating Ecosystem for loading data
         Ecosystems business = Ecosystems.getInstance();
-        Person per = null;
+        Person person = null;
         
         
         //Creating sysadmin user account
-        UserAccount sysAdmin = business.getUserAccountDirectory().createUserAccount("sysadmin", "sysadmin@123", person, new SystemAdminRole());
+        UserAccount sysAdmin = business.getUserAccountDirectory().createUserAccount("sysadmin", "sysadmin", person, new SystemAdminRole());
         return business;
     }
 
