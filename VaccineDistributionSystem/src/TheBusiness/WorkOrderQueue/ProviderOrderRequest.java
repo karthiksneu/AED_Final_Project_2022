@@ -1,10 +1,13 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
+
 package TheBusiness.WorkOrderQueue;
 
 import TheBusiness.Enterprise.Enterprise;
+import TheBusiness.Network.StateNetwork;
 import TheBusiness.OrderManagement.Order;
 import TheBusiness.Organization.ClinicOrganization;
 import TheBusiness.UserAccountManagement.UserAccount;
@@ -13,8 +16,11 @@ import java.util.Date;
 
 /**
  *
- * @author Dsouza
+ * @author DELL
  */
+
+//WorkRequest for Provision of vaccine Orders
+//Initializing class ProviderOrderRequest extends WorkRequest
 public class ProviderOrderRequest extends WorkRequest{
     
     private Order orderVaccine;
