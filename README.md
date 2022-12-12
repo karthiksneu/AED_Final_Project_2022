@@ -24,6 +24,8 @@ Roles: Medical Officer, CDC Officer, Center Head, Nurse, Patient, Doctor, Transp
 
 <img width="1211" alt="Screenshot 2022-12-11 at 8 14 17 PM" src="https://user-images.githubusercontent.com/114313259/206962480-d2fc0b39-435f-4cf6-be00-c2af4b51d9f0.png">
 
+Class diagram: https://lucid.app/lucidchart/d5a4ada5-1932-4fbf-85b0-80894be08d0a/edit?invitationId=inv_6480d0f5-e792-4e8c-828f-fbc491d35f8c
+
 # Flow of Project
 Ordering Vaccines:
     1. In order to stock up, the hospital administrator will ask the dealer for work.
