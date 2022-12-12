@@ -4,16 +4,16 @@
  * and open the template in the editor.
  */
 
-package UserInterface.LocalHealthDepartment;
+package userinterface.LocalHealthDepartment;
 
-import Business.EcoSystem;
-import Business.Enterprise.LocalHealthDepartment;
-import Business.Network.StateNetwork;
-import Business.Organization.Organization;
-import Business.Organization.LHDImmuneOrganization;
-import Business.UserAccount.UserAccount;
-import Business.WorkQueue.ProviderVaccineOrderWorkRequest;
-import Business.WorkQueue.WorkRequest;
+import TheBusiness.Ecosystems;
+import TheBusiness.Enterprise.LocalHealthDepartment;
+import TheBusiness.Network.StateNetwork;
+import TheBusiness.Organization.Organization;
+import TheBusiness.Organization.LocalHealthDptImmuneOrganization;
+import TheBusiness.UserAccountManagement.UserAccount;
+import TheBusiness.WorkOrderQueue.ProviderOrderRequest;
+import TheBusiness.WorkOrderQueue.WorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -21,21 +21,21 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author DELL
+ * @author Dsouza
  */
-public class OrderApprovalsJPanel extends javax.swing.JPanel {
+public class OrderApprovals extends javax.swing.JPanel {
 
     /**
-     * Creates new form OrderApprovalsJPanel
+     * Creates new form OrderApprovals
      */
     private JPanel workContainer;
     private UserAccount userAccount;
     private LocalHealthDepartment enterprise;
-    private LHDImmuneOrganization phdOrg;
-    private EcoSystem business;
+    private LocalHealthDptImmuneOrganization phdOrg;
+    private Ecosystems business;
     private StateNetwork state;
     
-    public OrderApprovalsJPanel(JPanel workContainer, UserAccount userAccount, LocalHealthDepartment enterprise,LHDImmuneOrganization phdOrg, StateNetwork state,EcoSystem business) {
+    public OrderApprovals(JPanel workContainer, UserAccount userAccount, LocalHealthDepartment enterprise,LocalHealthDptImmuneOrganization phdOrg, StateNetwork state,Ecosystems business) {
         initComponents();
         this.workContainer = workContainer;
         this.userAccount = userAccount;
@@ -52,14 +52,14 @@ public class OrderApprovalsJPanel extends javax.swing.JPanel {
         DefaultTableModel defaulttabelmodel = (DefaultTableModel) tblorder.getModel();
         defaulttabelmodel.setRowCount(0);
         
-         LHDImmuneOrganization pOrg = null;
+         LocalHealthDptImmuneOrganization pOrg = null;
          
         for(Organization org : enterprise.getOrganizationDirectory().getOrganizationList())
-        {   if(org instanceof LHDImmuneOrganization)
-        {   pOrg = (LHDImmuneOrganization)org;
+        {   if(org instanceof LocalHealthDptImmuneOrganization)
+        {   pOrg = (LocalHealthDptImmuneOrganization)org;
             for(WorkRequest workRequest : pOrg.getWorkQueue().getWorkRequestList())
-            {   if(workRequest instanceof ProviderVaccineOrderWorkRequest)
-            {ProviderVaccineOrderWorkRequest vaccineOrderWR = (ProviderVaccineOrderWorkRequest)workRequest;
+            {   if(workRequest instanceof ProviderOrderRequest)
+            {ProviderOrderRequest vaccineOrderWR = (ProviderOrderRequest)workRequest;
                 
                 Object[] row = new Object[5];
                 row[0] = vaccineOrderWR;
@@ -89,18 +89,18 @@ public class OrderApprovalsJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        lblTitle = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblorder = new javax.swing.JTable();
-        btnview = new javax.swing.JButton();
-        btnref = new javax.swing.JButton();
+        btnViewDetailsAndApprove = new javax.swing.JButton();
+        btnRefresh = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(70, 130, 180));
+        setBackground(new java.awt.Color(0, 204, 204));
 
-        jLabel1.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Approve Orders from Providers");
+        lblTitle.setFont(new java.awt.Font("October Compressed Devanagari", 1, 24)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitle.setText("Approve Orders from Providers");
 
         tblorder.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -121,23 +121,22 @@ public class OrderApprovalsJPanel extends javax.swing.JPanel {
         tblorder.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tblorder);
 
-        btnview.setBackground(new java.awt.Color(0, 0, 0));
-        btnview.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnview.setForeground(new java.awt.Color(255, 255, 255));
-        btnview.setText("View Details and Approve >>");
-        btnview.addActionListener(new java.awt.event.ActionListener() {
+        btnViewDetailsAndApprove.setBackground(new java.awt.Color(0, 0, 0));
+        btnViewDetailsAndApprove.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        btnViewDetailsAndApprove.setForeground(new java.awt.Color(255, 255, 255));
+        btnViewDetailsAndApprove.setText("View Details and Approve >>");
+        btnViewDetailsAndApprove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnviewActionPerformed(evt);
+                btnViewDetailsAndApproveActionPerformed(evt);
             }
         });
 
-        btnref.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        btnref.setForeground(new java.awt.Color(255, 255, 255));
-        btnref.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (2).png"))); // NOI18N
-        btnref.setText("Refresh");
-        btnref.addActionListener(new java.awt.event.ActionListener() {
+        btnRefresh.setFont(new java.awt.Font("October Compressed Devanagari", 1, 18)); // NOI18N
+        btnRefresh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/MicrosoftTeams-image (2).png"))); // NOI18N
+        btnRefresh.setText("Refresh");
+        btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnrefActionPerformed(evt);
+                btnRefreshActionPerformed(evt);
             }
         });
 
@@ -148,32 +147,31 @@ public class OrderApprovalsJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 664, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnref)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btnview)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnRefresh)
+                            .addComponent(btnViewDetailsAndApprove))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(lblTitle)
                 .addGap(1, 1, 1)
-                .addComponent(btnref)
+                .addComponent(btnRefresh)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnview)
-                .addContainerGap(195, Short.MAX_VALUE))
+                .addComponent(btnViewDetailsAndApprove)
+                .addContainerGap(190, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnviewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnviewActionPerformed
+    private void btnViewDetailsAndApproveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewDetailsAndApproveActionPerformed
         // TODO add your handling code here:
         
         int selectedRow = tblorder.getSelectedRow();
@@ -184,27 +182,27 @@ public class OrderApprovalsJPanel extends javax.swing.JPanel {
         }
         
         
-         ProviderVaccineOrderWorkRequest request = (ProviderVaccineOrderWorkRequest)tblorder.getValueAt(selectedRow, 0);
+         ProviderOrderRequest request = (ProviderOrderRequest)tblorder.getValueAt(selectedRow, 0);
         
         
         
-         ViewDetailsOfOrderJPanel panel = new ViewDetailsOfOrderJPanel(workContainer, userAccount, enterprise,phdOrg, state, business, request);
+         OrderDetailsList panel = new OrderDetailsList(workContainer, userAccount, enterprise,phdOrg, state, business, request);
         workContainer.add("OrderApprovalsJPanel", panel);
         CardLayout layout = (CardLayout)workContainer.getLayout();
         layout.next(workContainer);
-    }//GEN-LAST:event_btnviewActionPerformed
+    }//GEN-LAST:event_btnViewDetailsAndApproveActionPerformed
 
-    private void btnrefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnrefActionPerformed
+    private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
         // TODO add your handling code here:
         populateTable();
-    }//GEN-LAST:event_btnrefActionPerformed
+    }//GEN-LAST:event_btnRefreshActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnref;
-    private javax.swing.JButton btnview;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnRefresh;
+    private javax.swing.JButton btnViewDetailsAndApprove;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblTitle;
     private javax.swing.JTable tblorder;
     // End of variables declaration//GEN-END:variables
 }
