@@ -58,24 +58,20 @@ public class OrderAproval extends javax.swing.JPanel {
         lbl2.setForeground(new java.awt.Color(255, 255, 255));
         lbl2.setText("Order Number:");
 
-        txtOrderNumber.setBackground(new java.awt.Color(255, 255, 255));
         txtOrderNumber.setEnabled(false);
 
         lbl3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lbl3.setForeground(new java.awt.Color(255, 255, 255));
         lbl3.setText("State Population:");
 
-        txtStatePopulation.setBackground(new java.awt.Color(255, 255, 255));
         txtStatePopulation.setEnabled(false);
 
         lbl4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         lbl4.setForeground(new java.awt.Color(255, 255, 255));
         lbl4.setText("Vaccines left for State:");
 
-        txtVaccinesForState.setBackground(new java.awt.Color(255, 255, 255));
         txtVaccinesForState.setEnabled(false);
 
-        tblvacciine.setBackground(new java.awt.Color(255, 255, 255));
         tblvacciine.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -116,7 +112,6 @@ public class OrderAproval extends javax.swing.JPanel {
             }
         });
 
-        txtOrderType.setBackground(new java.awt.Color(255, 255, 255));
         txtOrderType.setEnabled(false);
 
         llbl5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -127,7 +122,6 @@ public class OrderAproval extends javax.swing.JPanel {
         lbl6.setForeground(new java.awt.Color(255, 255, 255));
         lbl6.setText("State:");
 
-        txtState.setBackground(new java.awt.Color(255, 255, 255));
         txtState.setEnabled(false);
         txtState.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
