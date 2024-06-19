@@ -76,6 +76,3 @@ The Vaccine Distribution System project aims to design, develop, and implement a
 3. **Inventory Update:**
    - Returned vaccines are received and managed by the inventory manager, with updates sent to CDC.
 
----
-
-This enhanced README provides a clearer structure, detailed project flow descriptions, and integrates visuals such as the system architecture diagram and class diagram link. Adjust the content further based on specific project details and requirements.
