@@ -102,7 +102,3 @@ To get started with the Vaccine Distribution System project, follow these steps:
 
 3. **Inventory Update:**
    - Returned vaccines are received and managed by the inventory manager, with updates sent to CDC.
-
----
-
-This README provides a detailed overview of the Vaccine Distribution System project, focusing on standalone application setup instructions, project flow descriptions, and links to supplementary diagrams. Adjust the content further based on specific project details and requirements.
