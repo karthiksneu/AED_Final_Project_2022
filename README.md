@@ -1,4 +1,4 @@
-Here's an enhanced version of your README for the AED_Final_Project_2022 - Vaccine Distribution System:
+Certainly! Here's an improved README file for the AED_Final_Project_2022 - Vaccine Distribution System, focusing on a standalone application approach:
 
 ---
 
@@ -12,33 +12,38 @@ Here's an enhanced version of your README for the AED_Final_Project_2022 - Vacci
 
 ## Project Overview
 
-The Vaccine Distribution System project aims to design, develop, and implement a comprehensive system for managing the distribution and administration of vaccines. This system provides real-time access to vaccine availability across federal, state, and local levels, ensuring efficient vaccination processes for all patients.
+The Vaccine Distribution System project aims to design, develop, and implement a standalone system for managing the distribution and administration of vaccines. This system provides functionalities to monitor vaccine availability, manage orders, and ensure efficient vaccination processes for healthcare institutions.
 
 ![System Architecture Diagram](https://user-images.githubusercontent.com/114313259/206962480-d2fc0b39-435f-4cf6-be00-c2af4b51d9f0.png)
 
 **Class Diagram:** [View Class Diagram](https://lucid.app/lucidchart/d5a4ada5-1932-4fbf-85b0-80894be08d0a/edit?invitationId=inv_6480d0f5-e792-4e8c-828f-fbc491d35f8c)
 
-
 ## Getting Started
+
 To get started with the Vaccine Distribution System project, follow these steps:
 
 ### Prerequisites
-Java Development Kit (JDK): Ensure JDK 8 or higher is installed.
-Integrated Development Environment (IDE): Use IntelliJ IDEA or Eclipse for Java development.
-Installation and Setup
-Clone the Repository:
 
-bash
-Copy code
-git clone https://github.com/karthiksneu/boston-marathon-analysis.git
-cd boston-marathon-analysis
-Import Project into IDE:
+- **Java Development Kit (JDK)**: Ensure JDK 8 or higher is installed.
+- **Integrated Development Environment (IDE)**: Use IntelliJ IDEA or Eclipse for Java development.
 
-Open the project in your preferred IDE (IntelliJ IDEA or Eclipse).
-Run the Application:
+### Installation and Setup
 
-Build and run the project from your IDE.
-Start the main application class (Main.java or similar).
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/karthiksneu/boston-marathon-analysis.git
+   cd boston-marathon-analysis
+   ```
+
+2. **Import Project into IDE:**
+   
+   - Open the project in your preferred IDE (IntelliJ IDEA or Eclipse).
+
+3. **Run the Application:**
+   
+   - Build and run the project from your IDE.
+   - Start the main application class (`Main.java` or similar).
 
 ## Project Flow
 
@@ -98,3 +103,6 @@ Start the main application class (Main.java or similar).
 3. **Inventory Update:**
    - Returned vaccines are received and managed by the inventory manager, with updates sent to CDC.
 
+---
+
+This README provides a detailed overview of the Vaccine Distribution System project, focusing on standalone application setup instructions, project flow descriptions, and links to supplementary diagrams. Adjust the content further based on specific project details and requirements.
